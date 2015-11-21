@@ -12,6 +12,7 @@
 #include "Communication/CommunicationTcpSocketServer.h"
 #include "Communication/CommunicationTcpSocketClient.h"
 #include "Communication/CommunicationSerialPort.h"
+#include "Simulator/RaceCar.h"
 
 
 
@@ -28,6 +29,7 @@ public:
     ~Application() = default;
 
 private:
+    RaceCar car;
     QQmlApplicationEngine engine;
     CommunicationTcpSocketServer tcpServer;
     CommunicationTcpSocketClient tcpClient;
