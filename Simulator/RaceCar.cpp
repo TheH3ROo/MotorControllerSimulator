@@ -27,7 +27,8 @@ void RaceCar::MotTimeout()
     double v = w/D*2;
     double Fs = C*v*v;
     double Mt = D/2*(Fs+m*(v-vpre)/dtm*1000);
-    emit MotorTick(Mt, ctrler.GetValue(), dtm/1000);
+    //emit MotorTick(Mt, ctrler.GetValue(), dtm/1000);
+    emit MotorTick(Mt, 1, dtm/1000);
 
     vpre = v;
     qDebug() << w;
