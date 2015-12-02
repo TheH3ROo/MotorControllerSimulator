@@ -25,7 +25,8 @@ SOURCES += main.cpp\
     DataParser.cpp \
     Simulator/DCMotor.cpp \
     Simulator/PICtrler.cpp \
-    Simulator/RaceCar.cpp
+    Simulator/RaceCar.cpp \
+    Simulator/Accumulator.cpp
 
 HEADERS  += MainWindow.h \
     Communication/Communication.h \
@@ -37,6 +38,7 @@ HEADERS  += MainWindow.h \
     DataParser.h \
     Simulator/DCMotor.h \
     Simulator/PICtrler.h \
-    Simulator/RaceCar.h
+    Simulator/RaceCar.h \
+    Simulator/Accumulator.h
 
 FORMS    += MainWindow.ui

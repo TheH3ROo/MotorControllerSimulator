@@ -65,7 +65,6 @@ public:
         sendBufferContent();
     }
 
-
 signals:
     /** Hibajelzés. */
     // Ezt majd minden protokoll megfelelően beköti.
@@ -95,6 +94,10 @@ protected:
 private:
     /** Az éppen fogadott üzenet mérete. A dataReceived() használja. */
     qint32 currentMessageSize;
+
+public slots:
+    /** Ide lehet bekötni a küldési signalokat.*/
+    void sendData(QByteArray& data){send(data);}
 
 protected slots:
     /** Adat érkezett, de nem feltétlenül egy egész üzenet.

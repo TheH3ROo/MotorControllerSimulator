@@ -37,6 +37,9 @@ private:
     CommunicationSerialPort serialPort;
     QTimer* dataUpdateTimer;
 
+signals:
+    void dataReady(QMap<quint16, double>&, QMap<QString, quint16>&);
+
 public slots:
     void errorHandling(const QString&);
 };

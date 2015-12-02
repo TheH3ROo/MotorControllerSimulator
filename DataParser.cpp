@@ -1,6 +1,5 @@
 #include "DataParser.h"
 
-
 DataParser::DataParser (const QString& codeFilePath)
     :codeFile(codeFilePath)
 {
@@ -42,22 +41,28 @@ void DataParser::dataInput(QDataStream& stream)
     stream >> byteArray;
     quint16 code = ((quint8)byteArray[0])*256+(quint8)byteArray[1];
 
-    if(code == codeMap.value(QString("temp")))
+    if(code == codeMap.value(QString("hven")))
     {
-        quint16 ST = ((quint8)byteArray[2])*256+(quint8)byteArray[3];
-        dataMap[code]=175.0*ST/(qPow(2,16)-1)-45;
+        dataMap[code]=(quint16)byteArray[2];
     }
-    else if(code == codeMap.value(QString("hum")))
+    else if(code == codeMap.value(QString("dren")))
     {
-        quint16 SRH = ((quint8)byteArray[2])*256+(quint8)byteArray[3];
-        dataMap[code]=100.0*SRH/(qPow(2,16)-1);
+        dataMap[code]=byteArray[2];
     }
-    else if(code == codeMap.value(QString("vbat")))
+    else if(code == codeMap.value(QString("stop")))
     {
-        quint16 vbat=((quint8)byteArray[2])*256+(quint8)byteArray[3];
-        dataMap[code]=vbat;
+        dataMap[code]=byteArray[2];
     }
+    else if(code == codeMap.value(QString("vref")))
+    {
+        dataMap[code]=(double)byteArray[2];
+    }
+//DEBUG!
     PrintDataToDebug();
+//DEBUG!
+
+    emit dataReady(dataMap, codeMap);
+
     return;
 }
 
@@ -65,21 +70,6 @@ void DataParser::dataInput(QDataStream& stream)
 
 void DataParser::PrintDataToDebug()
 {
-    QMapIterator<quint16, double> i(dataMap);
-    while (i.hasNext())
-    {
-        i.next();
-        qDebug() << i.key() << ": " << i.value() << endl;
-    }
-}
-
-void DataParser::saveDataTimestamp()
-{
-    QDateTime currTime = QDateTime::currentDateTimeUtc();
-    timestampQueue.enqueue(currTime);
-    dataQueue.enqueue(dataMap);
-
-    qDebug() << currTime.toString("yyyy.MM.dd. hh:mm:ss:zzz");
     QMapIterator<quint16, double> i(dataMap);
     while (i.hasNext())
     {

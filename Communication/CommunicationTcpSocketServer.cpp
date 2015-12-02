@@ -30,20 +30,17 @@ void CommunicationTcpSocketServer::newConnection()
 
         QByteArray ba;
         ba[0]=0x00;
-        ba[1]=0x55;
+        ba[1]=0x01;
         ba[2]=100;
-        ba[3]=122;
         send(ba);
 
         ba[0]=0x00;
-        ba[1]=0xAA;
-        ba[2]=128;
-        ba[3]=14;
+        ba[1]=0x02;
+        ba[2]=0;
         send(ba);
 
         ba[0]=0x00;
-        ba[1]=0xCB;
-        ba[2]=15;
+        ba[1]=0x04;
         ba[3]=192;
         send(ba);
 

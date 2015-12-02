@@ -9,6 +9,7 @@
 #include <QtMath>
 #include <QDateTime>
 #include <QQueue>
+#include <QtGlobal>
 
 class DataParser : public QObject
 {
@@ -16,11 +17,10 @@ class DataParser : public QObject
 
 public:
     DataParser(const QString&);
-
+//DEBUG!
     void PrintDataToDebug();
-
-    /** VIsszatérnek az adatokra mutató pointerrel.*/
-    QQueue<QDateTime>* GetTimestamp(){return &timestampQueue;}
+//DEBUG!
+    /** Visszatér az adatsorra mutató pointerrel.*/
     QQueue<QMap<quint16, double>>* GetData(){return &dataQueue;}
     /** Segédfüggvény az adatstring-kód kereséséhez.*/
     quint16 GetCode(QString& str){return codeMap[str];}
@@ -33,20 +33,15 @@ private:
     /** Adatokat tartalmazó map, két időegység között folyamatosan töltődik fel adattal.*/
     QMap<quint16, double> dataMap;
 
-    /** Timestamp tárolása.*/
-    QQueue<QDateTime> timestampQueue;
     /** Adat tárolása.*/
     QQueue<QMap<quint16, double>> dataQueue;
 signals:
     void errorOccurred(const QString&);
+    void dataReady(QMap<quint16, double>&, QMap<QString, quint16>&);
 
 public slots:
     /** Ide lehet bekötni a kommunikációs dataReady signalokat.*/
     void dataInput(QDataStream&);
-
-    /** Ide lehet bekötni a timer signalt. Minden egyes híváskor
-     * elmenti új timestampel az adatokat dataTimestamp-be.*/
-    void saveDataTimestamp();
 
 };
 
