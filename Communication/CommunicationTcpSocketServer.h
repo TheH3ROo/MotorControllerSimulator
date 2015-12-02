@@ -25,6 +25,8 @@ private:
     /** A belső QTcpServer példány. */
     QTcpServer serverSocket;
 
+void SendDebugData(quint16,double);
+
 private slots:
     /** A szerver sockethez új kapcsolatot érkezett.
      * Beköti az adatfogadási signalt és előkészíti az adat fogadást.

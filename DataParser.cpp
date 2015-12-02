@@ -39,24 +39,15 @@ void DataParser::dataInput(QDataStream& stream)
 
     QByteArray byteArray;
     stream >> byteArray;
-    quint16 code = ((quint8)byteArray[0])*256+(quint8)byteArray[1];
+    if(byteArray.size() >= 2+sizeof(double))
+    {
+        quint16 code;
+        double value;
+        memcpy(&code, byteArray.data(), 2);
+        memcpy(&value, byteArray.data()+2, sizeof(double));
+        dataMap[code]=value;
+    }
 
-    if(code == codeMap.value(QString("hven")))
-    {
-        dataMap[code]=(quint16)byteArray[2];
-    }
-    else if(code == codeMap.value(QString("dren")))
-    {
-        dataMap[code]=byteArray[2];
-    }
-    else if(code == codeMap.value(QString("stop")))
-    {
-        dataMap[code]=byteArray[2];
-    }
-    else if(code == codeMap.value(QString("vref")))
-    {
-        dataMap[code]=(double)byteArray[2];
-    }
 //DEBUG!
     PrintDataToDebug();
 //DEBUG!

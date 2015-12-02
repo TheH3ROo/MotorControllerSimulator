@@ -4,7 +4,7 @@ RaceCar::RaceCar(QObject *parent, double dtm, double dtpi, double D, double C, d
     : QObject(parent), dtm(dtm), dtpi(dtpi), D(D), C(C), m(m)
 {
     vpre = 0;
-    vref = 2.5;
+    vref = 0;
     Mref = 0;
 
     state = stop;

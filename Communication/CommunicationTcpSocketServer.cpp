@@ -16,6 +16,17 @@ CommunicationTcpSocketServer::CommunicationTcpSocketServer(int port)
     connect(&serverSocket, SIGNAL(newConnection()), this, SLOT(newConnection()));
 }
 
+//DEBUG!
+void CommunicationTcpSocketServer::SendDebugData(quint16 code, double value)
+{
+    QByteArray ba(reinterpret_cast<const char*>(&code), sizeof(quint16));
+    QByteArray byteArray(reinterpret_cast<const char*>(&value), sizeof(double));
+    ba.insert(2,byteArray);
+    send(ba);
+}
+
+//DEBUG!
+
 void CommunicationTcpSocketServer::newConnection()
 {
     QTcpSocket *newSocket = serverSocket.nextPendingConnection();
@@ -27,23 +38,9 @@ void CommunicationTcpSocketServer::newConnection()
         setSocket(newSocket);
         qWarning() << "Új kapcsolat létesült.\n";
 
-
-        QByteArray ba;
-        ba[0]=0x00;
-        ba[1]=0x01;
-        ba[2]=100;
-        send(ba);
-
-        ba[0]=0x00;
-        ba[1]=0x02;
-        ba[2]=0;
-        send(ba);
-
-        ba[0]=0x00;
-        ba[1]=0x04;
-        ba[3]=192;
-        send(ba);
-
+        SendDebugData(0x01, 10);
+        SendDebugData(0x02, 10);
+        SendDebugData(0x4, 12.6);
     }
 }
 
