@@ -65,6 +65,7 @@ public:
         sendBufferContent();
     }
 
+    void SendDebugData(quint16 code, double value);
 signals:
     /** Hibajelzés. */
     // Ezt majd minden protokoll megfelelően beköti.

@@ -23,11 +23,12 @@
  */
 class Application : public QApplication
 {
+    Q_OBJECT
+
 public:
     /** Konstruktor. Alapvető példányosítások és signal bekötések. */
     Application(int argc, char *argv[]);
-    ~Application() = default;
-
+    //~Application() = default;
 private:
     RaceCar car;
     QQmlApplicationEngine engine;
@@ -35,13 +36,19 @@ private:
     CommunicationTcpSocketClient tcpClient;
     DataParser dataParser;
     CommunicationSerialPort serialPort;
-    QTimer* dataUpdateTimer;
+    QTimer dataSendTimer;
+
+    void SendData(quint16 code, double value);
+    void SendDataFromClient(quint16 code, double value);
 
 signals:
-    void dataReady(QMap<quint16, double>&, QMap<QString, quint16>&);
+    //void dataReady(QMap<quint16, double>&, QMap<QString, quint16>&);
 
 public slots:
     void errorHandling(const QString&);
+
+private slots:
+    void sendData();
 };
 
 #endif // STVAPPLICATION_H

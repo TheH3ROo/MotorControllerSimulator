@@ -24,6 +24,8 @@ public:
     double GetTorq(){return motor.GetM();}
     double GetCurr(){return motor.GetI();}
     double GetCapac(){return accu.GetAh();}
+    double GetVbat(){return accu.GetVbat();}
+    double GetVrail(){return accu.GetVrail();}
 
 private:
     QTimer motTmr, PITmr;
@@ -32,7 +34,7 @@ private:
     Accumulator accu;
     raceCarState state;
 
-    double dtm, dtpi, D, C, m, vpre, urail;
+    double dtm, dtpi, D, C, m, vpre;
     double Mref, vref;
 
     void UpdateState(double M, double v);

@@ -15,6 +15,9 @@ public:
     /** Kapcsolat felépítése. */
     void connect(QString url, int port);
 
+    /** Állapot ellenőrzése*/
+    int state(){return socket.state();}
+
 private:
     /** A belső QTcpSocket példány. */
     QTcpSocket socket;

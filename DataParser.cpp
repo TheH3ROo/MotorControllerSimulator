@@ -65,7 +65,7 @@ void DataParser::PrintDataToDebug()
     while (i.hasNext())
     {
         i.next();
-        qDebug() << i.key() << ": " << i.value() << endl;
+        qDebug() << i.key() << ": " << i.value();
     }
 }
 

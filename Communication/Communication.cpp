@@ -71,3 +71,13 @@ qDebug() << "dataReady signal emit.";
         QTimer::singleShot(0, this, SLOT(dataReceived()));
     }
 }
+
+
+
+void Communication::SendDebugData(quint16 code, double value)
+{
+    QByteArray ba(reinterpret_cast<const char*>(&code), sizeof(quint16));
+    QByteArray byteArray(reinterpret_cast<const char*>(&value), sizeof(double));
+    ba.insert(2,byteArray);
+    send(ba);
+}

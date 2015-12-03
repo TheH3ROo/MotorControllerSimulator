@@ -40,12 +40,12 @@ void RaceCar::MotTimeout()
     emit AccuUpdate(motor.GetI(),dtm/1000);
     vpre = v;
 //DEBUG!
-    PrintDataToDebug();
+    //PrintDataToDebug();
 }
 
 void RaceCar::PITimeout()
 {
-    emit PITick(vref*D/2, motor.GetW(), dtpi/1000, accu.GetVoltage());
+    emit PITick(vref*D/2, motor.GetW(), dtpi/1000, accu.GetVrail());
 }
 
 void RaceCar::UpdateState(double M, double v)
@@ -54,10 +54,15 @@ void RaceCar::UpdateState(double M, double v)
     {
         case stop:
             Mref = vref = 0;
-            urail = 0;
+            accu.HVEN(false);
             break;
         case hven:
-            urail = accu.GetVoltage();
+            if(!accu.HVEN(true))
+            {
+                state = stop;
+                break;
+            }
+            Mref = vref = 0;
             break;
         case dren:
             Mref = M;
@@ -86,8 +91,7 @@ void RaceCar::DataProc(QMap<quint16, double>& data, QMap<QString, quint16>& code
 
 void RaceCar::PrintDataToDebug()
 {
-
-    //qDebug() << "--------------------------------";
+    qDebug() << "--------------------------------";
     switch(state)
     {
         case stop:
@@ -110,4 +114,6 @@ void RaceCar::PrintDataToDebug()
     qDebug() << "M="<<motor.GetM()<<"Nm";
     qDebug() << "I="<<motor.GetI()<<"A";
     qDebug() << "C="<<accu.GetAh()<<"Ah";
+    qDebug() << "Vbat="<<accu.GetVbat()<<"V";
+    qDebug() << "Vrail="<<accu.GetVrail()<<"V";
 }
