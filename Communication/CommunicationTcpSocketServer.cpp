@@ -28,11 +28,13 @@ void CommunicationTcpSocketServer::newConnection()
         setSocket(newSocket);
         qWarning() << "Új kapcsolat létesült.\n";
     }
+    emit newConnectionSignal();
 }
 
 void CommunicationTcpSocketServer::disconnected()
 {
     qWarning() << "A szerver oldali socket lezáródott.";
+    emit disconnectedSignal();
 }
 
 //DEBUG!

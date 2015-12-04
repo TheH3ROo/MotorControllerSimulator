@@ -17,8 +17,8 @@ class RaceCar : public QObject
     Q_OBJECT
 public:
     RaceCar(QObject *parent = 0, double dtm=1,
-            double dtpi=1, double D=0.2,
-            double C=0.1, double m=200);
+            double dtpi=5, double D=0.2,
+            double C=10, double m=200);
     double GetSpeed(){return vpre;}
     double GetAngSpeed(){return motor.GetW();}
     double GetTorq(){return (motor.GetM()+C*vpre*vpre);}
@@ -26,6 +26,7 @@ public:
     double GetCapac(){return accu.GetAh();}
     double GetVbat(){return accu.GetVbat();}
     double GetVrail(){return accu.GetVrail();}
+    double GetVref(){return vref;}
 
 private:
     QTimer motTmr, PITmr;
@@ -45,6 +46,7 @@ signals:
     void MotorTick(double Mt, double u, double dt);
     void PITick(double uBase, double uSense, double Ts, double umax);
     void AccuUpdate(double i, double dt);
+    void sendString(const QString&);
 public slots:
     void MotTimeout();
     void PITimeout();

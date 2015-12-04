@@ -50,32 +50,39 @@ void RaceCar::PITimeout()
 
 void RaceCar::UpdateState(double M, double v)
 {
+    QString str("State: ");
     switch(state)
     {
         case stop:
+            str.append("stop.");
             Mref = vref = 0;
             accu.HVEN(false);
             break;
         case hven:
             if(!accu.HVEN(true))
             {
+                str.append("stop.");
                 state = stop;
                 break;
             }
+            str.append("hven.");
             Mref = vref = 0;
             break;
         case dren:
             if(!accu.HVEN(true))
             {
+                str.append("stop.");
                 state = stop;
                 break;
             }
+            str.append("dren.");
             Mref = M;
             vref = v;
             break;
         default:
             break;
     }
+    emit sendString(str);
 }
 
 void RaceCar::DataProc(QMap<quint16, double>& data, QMap<QString, quint16>& code)

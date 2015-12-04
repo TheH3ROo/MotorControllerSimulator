@@ -14,8 +14,8 @@ class DCMotor : public QObject
     Q_OBJECT
 public:
     DCMotor(QObject *parent = 0,
-            double kf=0.1, double R=0.1,
-            double L=0.1, double theta=10);
+            double kf=6, double R=0.01,
+            double L=0.001, double theta=500);
     double GetI(){return i;}
     double GetW(){return w;}
     double GetM(){return kf*i;}

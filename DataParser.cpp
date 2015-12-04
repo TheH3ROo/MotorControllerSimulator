@@ -39,17 +39,21 @@ void DataParser::dataInput(QDataStream& stream)
 
     QByteArray byteArray;
     stream >> byteArray;
-    if(byteArray.size() >= 2+sizeof(double))
+
+    quint16 code;
+    double value;
+    uint i=1;
+    uint k=(sizeof(quint16) + sizeof(double));
+    while(byteArray.size() >= i*k)
     {
-        quint16 code;
-        double value;
-        memcpy(&code, byteArray.data(), 2);
-        memcpy(&value, byteArray.data()+2, sizeof(double));
+        memcpy(&code, byteArray.data() + (i-1)*k, sizeof(quint16));
+        memcpy(&value, byteArray.data()+sizeof(quint16)+(i-1)*k, sizeof(double));
         dataMap[code]=value;
+        i++;
     }
 
 //DEBUG!
-    PrintDataToDebug();
+    //PrintDataToDebug();
 //DEBUG!
 
     emit dataReady(dataMap, codeMap);

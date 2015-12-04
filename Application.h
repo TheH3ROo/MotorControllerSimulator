@@ -40,16 +40,20 @@ private:
 
     void SendData(quint16 code, double value);
     void SendDataFromClient(quint16 code, double value);
+    void PutInByteArray(quint16 code, double value, QByteArray& ba);
 
 signals:
     //void dataReady(QMap<quint16, double>&, QMap<QString, quint16>&);
 
 public slots:
     void errorHandling(const QString&);
+    void sendString(const QString&);
 
 private slots:
     void sendData();
     void sendDataDebug();
+    void startDataSendTimer(){dataSendTimer.start();}
+    void stopDataSendTimer(){dataSendTimer.stop();}
 };
 
 #endif // STVAPPLICATION_H

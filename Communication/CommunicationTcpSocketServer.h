@@ -27,6 +27,10 @@ private:
 
 void SendDebugData(quint16,double);
 
+signals:
+    /** Jelzi, hogy új kapcsolat létesült.*/
+    void newConnectionSignal();
+    void disconnectedSignal();
 private slots:
     /** A szerver sockethez új kapcsolatot érkezett.
      * Beköti az adatfogadási signalt és előkészíti az adat fogadást.

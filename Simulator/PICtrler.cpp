@@ -16,15 +16,15 @@ void PICtrler::Tick(double uBase, double uSense, double Ts, double umax)
     double x = (uBase - uSense)*Ap;
     integral = integral + x*Ts/Ti;
     out = integral + x;
-    if (out < 0)
+    if (out < -umax/2)
     {
-        integral = 0;
-        out = 0;
+        integral = -umax/2;
+        out = -umax/2;
     }
-    if (out > umax)
+    if (out > umax/2)
     {
-        integral = umax;
-        out = umax;
+        integral = umax/2;
+        out = umax/2;
     }
     xpre = x;
 }
