@@ -49,6 +49,7 @@ public slots:
 
 private slots:
     void sendData();
+    void sendDataDebug();
 };
 
 #endif // STVAPPLICATION_H

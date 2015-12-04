@@ -8,8 +8,8 @@ class PICtrler : public QObject
     Q_OBJECT
 public:
     explicit PICtrler(QObject *parent = 0,
-                      double Ap = 10,
-                      double Ti = 1e-3);
+                      double Ap = 1e-10,
+                      double Ti = 1e-6);
     double GetValue(){return out;}
 
 private:

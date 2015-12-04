@@ -31,7 +31,7 @@ Application::Application(int argc, char *argv[])
 
 //DEBUG!
     /** Kommunikáció indítása, kapcsolódás.*/
-    tcpClient.connect(QString("152.66.180.1"),4444);
+    //tcpClient.connect(QString("152.66.180.1"),4444);
     serialPort.connect();
 //DEBUG! vége
 
@@ -40,7 +40,7 @@ Application::Application(int argc, char *argv[])
             this,SLOT(sendData()));
     /** Folyamatos timer legyen.*/
     dataSendTimer.setSingleShot(false);
-    dataSendTimer.setInterval(5000);
+    dataSendTimer.setInterval(500);
     dataSendTimer.start();
     /*
     sendData();
@@ -67,6 +67,18 @@ void Application::SendDataFromClient(quint16 code, double value)
 
 void Application::sendData()
 {
+        SendData(dataParser.GetCode(QString("speed")),car.GetSpeed());
+        SendData(dataParser.GetCode(QString("angspeed")),car.GetAngSpeed());
+        SendData(dataParser.GetCode(QString("torq")),car.GetTorq());
+        SendData(dataParser.GetCode(QString("curr")),car.GetCurr());
+        SendData(dataParser.GetCode(QString("capac")),car.GetCapac());
+        SendData(dataParser.GetCode(QString("vacc")),car.GetVbat());
+        SendData(dataParser.GetCode(QString("vrail")),car.GetVrail());
+        qDebug() << "Adatok elküldve.";
+}
+
+void Application::sendDataDebug()
+{
     if(tcpClient.state() == QAbstractSocket::ConnectedState)
     {
         SendData(dataParser.GetCode(QString("speed")),car.GetSpeed());
@@ -76,6 +88,7 @@ void Application::sendData()
         SendData(dataParser.GetCode(QString("capac")),car.GetCapac());
         SendData(dataParser.GetCode(QString("vacc")),car.GetVbat());
         SendData(dataParser.GetCode(QString("vrail")),car.GetVrail());
+        SendData(dataParser.GetCode(QString("vref")),car.GetVrail());
 
         SendDataFromClient(dataParser.GetCode(QString("hven")),0x10);
         SendDataFromClient(dataParser.GetCode(QString("dren")),0x10);

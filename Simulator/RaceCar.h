@@ -17,11 +17,11 @@ class RaceCar : public QObject
     Q_OBJECT
 public:
     RaceCar(QObject *parent = 0, double dtm=1,
-            double dtpi=20, double D=0.2,
-            double C=1, double m=200);
+            double dtpi=1, double D=0.2,
+            double C=0.1, double m=200);
     double GetSpeed(){return vpre;}
     double GetAngSpeed(){return motor.GetW();}
-    double GetTorq(){return motor.GetM();}
+    double GetTorq(){return (motor.GetM()+C*vpre*vpre);}
     double GetCurr(){return motor.GetI();}
     double GetCapac(){return accu.GetAh();}
     double GetVbat(){return accu.GetVbat();}
