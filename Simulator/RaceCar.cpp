@@ -112,16 +112,20 @@ void RaceCar::UpdateState(double M, double v)
 void RaceCar::DataProc(QMap<quint16, double>& data, QMap<QString, quint16>& code)
 {
     //State beállítása
-    if(data.value(code["stop"]) > 1)
+    if(data.value(code["state"]) < 10)
     {
         state=stop;
     }
-    else if(data.value(code["hven"]) > 1)
+    else if(data.value(code["state"]) > 10)
     {
-        if(data.value(code["dren"]) > 1)
+        if(data.value(code["state"]) > 20)
+        {
             state=dren;
+        }
         else
+        {
             state=hven;
+        }
     }
     else
         state=stop;
