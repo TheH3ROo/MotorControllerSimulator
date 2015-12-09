@@ -3,7 +3,7 @@
 
 const double umax_def = 50;
 const double umin_def = 40;
-const double ah_def = 40;
+const double ah_def = 10;
 const double ah_min = 0;
 const quint8 cellnum_def = 12;
 
