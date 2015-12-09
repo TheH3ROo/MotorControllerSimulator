@@ -35,26 +35,6 @@ void CommunicationSerialPort::connect()
     QObject::connect(&serialPort, SIGNAL(readyRead()), this, SLOT(dataReceived()));
 
     qDebug() << "Soros port nyitva, adatfogadás készen áll.";
-
-
-    QByteArray ba;
-    ba[0]=0x00;
-    ba[1]=0x55;
-    ba[2]=200;
-    ba[3]=222;
-    send(ba);
-
-    ba[0]=0x00;
-    ba[1]=0xAA;
-    ba[2]=228;
-    ba[3]=24;
-    send(ba);
-
-    ba[0]=0x00;
-    ba[1]=0xCB;
-    ba[2]=25;
-    ba[3]=92;
-    send(ba);
 }
 
 bool CommunicationSerialPort::isConnected() const

@@ -55,7 +55,7 @@ void Accumulator::UpdateCapacity(double i, double dt)
         }
         else
         {
-            u=-(umax-umin)/ah*(ah_def-ah) + umax;
+            u=-(umax-umin)/ah_def*(ah_def-ah) + umax;
             urail = u;
         }
         UpdateCells();
