@@ -112,13 +112,13 @@ void RaceCar::UpdateState(double M, double v)
 void RaceCar::DataProc(QMap<quint16, double>& data, QMap<QString, quint16>& code)
 {
     //State beállítása
-    if(data.value(code["state"]) < 10)
+    if(data.value(code["state"]) < 5)
     {
         state=stop;
     }
-    else if(data.value(code["state"]) > 10)
+    else if(data.value(code["state"]) > 5)
     {
-        if(data.value(code["state"]) > 20)
+        if(data.value(code["state"]) > 15)
         {
             state=dren;
         }
@@ -128,7 +128,9 @@ void RaceCar::DataProc(QMap<quint16, double>& data, QMap<QString, quint16>& code
         }
     }
     else
+    {
         state=stop;
+    }
     //Alapjelek beállítása
     UpdateState(data.value(code["mref"]), data.value(code["vref"]));
 }
