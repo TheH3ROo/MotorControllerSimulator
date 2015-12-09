@@ -45,7 +45,9 @@ Application::Application(int argc, char *argv[])
     /** Kommunikáció indítása, kapcsolódás.*/
     serialPort.connect();
 //DEBUG! vége
-
+    /** String küldéséhez tartozó jelek bekötése.*/
+    connect(&car, SIGNAL(sendString(QString)),
+            this, SLOT(sendString(QString)));
     /** Adat küldés timer inicializálása.*/
     connect(&dataSendTimer,SIGNAL(timeout()),
             this,SLOT(sendData()));
@@ -61,7 +63,26 @@ void Application::PutInByteArray(quint16 code, double value, QByteArray& ba)
     ba.resize(i+k);
     memcpy(ba.data() + i, &code, sizeof(quint16));
     memcpy(ba.data()+sizeof(quint16)+i, &value, sizeof(double));
-    i++;
+    //i++;
+}
+void Application::PutVectorInByteArray(quint16 code, QVector<double>& value, QByteArray& ba)
+{
+    uint i = ba.size();
+    uint k = (sizeof(quint16) + sizeof(double));
+    double data;
+    QVector<double>::iterator iter = value.begin();
+    ba.resize(i+k);
+    memcpy(ba.data() + i, &code, sizeof(quint16));
+    i = i + sizeof(quint16);
+    while(iter != value.end())
+    {
+        data = *iter;
+        ba.resize(i+sizeof(double));
+        memcpy(ba.data() + i, &data, sizeof(double));
+        i = i + sizeof(double);
+        ++iter;
+    }
+    qDebug() << "done";
 }
 
 void Application::SendData(quint16 code, double value)
@@ -83,6 +104,9 @@ void Application::SendDataFromClient(quint16 code, double value)
 void Application::sendData()
 {
     QByteArray ba;
+    PutInByteArray(dataParser.GetCode(QString("stop")), car.IsStop(), ba);
+    PutInByteArray(dataParser.GetCode(QString("hven")), car.IsHVEN(), ba);
+    PutInByteArray(dataParser.GetCode(QString("dren")), car.IsDREN(), ba);
     PutInByteArray(dataParser.GetCode(QString("speed")), car.GetSpeed(), ba);
     PutInByteArray(dataParser.GetCode(QString("angspeed")), car.GetAngSpeed(), ba);
     PutInByteArray(dataParser.GetCode(QString("torq")), car.GetTorq(), ba);
@@ -91,6 +115,9 @@ void Application::sendData()
     PutInByteArray(dataParser.GetCode(QString("vacc")), car.GetVbat(), ba);
     PutInByteArray(dataParser.GetCode(QString("vrail")), car.GetVrail(), ba);
     PutInByteArray(dataParser.GetCode(QString("vref")), car.GetVref(), ba);
+    /** A cellafeszültségek külön eljárást igényelnek.*/
+    QVector<double> data = car.GetVCell();
+    PutVectorInByteArray(dataParser.GetCode(QString("vcells")), data, ba);
     tcpServer.send(ba);
     qDebug() << "Adatok elküldve.";
 }
@@ -126,7 +153,7 @@ void Application::errorHandling(const QString& error)
 void Application::sendString(const QString & str)
 {
     QByteArray ba;
-    ba.resize(2);
+    ba.resize(sizeof(quint16));
     quint16 code = dataParser.GetCode("str");
     memcpy(ba.data(),&code,sizeof(quint16));
     ba.append(str);

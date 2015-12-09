@@ -1,6 +1,7 @@
 #ifndef ACCUMULATOR_H
 #define ACCUMULATOR_H
 #include <QObject>
+#include <QVector>
 
 class Accumulator: public QObject
 {
@@ -16,11 +17,15 @@ public:
     double GetVbat(){return u;}
     double GetVrail(){return urail;}
     double GetAh(){return ah;}
+    const QVector<double>& GetVCell(){return ucell;}
     bool HVEN(bool);
 
 private:
-    double umax, umin, ah, u, urail;
+    double umax, umin, ah, u, urail, cellnum;
+    QVector<double> ucell, celldiff;
     contactorState contactor;
+
+    void UpdateCells();
 
 public slots:
     void UpdateCapacity(double i, double dt);

@@ -26,6 +26,30 @@ RaceCar::RaceCar(QObject *parent, double dtm, double dtpi, double D, double C, d
     PITmr.start();
 }
 
+double RaceCar::IsStop()
+{
+    if(state == stop)
+        return 10;
+    else
+        return 0;
+}
+
+double RaceCar::IsDREN()
+{
+    if(state == dren)
+        return 10;
+    else
+        return 0;
+}
+
+double RaceCar::IsHVEN()
+{
+    if(state == hven)
+        return 10;
+    else
+        return 0;
+}
+
 void RaceCar::MotTimeout()
 {
     double w = motor.GetW();

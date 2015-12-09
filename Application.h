@@ -4,6 +4,7 @@
 #include <QApplication>
 #include <QQmlApplicationEngine>
 #include <QString>
+#include <QVector>
 #include <QDebug>
 #include <QThread>
 #include <QTimer>
@@ -38,9 +39,10 @@ private:
     CommunicationSerialPort serialPort;
     QTimer dataSendTimer;
 
-    void SendData(quint16 code, double value);
-    void SendDataFromClient(quint16 code, double value);
-    void PutInByteArray(quint16 code, double value, QByteArray& ba);
+    void SendData(quint16, double);
+    void SendDataFromClient(quint16, double);
+    void PutInByteArray(quint16, double, QByteArray&);
+    void PutVectorInByteArray(quint16, QVector<double>&, QByteArray&);
 
 signals:
     //void dataReady(QMap<quint16, double>&, QMap<QString, quint16>&);

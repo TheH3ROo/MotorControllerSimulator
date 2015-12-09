@@ -27,7 +27,10 @@ public:
     double GetVbat(){return accu.GetVbat();}
     double GetVrail(){return accu.GetVrail();}
     double GetVref(){return vref;}
-
+    double IsStop();
+    double IsHVEN();
+    double IsDREN();
+    const QVector<double>& GetVCell(){return accu.GetVCell();}
 private:
     QTimer motTmr, PITmr;
     DCMotor motor;
