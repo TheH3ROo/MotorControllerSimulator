@@ -1,0 +1,5 @@
+<map id="RaceCar::MotTimeout" name="RaceCar::MotTimeout">
+<area shape="rect" id="node2" href="$class_d_c_motor.html#a026043923b487d9d44a9e0b5b93b0701" title="DCMotor::GetW" alt="" coords="207,5,322,32"/>
+<area shape="rect" id="node3" href="$class_p_i_ctrler.html#ae0428a99bf1cd404cdb7d2715593702f" title="PICtrler::GetValue" alt="" coords="201,56,328,83"/>
+<area shape="rect" id="node4" href="$class_d_c_motor.html#aa5e21b3a40c4257502e838704659837c" title="DCMotor::GetI" alt="" coords="212,107,317,133"/>
+</map>

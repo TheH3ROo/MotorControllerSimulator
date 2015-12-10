@@ -1,0 +1,4 @@
+<map id="RaceCar::PITimeout" name="RaceCar::PITimeout">
+<area shape="rect" id="node2" href="$class_d_c_motor.html#a026043923b487d9d44a9e0b5b93b0701" title="DCMotor::GetW" alt="" coords="210,5,325,32"/>
+<area shape="rect" id="node3" href="$class_accumulator.html#a5720b8db3fa482b82f71fdda8e704795" title="Accumulator::GetVrail" alt="" coords="192,56,343,83"/>
+</map>

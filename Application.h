@@ -21,6 +21,7 @@
  * @brief Alkalmazás osztály. A main() példányosítja és indítja el.
  *
  * A konstruktor elvégzi az alapvető példányosításokat és a signalok összekapcsolását.
+ * Tartalmazza a kommunikációs obejektumokat, adatparsolást, biztosítja az objektumok közötti kommunikációt.
  */
 class Application : public QApplication
 {
@@ -29,8 +30,10 @@ class Application : public QApplication
 public:
     /** Konstruktor. Alapvető példányosítások és signal bekötések. */
     Application(int argc, char *argv[]);
-    //~Application() = default;
+
 private:
+    /** Obejktumok példányosítása.*/
+
     RaceCar car;
     QQmlApplicationEngine engine;
     CommunicationTcpSocketServer tcpServer;
@@ -39,20 +42,36 @@ private:
     CommunicationSerialPort serialPort;
     QTimer dataSendTimer;
 
+    /** Egy adatot küld el a TCP szerverről a kliensnek. Paraméterek: @see DataParser*/
     void SendData(quint16, double);
+    /** Egy adatot küld el a TCP kliensről a szervernek. Paraméterek: @see DataParser*/
     void SendDataFromClient(quint16, double);
-    void PutInByteArray(quint16, double, QByteArray&);
-    void PutVectorInByteArray(quint16, QVector<double>&, QByteArray&);
-
-signals:
-    //void dataReady(QMap<quint16, double>&, QMap<QString, quint16>&);
+    /** Ahhoz, hogy egyszerre tudjuk elküldeni az összes adatot a kliens számára,
+     * minden adatot egy ByteArray-be kell elhelyezni, ezt tudjuk átadni a kommunikációs
+     * objektumoknak(@see Communication::send). Ez a függvény ezt a folyamatot segíti meg,
+     * elrejti a felhasználó elől az elsőre bonyolultnak tűnő műveleteket.
+     * @param code  Adathoz tartozó 16bites kód. @see DataParser
+     * @param value Az elküldendő adat.
+     * @param ba    Ebbe a ByteArray-be kerül bele az adat.
+    */
+    void PutInByteArray(quint16 code, double value, QByteArray& ba);
+    /** A cellafeszültségeket vektorként küldjük el, ez a függvény ebben nyújt segítséget.
+     * @param code  A cellafeszültségekhez tartozó kód. @see DataParser
+     * @param value Az elküldendő adatvektor.
+     * @param ba    Ebbe a ByteArray-be kerül bele az adat.
+    */
+    void PutVectorInByteArray(quint16 code, QVector<double>& value, QByteArray& ba);
 
 public slots:
+    /** Hibakezelésért felelős slot.*/
     void errorHandling(const QString&);
+    /** A paraméterként kapott stringet elküldi a kliensnek.*/
     void sendString(const QString&);
 
 private slots:
+    /** Hatására az Application::car objektumtól lekért adatokat elküldi a TCP kliensnek.*/
     void sendData();
+    /** Hibakereséshez használható változat. @see Application:sendData*/
     void sendDataDebug();
     void startDataSendTimer(){dataSendTimer.start();}
     void stopDataSendTimer(){dataSendTimer.stop();}

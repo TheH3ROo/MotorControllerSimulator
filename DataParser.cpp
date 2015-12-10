@@ -52,16 +52,10 @@ void DataParser::dataInput(QDataStream& stream)
         i++;
     }
 
-//DEBUG!
-    //PrintDataToDebug();
-//DEBUG!
-
     emit dataReady(dataMap, codeMap);
 
     return;
 }
-
-// Test for master branch
 
 void DataParser::PrintDataToDebug()
 {

@@ -16,7 +16,7 @@ Accumulator::Accumulator():
     u=umax;
     cellnum = cellnum_def;
 
-    /** A cellafeszültségek nem egyformák a valóságban, ezt kis mértékű offszettel valósítom meg.*/
+    // A cellafeszültségek nem egyformák a valóságban, ezt kis mértékű offszettel valósítom meg.
     celldiff.append(1.01);
     celldiff.append(0.98);
     celldiff.append(0.97);

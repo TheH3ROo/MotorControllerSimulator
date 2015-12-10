@@ -1,0 +1,4 @@
+<map id="CommunicationSerialPort::connect" name="CommunicationSerialPort::connect">
+<area shape="rect" id="node2" href="$class_communication.html#ad353a908e815c98158f6145e7104bc4f" title="Communication::dataReceived" alt="" coords="223,13,420,39"/>
+<area shape="rect" id="node3" href="$class_communication.html#adf0ba74b7d1e1c993a9166b68b7d5b97" title="Communication::getReceive\lStream" alt="" coords="468,5,651,47"/>
+</map>

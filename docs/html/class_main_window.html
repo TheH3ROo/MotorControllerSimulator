@@ -65,7 +65,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Keresés');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Osztálylista</span></a></li>
       <li><a href="classes.html"><span>Osztálymutató</span></a></li>
-      <li><a href="hierarchy.html"><span>Osztályhierarchia</span></a></li>
+      <li><a href="inherits.html"><span>Osztályhierarchia</span></a></li>
       <li><a href="functions.html"><span>Osztálytagok</span></a></li>
     </ul>
   </div>
@@ -87,21 +87,27 @@ var searchBox = new SearchBox("searchBox", "search",false,'Keresés');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Publikus tagfüggvények</a> &#124;
+<a href="#pri-attribs">Privát attribútumok</a> &#124;
 <a href="class_main_window-members.html">A tagok teljes listája</a>  </div>
   <div class="headertitle">
 <div class="title">MainWindow osztályreferencia</div>  </div>
 </div><!--header-->
 <div class="contents">
 
+<p>A GUI felület létrehozásáért felelős objektum.  
+ <a href="class_main_window.html#details">Részletek...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_main_window_8h_source.html">MainWindow.h</a>&gt;</code></p>
 <div class="dynheader">
 A MainWindow osztály származási diagramja:</div>
 <div class="dyncontent">
- <div class="center">
-  <img src="class_main_window.png" usemap="#MainWindow_map" alt=""/>
-  <map id="MainWindow_map" name="MainWindow_map">
-</map>
- </div></div>
+<div class="center"><img src="class_main_window__inherit__graph.png" border="0" usemap="#_main_window_inherit__map" alt="Inheritance graph"/></div>
+<center><span class="legend">[<a href="graph_legend.html">Jelmagyarázat</a>]</span></center></div>
+<div class="dynheader">
+A MainWindow osztály együttműködési diagramja:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_main_window__coll__graph.png" border="0" usemap="#_main_window_coll__map" alt="Collaboration graph"/></div>
+<center><span class="legend">[<a href="graph_legend.html">Jelmagyarázat</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Publikus tagfüggvények</h2></td></tr>
@@ -109,8 +115,16 @@ Publikus tagfüggvények</h2></td></tr>
 <tr class="separator:a8b244be8b7b7db1b08de2a2acb9409db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae98d00a93bc118200eeef9f9bba1dba7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#ae98d00a93bc118200eeef9f9bba1dba7">~MainWindow</a> ()</td></tr>
 <tr class="separator:ae98d00a93bc118200eeef9f9bba1dba7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Privát attribútumok</h2></td></tr>
+<tr class="memitem:a35466a70ed47252a0191168126a352a5"><td class="memItemLeft" align="right" valign="top">Ui::MainWindow *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a></td></tr>
+<tr class="separator:a35466a70ed47252a0191168126a352a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Konstruktorok és destruktorok dokumentációja</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Részletes leírás</h2>
+<div class="textblock"><p>A GUI felület létrehozásáért felelős objektum. </p>
+<p>Jelenleg csak azért van, hogy egy ablak feljövetele jelezze a szimulátor indulását, funkciója egyenlőre nincsen. </p>
+</div><h2 class="groupheader">Konstruktorok és destruktorok dokumentációja</h2>
 <a class="anchor" id="a8b244be8b7b7db1b08de2a2acb9409db"></a>
 <div class="memitem">
 <div class="memproto">
@@ -146,6 +160,27 @@ Publikus tagfüggvények</h2></td></tr>
           <td></td>
         </tr>
       </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Adattagok dokumentációja</h2>
+<a class="anchor" id="a35466a70ed47252a0191168126a352a5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Ui::MainWindow* MainWindow::ui</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>

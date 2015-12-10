@@ -1,0 +1,6 @@
+<map id="CommunicationTcpSocket::setSocket" name="CommunicationTcpSocket::setSocket">
+<area shape="rect" id="node2" href="$class_communication_tcp_socket.html#ae8e52251a25607afb988c43f43551b0a" title="CommunicationTcpSocket\l::handleError" alt="" coords="239,5,414,47"/>
+<area shape="rect" id="node3" href="$class_communication.html#ad353a908e815c98158f6145e7104bc4f" title="Communication::dataReceived" alt="" coords="228,71,425,98"/>
+<area shape="rect" id="node5" href="$class_communication.html#a4e1587f6fdd18820a4aa9c1902332f04" title="Communication::connectTo\lDevice" alt="" coords="237,123,417,164"/>
+<area shape="rect" id="node4" href="$class_communication.html#adf0ba74b7d1e1c993a9166b68b7d5b97" title="Communication::getReceive\lStream" alt="" coords="473,64,656,105"/>
+</map>

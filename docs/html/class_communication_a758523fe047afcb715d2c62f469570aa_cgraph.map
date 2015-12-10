@@ -1,0 +1,4 @@
+<map id="Communication::send" name="Communication::send">
+<area shape="rect" id="node2" href="$class_communication.html#a55270f00472fa162061787fa4eae532b" title="Communication::getSendStream" alt="" coords="201,5,412,32"/>
+<area shape="rect" id="node3" href="$class_communication.html#ac818c645c8ed63af3e871f017e30ed02" title="Communication::sendBuffer\lContent" alt="" coords="216,57,397,98"/>
+</map>

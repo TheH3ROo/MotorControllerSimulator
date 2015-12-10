@@ -65,7 +65,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Keresés');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Osztálylista</span></a></li>
       <li><a href="classes.html"><span>Osztálymutató</span></a></li>
-      <li><a href="hierarchy.html"><span>Osztályhierarchia</span></a></li>
+      <li><a href="inherits.html"><span>Osztályhierarchia</span></a></li>
       <li><a href="functions.html"><span>Osztálytagok</span></a></li>
     </ul>
   </div>
@@ -88,6 +88,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Keresés');
   <div class="summary">
 <a href="#pub-slots">Publikus rések</a> &#124;
 <a href="#pub-methods">Publikus tagfüggvények</a> &#124;
+<a href="#pri-slots">Privát rések</a> &#124;
+<a href="#pri-methods">Privát tagfüggvények</a> &#124;
+<a href="#pri-attribs">Privát attribútumok</a> &#124;
 <a href="class_application-members.html">A tagok teljes listája</a>  </div>
   <div class="headertitle">
 <div class="title">Application osztályreferencia</div>  </div>
@@ -101,11 +104,25 @@ var searchBox = new SearchBox("searchBox", "search",false,'Keresés');
 <div class="dynheader">
 Az Application osztály származási diagramja:</div>
 <div class="dyncontent">
- <div class="center">
-  <img src="class_application.png" usemap="#Application_map" alt=""/>
-  <map id="Application_map" name="Application_map">
+<div class="center"><img src="class_application__inherit__graph.png" border="0" usemap="#_application_inherit__map" alt="Inheritance graph"/></div>
+<center><span class="legend">[<a href="graph_legend.html">Jelmagyarázat</a>]</span></center></div>
+<div class="dynheader">
+Az Application osztály együttműködési diagramja:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_application__coll__graph.png" border="0" usemap="#_application_coll__map" alt="Collaboration graph"/></div>
+<map name="_application_coll__map" id="_application_coll__map">
+<area shape="rect" id="node3" href="class_data_parser.html" title="Az kapott adat értelmezéséért, szétbontásáért felelős objektum. " alt="" coords="261,68,348,95"/>
+<area shape="rect" id="node7" href="class_communication.html" title="Stream alapú kommunikációs ősosztály. " alt="" coords="125,148,237,175"/>
+<area shape="rect" id="node10" href="class_race_car.html" title="Elektromos versenyautót szimuláló osztály. " alt="" coords="423,272,495,299"/>
+<area shape="rect" id="node11" href="class_accumulator.html" title="LiIon akkumulátor csomagot megvalósító osztály. " alt="" coords="134,249,229,276"/>
+<area shape="rect" id="node12" href="class_p_i_ctrler.html" title="PI szabályozót megvalósító osztály. " alt="" coords="149,300,214,327"/>
+<area shape="rect" id="node13" href="class_d_c_motor.html" title="DC motort szimuláló osztály. " alt="" coords="145,351,218,377"/>
+<area shape="rect" id="node5" href="class_communication_tcp_socket_client.html" title="QTcpSocket alapú kommunikáció kliens oldala. " alt="" coords="766,107,973,133"/>
+<area shape="rect" id="node6" href="class_communication_tcp_socket.html" title="TCP socket alapú kommunikációra kialakított leszármazottja az általános Communication osztálynak..." alt="" coords="372,115,547,141"/>
+<area shape="rect" id="node9" href="class_communication_tcp_socket_server.html" title="TCP/IP szerver socket. " alt="" coords="764,157,975,184"/>
+<area shape="rect" id="node8" href="class_communication_serial_port.html" title="Soros port kommunikáció " alt="" coords="571,197,740,224"/>
 </map>
- </div></div>
+<center><span class="legend">[<a href="graph_legend.html">Jelmagyarázat</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-slots"></a>
 Publikus rések</h2></td></tr>
@@ -118,10 +135,49 @@ Publikus rések</h2></td></tr>
 Publikus tagfüggvények</h2></td></tr>
 <tr class="memitem:a4f945a7f8d003a3b8f716f7128206329"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_application.html#a4f945a7f8d003a3b8f716f7128206329">Application</a> (int argc, char *argv[])</td></tr>
 <tr class="separator:a4f945a7f8d003a3b8f716f7128206329"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-slots"></a>
+Privát rések</h2></td></tr>
+<tr class="memitem:aa61db470698441ef02ced6286f3a859a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_application.html#aa61db470698441ef02ced6286f3a859a">sendData</a> ()</td></tr>
+<tr class="separator:aa61db470698441ef02ced6286f3a859a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace28af03fbc0b49d32035210bfee522e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_application.html#ace28af03fbc0b49d32035210bfee522e">sendDataDebug</a> ()</td></tr>
+<tr class="separator:ace28af03fbc0b49d32035210bfee522e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6b3296dc5ce46190ac30cc7f6135e92"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_application.html#ab6b3296dc5ce46190ac30cc7f6135e92">startDataSendTimer</a> ()</td></tr>
+<tr class="separator:ab6b3296dc5ce46190ac30cc7f6135e92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8ef60ede362fbf8f3b92964dad123d7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_application.html#ad8ef60ede362fbf8f3b92964dad123d7">stopDataSendTimer</a> ()</td></tr>
+<tr class="separator:ad8ef60ede362fbf8f3b92964dad123d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Privát tagfüggvények</h2></td></tr>
+<tr class="memitem:aae140ebe65e3415cd70f2ee247f9d435"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_application.html#aae140ebe65e3415cd70f2ee247f9d435">SendData</a> (quint16, double)</td></tr>
+<tr class="separator:aae140ebe65e3415cd70f2ee247f9d435"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6eb519251f443e418a59a91f05ea5cee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_application.html#a6eb519251f443e418a59a91f05ea5cee">SendDataFromClient</a> (quint16, double)</td></tr>
+<tr class="separator:a6eb519251f443e418a59a91f05ea5cee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a785ce03e0ed49f448a56d7d3dbac1cce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_application.html#a785ce03e0ed49f448a56d7d3dbac1cce">PutInByteArray</a> (quint16 code, double value, QByteArray &amp;ba)</td></tr>
+<tr class="separator:a785ce03e0ed49f448a56d7d3dbac1cce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1f74c1b7effc3a53812c2799447e850"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_application.html#ae1f74c1b7effc3a53812c2799447e850">PutVectorInByteArray</a> (quint16 code, QVector&lt; double &gt; &amp;value, QByteArray &amp;ba)</td></tr>
+<tr class="separator:ae1f74c1b7effc3a53812c2799447e850"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Privát attribútumok</h2></td></tr>
+<tr class="memitem:a4ac4d911e08afe1392bc0701ee126ccd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_race_car.html">RaceCar</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_application.html#a4ac4d911e08afe1392bc0701ee126ccd">car</a></td></tr>
+<tr class="separator:a4ac4d911e08afe1392bc0701ee126ccd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14b639af07c347a7622e4b76dcedb26b"><td class="memItemLeft" align="right" valign="top">QQmlApplicationEngine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_application.html#a14b639af07c347a7622e4b76dcedb26b">engine</a></td></tr>
+<tr class="separator:a14b639af07c347a7622e4b76dcedb26b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60833c27861b9030f5266e15a0beb98b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_communication_tcp_socket_server.html">CommunicationTcpSocketServer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_application.html#a60833c27861b9030f5266e15a0beb98b">tcpServer</a></td></tr>
+<tr class="separator:a60833c27861b9030f5266e15a0beb98b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fa69eb22a08fa20eb2080fb28117254"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_communication_tcp_socket_client.html">CommunicationTcpSocketClient</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_application.html#a3fa69eb22a08fa20eb2080fb28117254">tcpClient</a></td></tr>
+<tr class="separator:a3fa69eb22a08fa20eb2080fb28117254"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8beea995ee6b6aa7a48d82d96adbdc5a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_data_parser.html">DataParser</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_application.html#a8beea995ee6b6aa7a48d82d96adbdc5a">dataParser</a></td></tr>
+<tr class="separator:a8beea995ee6b6aa7a48d82d96adbdc5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8f2e2bc0d9d82cd3d6d504924fa4783"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_communication_serial_port.html">CommunicationSerialPort</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_application.html#ac8f2e2bc0d9d82cd3d6d504924fa4783">serialPort</a></td></tr>
+<tr class="separator:ac8f2e2bc0d9d82cd3d6d504924fa4783"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83bf199313c0160c79254c613f399854"><td class="memItemLeft" align="right" valign="top">QTimer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_application.html#a83bf199313c0160c79254c613f399854">dataSendTimer</a></td></tr>
+<tr class="separator:a83bf199313c0160c79254c613f399854"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Részletes leírás</h2>
 <div class="textblock"><p>Alkalmazás osztály. A <a class="el" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main()</a> példányosítja és indítja el. </p>
-<p>A konstruktor elvégzi az alapvető példányosításokat és a signalok összekapcsolását. </p>
+<p>A konstruktor elvégzi az alapvető példányosításokat és a signalok összekapcsolását. Tartalmazza a kommunikációs obejektumokat, adatparsolást, biztosítja az objektumok közötti kommunikációt. </p>
 </div><h2 class="groupheader">Konstruktorok és destruktorok dokumentációja</h2>
 <a class="anchor" id="a4f945a7f8d003a3b8f716f7128206329"></a>
 <div class="memitem">
@@ -151,10 +207,51 @@ Publikus tagfüggvények</h2></td></tr>
 <p>Ha a TCP szerverre kapcsolat érkezik, indulhat az adatok kiküldése, előtte felesleges.</p>
 <p>A dataParser és a car közötti jelek összekötése.</p>
 <p>A hibajelek signaljainak összekötése.</p>
-<p>Kommunikáció indítása, kapcsolódás.</p>
+<p>Kommunikáció indítása, kapcsolódás. A szerver már fut, a soros port nyitása van még hátra.</p>
 <p>String küldéséhez tartozó jelek bekötése.</p>
-<p>Adat küldés timer inicializálása.</p>
-<p>Folyamatos timer legyen. </p>
+<p>Adat küldés timer inicializálása. </p>
+
+<p><div class="dynheader">
+A függvény hívási gráfja:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_application_a4f945a7f8d003a3b8f716f7128206329_cgraph.png" border="0" usemap="#class_application_a4f945a7f8d003a3b8f716f7128206329_cgraph" alt=""/></div>
+<map name="class_application_a4f945a7f8d003a3b8f716f7128206329_cgraph" id="class_application_a4f945a7f8d003a3b8f716f7128206329_cgraph">
+<area shape="rect" id="node2" href="class_application.html#ab6b3296dc5ce46190ac30cc7f6135e92" title="Application::startDataSend\lTimer" alt="" coords="212,5,389,47"/>
+<area shape="rect" id="node3" href="class_application.html#ad8ef60ede362fbf8f3b92964dad123d7" title="Application::stopDataSend\lTimer" alt="" coords="213,71,389,112"/>
+<area shape="rect" id="node4" href="class_application.html#a35b0dd44c63b66879e03e30982cbe589" title="Application::errorHandling" alt="" coords="215,137,386,163"/>
+<area shape="rect" id="node5" href="class_communication_serial_port.html#a9f4b0b50d8414e14732961db77c10885" title="CommunicationSerialPort\l::connect" alt="" coords="216,188,385,229"/>
+<area shape="rect" id="node8" href="class_application.html#abdf132e4c5a31d10b800610659c33e66" title="Application::sendString" alt="" coords="223,254,379,281"/>
+<area shape="rect" id="node13" href="class_application.html#aa61db470698441ef02ced6286f3a859a" title="Application::sendData" alt="" coords="226,583,375,610"/>
+<area shape="rect" id="node6" href="class_communication.html#ad353a908e815c98158f6145e7104bc4f" title="Communication::dataReceived" alt="" coords="437,166,635,193"/>
+<area shape="rect" id="node7" href="class_communication.html#adf0ba74b7d1e1c993a9166b68b7d5b97" title="Communication::getReceive\lStream" alt="" coords="697,147,879,188"/>
+<area shape="rect" id="node9" href="class_data_parser.html#abfec1884cfd3235e0d46cd4a1dc112df" title="DataParser::GetCode" alt="" coords="463,279,609,306"/>
+<area shape="rect" id="node10" href="class_communication.html#a758523fe047afcb715d2c62f469570aa" title="Communication::send" alt="" coords="462,229,610,255"/>
+<area shape="rect" id="node11" href="class_communication.html#a55270f00472fa162061787fa4eae532b" title="Communication::getSendStream" alt="" coords="683,213,893,239"/>
+<area shape="rect" id="node12" href="class_communication.html#ac818c645c8ed63af3e871f017e30ed02" title="Communication::sendBuffer\lContent" alt="" coords="697,264,879,305"/>
+<area shape="rect" id="node14" href="class_application.html#a785ce03e0ed49f448a56d7d3dbac1cce" title="Application::PutInByteArray" alt="" coords="445,802,627,829"/>
+<area shape="rect" id="node15" href="class_race_car.html#a2fb4e4fee325b978ecf8eccc0c33c5b1" title="RaceCar::IsStop" alt="" coords="477,853,595,879"/>
+<area shape="rect" id="node16" href="class_race_car.html#a9f99f6ed0883839d20ae1661c385fb94" title="RaceCar::IsHVEN" alt="" coords="473,903,599,930"/>
+<area shape="rect" id="node17" href="class_race_car.html#a33d9d86e76d0799a188b56c0ff32e32c" title="RaceCar::IsDREN" alt="" coords="473,954,599,981"/>
+<area shape="rect" id="node18" href="class_race_car.html#a3189f80cfa5b724352e254d61bf1b892" title="RaceCar::GetSpeed" alt="" coords="467,1005,605,1031"/>
+<area shape="rect" id="node19" href="class_race_car.html#afaf526970a2bb73a3526eeb6670253af" title="RaceCar::GetAngSpeed" alt="" coords="455,330,617,357"/>
+<area shape="rect" id="node21" href="class_race_car.html#a7c2bdb79c6a9152d5781fadd267364e7" title="RaceCar::GetTorq" alt="" coords="473,381,599,407"/>
+<area shape="rect" id="node23" href="class_race_car.html#aa41241995c89892f43914564c1efd249" title="RaceCar::GetCurr" alt="" coords="473,431,599,458"/>
+<area shape="rect" id="node25" href="class_race_car.html#acf47a00d02df89a73225cf322d9be5c0" title="RaceCar::GetCapac" alt="" coords="467,482,605,509"/>
+<area shape="rect" id="node27" href="class_race_car.html#abe76e92ec9a5701235404f162b8c0a3f" title="RaceCar::GetVbat" alt="" coords="472,533,600,559"/>
+<area shape="rect" id="node29" href="class_race_car.html#a03d94de7065a5293e9ea142055d27a05" title="RaceCar::GetVrail" alt="" coords="473,583,599,610"/>
+<area shape="rect" id="node31" href="class_race_car.html#a78f6da7999486db4750a14f05727db32" title="RaceCar::GetVref" alt="" coords="474,634,598,661"/>
+<area shape="rect" id="node32" href="class_race_car.html#a85367304dbc71deea7b54f3da3ac4c90" title="RaceCar::GetVCell" alt="" coords="470,685,602,711"/>
+<area shape="rect" id="node34" href="class_application.html#ae1f74c1b7effc3a53812c2799447e850" title="Application::PutVectorIn\lByteArray" alt="" coords="455,736,617,777"/>
+<area shape="rect" id="node20" href="class_d_c_motor.html#a026043923b487d9d44a9e0b5b93b0701" title="DCMotor::GetW" alt="" coords="731,330,845,357"/>
+<area shape="rect" id="node22" href="class_d_c_motor.html#aac21b47f32e489b1ceb910e991dc63de" title="DCMotor::GetM" alt="" coords="731,381,845,407"/>
+<area shape="rect" id="node24" href="class_d_c_motor.html#aa5e21b3a40c4257502e838704659837c" title="DCMotor::GetI" alt="" coords="735,431,841,458"/>
+<area shape="rect" id="node26" href="class_accumulator.html#a4821f445e39d461046f9fa8630be00fe" title="Accumulator::GetAh" alt="" coords="718,482,858,509"/>
+<area shape="rect" id="node28" href="class_accumulator.html#af22fd564b9635f4641e903eac84f5d00" title="Accumulator::GetVbat" alt="" coords="713,533,863,559"/>
+<area shape="rect" id="node30" href="class_accumulator.html#a5720b8db3fa482b82f71fdda8e704795" title="Accumulator::GetVrail" alt="" coords="713,583,863,610"/>
+<area shape="rect" id="node33" href="class_accumulator.html#adc96c9233a2f5b4d4c4a54609d1a5ce9" title="Accumulator::GetVCell" alt="" coords="711,685,865,711"/>
+</map>
+</div>
+</p>
 
 </div>
 </div>
@@ -180,6 +277,384 @@ Publikus tagfüggvények</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Hibakezelésért felelős slot. </p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_application_a35b0dd44c63b66879e03e30982cbe589_icgraph.png" border="0" usemap="#class_application_a35b0dd44c63b66879e03e30982cbe589_icgraph" alt=""/></div>
+<map name="class_application_a35b0dd44c63b66879e03e30982cbe589_icgraph" id="class_application_a35b0dd44c63b66879e03e30982cbe589_icgraph">
+<area shape="rect" id="node2" href="class_application.html#a4f945a7f8d003a3b8f716f7128206329" title="Application::Application" alt="" coords="224,5,383,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a785ce03e0ed49f448a56d7d3dbac1cce"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Application::PutInByteArray </td>
+          <td>(</td>
+          <td class="paramtype">quint16&#160;</td>
+          <td class="paramname"><em>code</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QByteArray &amp;&#160;</td>
+          <td class="paramname"><em>ba</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Ahhoz, hogy egyszerre tudjuk elküldeni az összes adatot a kliens számára, minden adatot egy ByteArray-be kell elhelyezni, ezt tudjuk átadni a kommunikációs objektumoknak(</p><dl class="section see"><dt>Lásd még</dt><dd><a class="el" href="class_communication.html#a758523fe047afcb715d2c62f469570aa">Communication::send</a>). Ez a függvény ezt a folyamatot segíti meg, elrejti a felhasználó elől az elsőre bonyolultnak tűnő műveleteket. </dd></dl>
+<dl class="params"><dt>Paraméterek</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">code</td><td>Adathoz tartozó 16bites kód. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>Lásd még</dt><dd><a class="el" href="class_data_parser.html" title="Az kapott adat értelmezéséért, szétbontásáért felelős objektum. ">DataParser</a> </dd></dl>
+<dl class="params"><dt>Paraméterek</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>Az elküldendő adat. </td></tr>
+    <tr><td class="paramname">ba</td><td>Ebbe a ByteArray-be kerül bele az adat. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_application_a785ce03e0ed49f448a56d7d3dbac1cce_icgraph.png" border="0" usemap="#class_application_a785ce03e0ed49f448a56d7d3dbac1cce_icgraph" alt=""/></div>
+<map name="class_application_a785ce03e0ed49f448a56d7d3dbac1cce_icgraph" id="class_application_a785ce03e0ed49f448a56d7d3dbac1cce_icgraph">
+<area shape="rect" id="node2" href="class_application.html#aa61db470698441ef02ced6286f3a859a" title="Application::sendData" alt="" coords="236,5,385,32"/>
+<area shape="rect" id="node3" href="class_application.html#a4f945a7f8d003a3b8f716f7128206329" title="Application::Application" alt="" coords="433,5,592,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ae1f74c1b7effc3a53812c2799447e850"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Application::PutVectorInByteArray </td>
+          <td>(</td>
+          <td class="paramtype">quint16&#160;</td>
+          <td class="paramname"><em>code</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QVector&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QByteArray &amp;&#160;</td>
+          <td class="paramname"><em>ba</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>A cellafeszültségeket vektorként küldjük el, ez a függvény ebben nyújt segítséget. </p><dl class="params"><dt>Paraméterek</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">code</td><td>A cellafeszültségekhez tartozó kód. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>Lásd még</dt><dd><a class="el" href="class_data_parser.html" title="Az kapott adat értelmezéséért, szétbontásáért felelős objektum. ">DataParser</a> </dd></dl>
+<dl class="params"><dt>Paraméterek</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>Az elküldendő adatvektor. </td></tr>
+    <tr><td class="paramname">ba</td><td>Ebbe a ByteArray-be kerül bele az adat. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_application_ae1f74c1b7effc3a53812c2799447e850_icgraph.png" border="0" usemap="#class_application_ae1f74c1b7effc3a53812c2799447e850_icgraph" alt=""/></div>
+<map name="class_application_ae1f74c1b7effc3a53812c2799447e850_icgraph" id="class_application_ae1f74c1b7effc3a53812c2799447e850_icgraph">
+<area shape="rect" id="node2" href="class_application.html#aa61db470698441ef02ced6286f3a859a" title="Application::sendData" alt="" coords="216,13,365,39"/>
+<area shape="rect" id="node3" href="class_application.html#a4f945a7f8d003a3b8f716f7128206329" title="Application::Application" alt="" coords="413,13,572,39"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="aae140ebe65e3415cd70f2ee247f9d435"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Application::SendData </td>
+          <td>(</td>
+          <td class="paramtype">quint16&#160;</td>
+          <td class="paramname"><em>code</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Egy adatot küld el a TCP szerverről a kliensnek. Paraméterek: </p><dl class="section see"><dt>Lásd még</dt><dd><a class="el" href="class_data_parser.html" title="Az kapott adat értelmezéséért, szétbontásáért felelős objektum. ">DataParser</a> </dd></dl>
+
+<p><div class="dynheader">
+A függvény hívási gráfja:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_application_aae140ebe65e3415cd70f2ee247f9d435_cgraph.png" border="0" usemap="#class_application_aae140ebe65e3415cd70f2ee247f9d435_cgraph" alt=""/></div>
+<map name="class_application_aae140ebe65e3415cd70f2ee247f9d435_cgraph" id="class_application_aae140ebe65e3415cd70f2ee247f9d435_cgraph">
+<area shape="rect" id="node2" href="class_communication.html#a758523fe047afcb715d2c62f469570aa" title="Communication::send" alt="" coords="204,35,352,61"/>
+<area shape="rect" id="node3" href="class_communication.html#a55270f00472fa162061787fa4eae532b" title="Communication::getSendStream" alt="" coords="400,5,611,32"/>
+<area shape="rect" id="node4" href="class_communication.html#ac818c645c8ed63af3e871f017e30ed02" title="Communication::sendBuffer\lContent" alt="" coords="415,57,596,98"/>
+</map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_application_aae140ebe65e3415cd70f2ee247f9d435_icgraph.png" border="0" usemap="#class_application_aae140ebe65e3415cd70f2ee247f9d435_icgraph" alt=""/></div>
+<map name="class_application_aae140ebe65e3415cd70f2ee247f9d435_icgraph" id="class_application_aae140ebe65e3415cd70f2ee247f9d435_icgraph">
+<area shape="rect" id="node2" href="class_application.html#ace28af03fbc0b49d32035210bfee522e" title="Application::sendDataDebug" alt="" coords="204,5,391,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="aa61db470698441ef02ced6286f3a859a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Application::sendData </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Hatására az <a class="el" href="class_application.html#a4ac4d911e08afe1392bc0701ee126ccd">Application::car</a> objektumtól lekért adatokat elküldi a TCP kliensnek. </p>
+<p>A cellafeszültségek külön eljárást igényelnek. </p>
+
+<p><div class="dynheader">
+A függvény hívási gráfja:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_application_aa61db470698441ef02ced6286f3a859a_cgraph.png" border="0" usemap="#class_application_aa61db470698441ef02ced6286f3a859a_cgraph" alt=""/></div>
+<map name="class_application_aa61db470698441ef02ced6286f3a859a_cgraph" id="class_application_aa61db470698441ef02ced6286f3a859a_cgraph">
+<area shape="rect" id="node2" href="class_application.html#a785ce03e0ed49f448a56d7d3dbac1cce" title="Application::PutInByteArray" alt="" coords="203,5,385,32"/>
+<area shape="rect" id="node3" href="class_data_parser.html#abfec1884cfd3235e0d46cd4a1dc112df" title="DataParser::GetCode" alt="" coords="221,56,367,83"/>
+<area shape="rect" id="node4" href="class_race_car.html#a2fb4e4fee325b978ecf8eccc0c33c5b1" title="RaceCar::IsStop" alt="" coords="235,107,353,133"/>
+<area shape="rect" id="node5" href="class_race_car.html#a9f99f6ed0883839d20ae1661c385fb94" title="RaceCar::IsHVEN" alt="" coords="231,157,357,184"/>
+<area shape="rect" id="node6" href="class_race_car.html#a33d9d86e76d0799a188b56c0ff32e32c" title="RaceCar::IsDREN" alt="" coords="231,208,357,235"/>
+<area shape="rect" id="node7" href="class_race_car.html#a3189f80cfa5b724352e254d61bf1b892" title="RaceCar::GetSpeed" alt="" coords="225,259,363,285"/>
+<area shape="rect" id="node8" href="class_race_car.html#afaf526970a2bb73a3526eeb6670253af" title="RaceCar::GetAngSpeed" alt="" coords="213,309,375,336"/>
+<area shape="rect" id="node10" href="class_race_car.html#a7c2bdb79c6a9152d5781fadd267364e7" title="RaceCar::GetTorq" alt="" coords="231,360,357,387"/>
+<area shape="rect" id="node12" href="class_race_car.html#aa41241995c89892f43914564c1efd249" title="RaceCar::GetCurr" alt="" coords="231,411,357,437"/>
+<area shape="rect" id="node14" href="class_race_car.html#acf47a00d02df89a73225cf322d9be5c0" title="RaceCar::GetCapac" alt="" coords="225,461,363,488"/>
+<area shape="rect" id="node16" href="class_race_car.html#abe76e92ec9a5701235404f162b8c0a3f" title="RaceCar::GetVbat" alt="" coords="230,512,358,539"/>
+<area shape="rect" id="node18" href="class_race_car.html#a03d94de7065a5293e9ea142055d27a05" title="RaceCar::GetVrail" alt="" coords="231,563,357,589"/>
+<area shape="rect" id="node20" href="class_race_car.html#a78f6da7999486db4750a14f05727db32" title="RaceCar::GetVref" alt="" coords="232,613,356,640"/>
+<area shape="rect" id="node21" href="class_race_car.html#a85367304dbc71deea7b54f3da3ac4c90" title="RaceCar::GetVCell" alt="" coords="228,664,360,691"/>
+<area shape="rect" id="node23" href="class_application.html#ae1f74c1b7effc3a53812c2799447e850" title="Application::PutVectorIn\lByteArray" alt="" coords="213,715,375,757"/>
+<area shape="rect" id="node24" href="class_communication.html#a758523fe047afcb715d2c62f469570aa" title="Communication::send" alt="" coords="220,781,368,808"/>
+<area shape="rect" id="node9" href="class_d_c_motor.html#a026043923b487d9d44a9e0b5b93b0701" title="DCMotor::GetW" alt="" coords="481,309,596,336"/>
+<area shape="rect" id="node11" href="class_d_c_motor.html#aac21b47f32e489b1ceb910e991dc63de" title="DCMotor::GetM" alt="" coords="482,360,595,387"/>
+<area shape="rect" id="node13" href="class_d_c_motor.html#aa5e21b3a40c4257502e838704659837c" title="DCMotor::GetI" alt="" coords="486,411,591,437"/>
+<area shape="rect" id="node15" href="class_accumulator.html#a4821f445e39d461046f9fa8630be00fe" title="Accumulator::GetAh" alt="" coords="469,461,609,488"/>
+<area shape="rect" id="node17" href="class_accumulator.html#af22fd564b9635f4641e903eac84f5d00" title="Accumulator::GetVbat" alt="" coords="463,512,614,539"/>
+<area shape="rect" id="node19" href="class_accumulator.html#a5720b8db3fa482b82f71fdda8e704795" title="Accumulator::GetVrail" alt="" coords="463,563,614,589"/>
+<area shape="rect" id="node22" href="class_accumulator.html#adc96c9233a2f5b4d4c4a54609d1a5ce9" title="Accumulator::GetVCell" alt="" coords="461,664,616,691"/>
+<area shape="rect" id="node25" href="class_communication.html#a55270f00472fa162061787fa4eae532b" title="Communication::getSendStream" alt="" coords="433,752,644,779"/>
+<area shape="rect" id="node26" href="class_communication.html#ac818c645c8ed63af3e871f017e30ed02" title="Communication::sendBuffer\lContent" alt="" coords="448,803,629,845"/>
+</map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_application_aa61db470698441ef02ced6286f3a859a_icgraph.png" border="0" usemap="#class_application_aa61db470698441ef02ced6286f3a859a_icgraph" alt=""/></div>
+<map name="class_application_aa61db470698441ef02ced6286f3a859a_icgraph" id="class_application_aa61db470698441ef02ced6286f3a859a_icgraph">
+<area shape="rect" id="node2" href="class_application.html#a4f945a7f8d003a3b8f716f7128206329" title="Application::Application" alt="" coords="203,5,361,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ace28af03fbc0b49d32035210bfee522e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Application::sendDataDebug </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Hibakereséshez használható változat. </p><dl class="section see"><dt>Lásd még</dt><dd><a class="el" href="class_application.html" title="Alkalmazás osztály. A main() példányosítja és indítja el. ">Application</a>:<a class="el" href="class_application.html#aa61db470698441ef02ced6286f3a859a">sendData</a> </dd></dl>
+
+<p><div class="dynheader">
+A függvény hívási gráfja:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_application_ace28af03fbc0b49d32035210bfee522e_cgraph.png" border="0" usemap="#class_application_ace28af03fbc0b49d32035210bfee522e_cgraph" alt=""/></div>
+<map name="class_application_ace28af03fbc0b49d32035210bfee522e_cgraph" id="class_application_ace28af03fbc0b49d32035210bfee522e_cgraph">
+<area shape="rect" id="node2" href="class_communication_tcp_socket_client.html#adcf5c0193b344da67da81e5efd4499eb" title="CommunicationTcpSocketClient\l::state" alt="" coords="240,5,447,47"/>
+<area shape="rect" id="node3" href="class_application.html#aae140ebe65e3415cd70f2ee247f9d435" title="Application::SendData" alt="" coords="268,71,419,98"/>
+<area shape="rect" id="node7" href="class_data_parser.html#abfec1884cfd3235e0d46cd4a1dc112df" title="DataParser::GetCode" alt="" coords="270,122,417,149"/>
+<area shape="rect" id="node8" href="class_race_car.html#a3189f80cfa5b724352e254d61bf1b892" title="RaceCar::GetSpeed" alt="" coords="274,173,413,199"/>
+<area shape="rect" id="node9" href="class_race_car.html#afaf526970a2bb73a3526eeb6670253af" title="RaceCar::GetAngSpeed" alt="" coords="263,290,424,317"/>
+<area shape="rect" id="node11" href="class_race_car.html#a7c2bdb79c6a9152d5781fadd267364e7" title="RaceCar::GetTorq" alt="" coords="280,341,407,367"/>
+<area shape="rect" id="node13" href="class_race_car.html#aa41241995c89892f43914564c1efd249" title="RaceCar::GetCurr" alt="" coords="281,391,406,418"/>
+<area shape="rect" id="node15" href="class_race_car.html#acf47a00d02df89a73225cf322d9be5c0" title="RaceCar::GetCapac" alt="" coords="274,442,413,469"/>
+<area shape="rect" id="node17" href="class_race_car.html#abe76e92ec9a5701235404f162b8c0a3f" title="RaceCar::GetVbat" alt="" coords="279,493,407,519"/>
+<area shape="rect" id="node19" href="class_race_car.html#a03d94de7065a5293e9ea142055d27a05" title="RaceCar::GetVrail" alt="" coords="280,543,407,570"/>
+<area shape="rect" id="node21" href="class_application.html#a6eb519251f443e418a59a91f05ea5cee" title="Application::SendDataFrom\lClient" alt="" coords="253,224,434,265"/>
+<area shape="rect" id="node4" href="class_communication.html#a758523fe047afcb715d2c62f469570aa" title="Communication::send" alt="" coords="496,151,644,178"/>
+<area shape="rect" id="node5" href="class_communication.html#a55270f00472fa162061787fa4eae532b" title="Communication::getSendStream" alt="" coords="693,122,904,149"/>
+<area shape="rect" id="node6" href="class_communication.html#ac818c645c8ed63af3e871f017e30ed02" title="Communication::sendBuffer\lContent" alt="" coords="708,173,889,215"/>
+<area shape="rect" id="node10" href="class_d_c_motor.html#a026043923b487d9d44a9e0b5b93b0701" title="DCMotor::GetW" alt="" coords="513,290,627,317"/>
+<area shape="rect" id="node12" href="class_d_c_motor.html#aac21b47f32e489b1ceb910e991dc63de" title="DCMotor::GetM" alt="" coords="513,341,627,367"/>
+<area shape="rect" id="node14" href="class_d_c_motor.html#aa5e21b3a40c4257502e838704659837c" title="DCMotor::GetI" alt="" coords="517,391,623,418"/>
+<area shape="rect" id="node16" href="class_accumulator.html#a4821f445e39d461046f9fa8630be00fe" title="Accumulator::GetAh" alt="" coords="500,442,640,469"/>
+<area shape="rect" id="node18" href="class_accumulator.html#af22fd564b9635f4641e903eac84f5d00" title="Accumulator::GetVbat" alt="" coords="495,493,645,519"/>
+<area shape="rect" id="node20" href="class_accumulator.html#a5720b8db3fa482b82f71fdda8e704795" title="Accumulator::GetVrail" alt="" coords="495,543,645,570"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a6eb519251f443e418a59a91f05ea5cee"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Application::SendDataFromClient </td>
+          <td>(</td>
+          <td class="paramtype">quint16&#160;</td>
+          <td class="paramname"><em>code</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Egy adatot küld el a TCP kliensről a szervernek. Paraméterek: </p><dl class="section see"><dt>Lásd még</dt><dd><a class="el" href="class_data_parser.html" title="Az kapott adat értelmezéséért, szétbontásáért felelős objektum. ">DataParser</a> </dd></dl>
+
+<p><div class="dynheader">
+A függvény hívási gráfja:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_application_a6eb519251f443e418a59a91f05ea5cee_cgraph.png" border="0" usemap="#class_application_a6eb519251f443e418a59a91f05ea5cee_cgraph" alt=""/></div>
+<map name="class_application_a6eb519251f443e418a59a91f05ea5cee_cgraph" id="class_application_a6eb519251f443e418a59a91f05ea5cee_cgraph">
+<area shape="rect" id="node2" href="class_communication.html#a758523fe047afcb715d2c62f469570aa" title="Communication::send" alt="" coords="235,35,383,61"/>
+<area shape="rect" id="node3" href="class_communication.html#a55270f00472fa162061787fa4eae532b" title="Communication::getSendStream" alt="" coords="431,5,641,32"/>
+<area shape="rect" id="node4" href="class_communication.html#ac818c645c8ed63af3e871f017e30ed02" title="Communication::sendBuffer\lContent" alt="" coords="445,57,627,98"/>
+</map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_application_a6eb519251f443e418a59a91f05ea5cee_icgraph.png" border="0" usemap="#class_application_a6eb519251f443e418a59a91f05ea5cee_icgraph" alt=""/></div>
+<map name="class_application_a6eb519251f443e418a59a91f05ea5cee_icgraph" id="class_application_a6eb519251f443e418a59a91f05ea5cee_icgraph">
+<area shape="rect" id="node2" href="class_application.html#ace28af03fbc0b49d32035210bfee522e" title="Application::sendDataDebug" alt="" coords="235,13,421,39"/>
+</map>
+</div>
+</p>
 
 </div>
 </div>
@@ -201,6 +676,238 @@ Publikus tagfüggvények</h2></td></tr>
   </td>
   <td class="mlabels-right">
 <span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>A paraméterként kapott stringet elküldi a kliensnek. </p>
+
+<p><div class="dynheader">
+A függvény hívási gráfja:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_application_abdf132e4c5a31d10b800610659c33e66_cgraph.png" border="0" usemap="#class_application_abdf132e4c5a31d10b800610659c33e66_cgraph" alt=""/></div>
+<map name="class_application_abdf132e4c5a31d10b800610659c33e66_cgraph" id="class_application_abdf132e4c5a31d10b800610659c33e66_cgraph">
+<area shape="rect" id="node2" href="class_data_parser.html#abfec1884cfd3235e0d46cd4a1dc112df" title="DataParser::GetCode" alt="" coords="210,5,357,32"/>
+<area shape="rect" id="node3" href="class_communication.html#a758523fe047afcb715d2c62f469570aa" title="Communication::send" alt="" coords="209,56,357,83"/>
+<area shape="rect" id="node4" href="class_communication.html#a55270f00472fa162061787fa4eae532b" title="Communication::getSendStream" alt="" coords="405,27,616,53"/>
+<area shape="rect" id="node5" href="class_communication.html#ac818c645c8ed63af3e871f017e30ed02" title="Communication::sendBuffer\lContent" alt="" coords="420,78,601,119"/>
+</map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_application_abdf132e4c5a31d10b800610659c33e66_icgraph.png" border="0" usemap="#class_application_abdf132e4c5a31d10b800610659c33e66_icgraph" alt=""/></div>
+<map name="class_application_abdf132e4c5a31d10b800610659c33e66_icgraph" id="class_application_abdf132e4c5a31d10b800610659c33e66_icgraph">
+<area shape="rect" id="node2" href="class_application.html#a4f945a7f8d003a3b8f716f7128206329" title="Application::Application" alt="" coords="209,5,368,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ab6b3296dc5ce46190ac30cc7f6135e92"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Application::startDataSendTimer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_application_ab6b3296dc5ce46190ac30cc7f6135e92_icgraph.png" border="0" usemap="#class_application_ab6b3296dc5ce46190ac30cc7f6135e92_icgraph" alt=""/></div>
+<map name="class_application_ab6b3296dc5ce46190ac30cc7f6135e92_icgraph" id="class_application_ab6b3296dc5ce46190ac30cc7f6135e92_icgraph">
+<area shape="rect" id="node2" href="class_application.html#a4f945a7f8d003a3b8f716f7128206329" title="Application::Application" alt="" coords="231,13,389,39"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ad8ef60ede362fbf8f3b92964dad123d7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Application::stopDataSendTimer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_application_ad8ef60ede362fbf8f3b92964dad123d7_icgraph.png" border="0" usemap="#class_application_ad8ef60ede362fbf8f3b92964dad123d7_icgraph" alt=""/></div>
+<map name="class_application_ad8ef60ede362fbf8f3b92964dad123d7_icgraph" id="class_application_ad8ef60ede362fbf8f3b92964dad123d7_icgraph">
+<area shape="rect" id="node2" href="class_application.html#a4f945a7f8d003a3b8f716f7128206329" title="Application::Application" alt="" coords="229,13,388,39"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<h2 class="groupheader">Adattagok dokumentációja</h2>
+<a class="anchor" id="a4ac4d911e08afe1392bc0701ee126ccd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_race_car.html">RaceCar</a> Application::car</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Obejktumok példányosítása. </p>
+
+</div>
+</div>
+<a class="anchor" id="a8beea995ee6b6aa7a48d82d96adbdc5a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_data_parser.html">DataParser</a> Application::dataParser</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a83bf199313c0160c79254c613f399854"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QTimer Application::dataSendTimer</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a14b639af07c347a7622e4b76dcedb26b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QQmlApplicationEngine Application::engine</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ac8f2e2bc0d9d82cd3d6d504924fa4783"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_communication_serial_port.html">CommunicationSerialPort</a> Application::serialPort</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a3fa69eb22a08fa20eb2080fb28117254"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_communication_tcp_socket_client.html">CommunicationTcpSocketClient</a> Application::tcpClient</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a60833c27861b9030f5266e15a0beb98b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_communication_tcp_socket_server.html">CommunicationTcpSocketServer</a> Application::tcpServer</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">

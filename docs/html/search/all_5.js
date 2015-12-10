@@ -5,7 +5,6 @@ var searchData=
   ['getcapac',['GetCapac',['../class_race_car.html#acf47a00d02df89a73225cf322d9be5c0',1,'RaceCar']]],
   ['getcode',['GetCode',['../class_data_parser.html#abfec1884cfd3235e0d46cd4a1dc112df',1,'DataParser']]],
   ['getcurr',['GetCurr',['../class_race_car.html#aa41241995c89892f43914564c1efd249',1,'RaceCar']]],
-  ['getdata',['GetData',['../class_data_parser.html#a9ced1c167e730241fe3e17e08959e1eb',1,'DataParser']]],
   ['geti',['GetI',['../class_d_c_motor.html#aa5e21b3a40c4257502e838704659837c',1,'DCMotor']]],
   ['getm',['GetM',['../class_d_c_motor.html#aac21b47f32e489b1ceb910e991dc63de',1,'DCMotor']]],
   ['getreceivestream',['getReceiveStream',['../class_communication.html#adf0ba74b7d1e1c993a9166b68b7d5b97',1,'Communication']]],

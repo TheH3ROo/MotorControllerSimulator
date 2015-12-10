@@ -1,0 +1,13 @@
+<map id="Communication::errorOccurred" name="Communication::errorOccurred">
+<area shape="rect" id="node2" href="$class_communication_serial_port.html#a9f4b0b50d8414e14732961db77c10885" title="CommunicationSerialPort\l::connect" alt="" coords="255,5,424,47"/>
+<area shape="rect" id="node4" href="$class_communication_serial_port.html#a8f5ece62f8c14851f2f81100283b392f" title="CommunicationSerialPort\l::sendBufferContent" alt="" coords="255,71,424,112"/>
+<area shape="rect" id="node5" href="$class_communication_serial_port.html#ab1f1867d3aa930fa3b797dd1398ba0e2" title="CommunicationSerialPort\l::handleError" alt="" coords="255,136,424,177"/>
+<area shape="rect" id="node7" href="$class_communication_tcp_socket.html#abe7e810371ab1df67adacaea55f7b82a" title="CommunicationTcpSocket\l::sendBufferContent" alt="" coords="252,201,427,243"/>
+<area shape="rect" id="node8" href="$class_communication_tcp_socket.html#ae8e52251a25607afb988c43f43551b0a" title="CommunicationTcpSocket\l::handleError" alt="" coords="252,267,427,308"/>
+<area shape="rect" id="node3" href="$class_application.html#a4f945a7f8d003a3b8f716f7128206329" title="Application::Application" alt="" coords="484,13,643,39"/>
+<area shape="rect" id="node6" href="$class_communication_serial_port.html#ad07dc272819d966bb3003d1c3cf39746" title="CommunicationSerialPort\l::CommunicationSerialPort" alt="" coords="475,136,652,177"/>
+<area shape="rect" id="node9" href="$class_communication_tcp_socket.html#a5cbd04540116c295413af2825309398e" title="Beállítja a használt socketet. " alt="" coords="476,267,651,308"/>
+<area shape="rect" id="node10" href="$class_communication_tcp_socket_client.html#ada058d58cb786f965c1dfc5ae9c0778c" title="CommunicationTcpSocketClient\l::connect" alt="" coords="702,233,909,275"/>
+<area shape="rect" id="node11" href="$class_communication_tcp_socket_server.html#a82f33a70276083eb7e84327c1932a526" title="CommunicationTcpSocketServer\l::newConnection" alt="" coords="700,299,911,340"/>
+<area shape="rect" id="node12" href="$class_communication_tcp_socket_server.html#a0e4924b41f809060108a495e06874ec7" title="CommunicationTcpSocketServer\l::CommunicationTcpSocketServer" alt="" coords="959,299,1177,340"/>
+</map>

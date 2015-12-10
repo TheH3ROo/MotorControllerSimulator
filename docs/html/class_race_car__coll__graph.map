@@ -1,0 +1,5 @@
+<map id="RaceCar" name="RaceCar">
+<area shape="rect" id="node3" href="$class_accumulator.html" title="LiIon akkumulátor csomagot megvalósító osztály. " alt="" coords="23,81,118,108"/>
+<area shape="rect" id="node4" href="$class_p_i_ctrler.html" title="PI szabályozót megvalósító osztály. " alt="" coords="142,81,207,108"/>
+<area shape="rect" id="node5" href="$class_d_c_motor.html" title="DC motort szimuláló osztály. " alt="" coords="231,81,305,108"/>
+</map>

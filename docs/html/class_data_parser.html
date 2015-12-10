@@ -65,7 +65,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Keresés');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Osztálylista</span></a></li>
       <li><a href="classes.html"><span>Osztálymutató</span></a></li>
-      <li><a href="hierarchy.html"><span>Osztályhierarchia</span></a></li>
+      <li><a href="inherits.html"><span>Osztályhierarchia</span></a></li>
       <li><a href="functions.html"><span>Osztálytagok</span></a></li>
     </ul>
   </div>
@@ -89,21 +89,27 @@ var searchBox = new SearchBox("searchBox", "search",false,'Keresés');
 <a href="#pub-slots">Publikus rések</a> &#124;
 <a href="#signals">Szignálok</a> &#124;
 <a href="#pub-methods">Publikus tagfüggvények</a> &#124;
+<a href="#pri-attribs">Privát attribútumok</a> &#124;
 <a href="class_data_parser-members.html">A tagok teljes listája</a>  </div>
   <div class="headertitle">
 <div class="title">DataParser osztályreferencia</div>  </div>
 </div><!--header-->
 <div class="contents">
 
+<p>Az kapott adat értelmezéséért, szétbontásáért felelős objektum.  
+ <a href="class_data_parser.html#details">Részletek...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_data_parser_8h_source.html">DataParser.h</a>&gt;</code></p>
 <div class="dynheader">
 A DataParser osztály származási diagramja:</div>
 <div class="dyncontent">
- <div class="center">
-  <img src="class_data_parser.png" usemap="#DataParser_map" alt=""/>
-  <map id="DataParser_map" name="DataParser_map">
-</map>
- </div></div>
+<div class="center"><img src="class_data_parser__inherit__graph.png" border="0" usemap="#_data_parser_inherit__map" alt="Inheritance graph"/></div>
+<center><span class="legend">[<a href="graph_legend.html">Jelmagyarázat</a>]</span></center></div>
+<div class="dynheader">
+A DataParser osztály együttműködési diagramja:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_data_parser__coll__graph.png" border="0" usemap="#_data_parser_coll__map" alt="Collaboration graph"/></div>
+<center><span class="legend">[<a href="graph_legend.html">Jelmagyarázat</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-slots"></a>
 Publikus rések</h2></td></tr>
@@ -119,17 +125,27 @@ Szignálok</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Publikus tagfüggvények</h2></td></tr>
-<tr class="memitem:a85fdc7505703e498030efeb457aec240"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_data_parser.html#a85fdc7505703e498030efeb457aec240">DataParser</a> (const QString &amp;)</td></tr>
-<tr class="separator:a85fdc7505703e498030efeb457aec240"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a602f4d9e0b6aef51b9de3a153c7d0bb6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_data_parser.html#a602f4d9e0b6aef51b9de3a153c7d0bb6">PrintDataToDebug</a> ()</td></tr>
-<tr class="separator:a602f4d9e0b6aef51b9de3a153c7d0bb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9ced1c167e730241fe3e17e08959e1eb"><td class="memItemLeft" align="right" valign="top">QQueue&lt; QMap&lt; quint16, double &gt; &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_data_parser.html#a9ced1c167e730241fe3e17e08959e1eb">GetData</a> ()</td></tr>
-<tr class="separator:a9ced1c167e730241fe3e17e08959e1eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2db453cb5399fcf6682dec468fdb871e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_data_parser.html#a2db453cb5399fcf6682dec468fdb871e">DataParser</a> (const QString &amp;codeFilePath)</td></tr>
+<tr class="separator:a2db453cb5399fcf6682dec468fdb871e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abfec1884cfd3235e0d46cd4a1dc112df"><td class="memItemLeft" align="right" valign="top">quint16&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_data_parser.html#abfec1884cfd3235e0d46cd4a1dc112df">GetCode</a> (QString str)</td></tr>
 <tr class="separator:abfec1884cfd3235e0d46cd4a1dc112df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a602f4d9e0b6aef51b9de3a153c7d0bb6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_data_parser.html#a602f4d9e0b6aef51b9de3a153c7d0bb6">PrintDataToDebug</a> ()</td></tr>
+<tr class="separator:a602f4d9e0b6aef51b9de3a153c7d0bb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Privát attribútumok</h2></td></tr>
+<tr class="memitem:a601c74a54c19f682b8181c40c9a59c4c"><td class="memItemLeft" align="right" valign="top">QFile&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_data_parser.html#a601c74a54c19f682b8181c40c9a59c4c">codeFile</a></td></tr>
+<tr class="separator:a601c74a54c19f682b8181c40c9a59c4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b82eb847f5b938edd5e8b762dbf7a78"><td class="memItemLeft" align="right" valign="top">QMap&lt; QString, quint16 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_data_parser.html#a5b82eb847f5b938edd5e8b762dbf7a78">codeMap</a></td></tr>
+<tr class="separator:a5b82eb847f5b938edd5e8b762dbf7a78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae958fe8c4d361aa2590265fcc842e665"><td class="memItemLeft" align="right" valign="top">QMap&lt; quint16, double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_data_parser.html#ae958fe8c4d361aa2590265fcc842e665">dataMap</a></td></tr>
+<tr class="separator:ae958fe8c4d361aa2590265fcc842e665"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Konstruktorok és destruktorok dokumentációja</h2>
-<a class="anchor" id="a85fdc7505703e498030efeb457aec240"></a>
+<a name="details" id="details"></a><h2 class="groupheader">Részletes leírás</h2>
+<div class="textblock"><p>Az kapott adat értelmezéséért, szétbontásáért felelős objektum. </p>
+<p>A dataInput(...) slotban kapott streamből a saját protokollnak megfeleően elmenti a vett adatokat a dataMap változóba. A dataMap kulcsa 16bites szám, amely egyedi minden adathoz, értéke double szám. Azt, hogy mely kódhoz milyen jelentés tartozik a codeMap változó tartalmazza, segítségével olvashatóbbá válik a forráskód, hiszen nem számokkal, hanem stringekkel lehet a dataMap tagokra hivatkozni. A program mellett található code.txt tartalmazza a jelentés-kód párokat, a konstruktor abból a fájlból olvassa ki ezeket a hozzárendeléseket, ez alapján töltődnek fel a codeMap és dataMap változók. A code.txt fájl elemeinek módosításával újabb adatokat lehet felvenni a dataMap változóba, így könnyen bővíthetővé válik a szoftver. </p><dl class="section warning"><dt>Figyelmeztetés</dt><dd>A szerver és kliens oldalon is meg kell egyezzen a code.txt fájl! </dd></dl>
+</div><h2 class="groupheader">Konstruktorok és destruktorok dokumentációja</h2>
+<a class="anchor" id="a2db453cb5399fcf6682dec468fdb871e"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -142,6 +158,12 @@ Publikus tagfüggvények</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Konstruktor. </p><dl class="params"><dt>Paraméterek</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">codeFilePath</td><td>A jelentés-kód párokat tartalmazó fájl elérési útja. </td></tr>
+  </table>
+  </dd>
+</dl>
 <p>Hibát jelez, ha nem sikerült a fájlt megnyitni.</p>
 <p>Feltölti a codeMap változót a fájlban található értékekkel.</p>
 <p>A fájlból való betöltés alapján a dataMap inicializációja 0-val. </p>
@@ -170,7 +192,7 @@ Publikus tagfüggvények</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Ide lehet bekötni a kommunikációs dataReady signalokat, vagyis jelezni, hogy adat érkezett </p>
+<p>Ide lehet bekötni a kommunikációs dataReady signalokat, vagyis jelezni, hogy adat érkezett. A kommunikációs obejktum jeléhez kapcsolható. </p>
 
 </div>
 </div>
@@ -207,6 +229,16 @@ Publikus tagfüggvények</h2></td></tr>
 </div><div class="memdoc">
 <p>Ez a signal emittálódik ha érkezett adat, és a parsolás elkészült. Az adatfeldolgozó slothoz érdemes bekötni. </p>
 
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_data_parser_a31b3b813861971e119b8b90b705e8932_icgraph.png" border="0" usemap="#class_data_parser_a31b3b813861971e119b8b90b705e8932_icgraph" alt=""/></div>
+<map name="class_data_parser_a31b3b813861971e119b8b90b705e8932_icgraph" id="class_data_parser_a31b3b813861971e119b8b90b705e8932_icgraph">
+<area shape="rect" id="node2" href="class_data_parser.html#a24c86fd9ac500f8e5afcca66a6ad7368" title="DataParser::dataInput" alt="" coords="211,5,359,32"/>
+</map>
+</div>
+</p>
+
 </div>
 </div>
 <a class="anchor" id="a8807cc85cefd0641355cc7aed83dc5f6"></a>
@@ -230,6 +262,17 @@ Publikus tagfüggvények</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Hibakezelő függ jel. </p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_data_parser_a8807cc85cefd0641355cc7aed83dc5f6_icgraph.png" border="0" usemap="#class_data_parser_a8807cc85cefd0641355cc7aed83dc5f6_icgraph" alt=""/></div>
+<map name="class_data_parser_a8807cc85cefd0641355cc7aed83dc5f6_icgraph" id="class_data_parser_a8807cc85cefd0641355cc7aed83dc5f6_icgraph">
+<area shape="rect" id="node2" href="class_data_parser.html#a2db453cb5399fcf6682dec468fdb871e" title="DataParser::DataParser" alt="" coords="228,5,388,32"/>
+</map>
+</div>
+</p>
 
 </div>
 </div>
@@ -254,31 +297,20 @@ Publikus tagfüggvények</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Segédfüggvény az adatstring-kód kereséséhez. </p>
+<p>Visszatér az adatsorra (dataMap) mutató pointerrel. Segédfüggvény az adatstring-kód kereséséhez. </p>
 
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_data_parser_abfec1884cfd3235e0d46cd4a1dc112df_icgraph.png" border="0" usemap="#class_data_parser_abfec1884cfd3235e0d46cd4a1dc112df_icgraph" alt=""/></div>
+<map name="class_data_parser_abfec1884cfd3235e0d46cd4a1dc112df_icgraph" id="class_data_parser_abfec1884cfd3235e0d46cd4a1dc112df_icgraph">
+<area shape="rect" id="node2" href="class_application.html#aa61db470698441ef02ced6286f3a859a" title="Application::sendData" alt="" coords="219,5,368,32"/>
+<area shape="rect" id="node4" href="class_application.html#ace28af03fbc0b49d32035210bfee522e" title="Application::sendDataDebug" alt="" coords="200,56,387,83"/>
+<area shape="rect" id="node5" href="class_application.html#abdf132e4c5a31d10b800610659c33e66" title="Application::sendString" alt="" coords="215,107,371,133"/>
+<area shape="rect" id="node3" href="class_application.html#a4f945a7f8d003a3b8f716f7128206329" title="Application::Application" alt="" coords="435,56,593,83"/>
+</map>
 </div>
-</div>
-<a class="anchor" id="a9ced1c167e730241fe3e17e08959e1eb"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">QQueue&lt;QMap&lt;quint16, double&gt; &gt;* DataParser::GetData </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Visszatér az adatsorra mutató pointerrel. </p>
+</p>
 
 </div>
 </div>
@@ -294,6 +326,71 @@ Publikus tagfüggvények</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Hibakereséshez használatos függvény, a konzolra írja a dataMap elemeit. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Adattagok dokumentációja</h2>
+<a class="anchor" id="a601c74a54c19f682b8181c40c9a59c4c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QFile DataParser::codeFile</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>A kód-jelentést tartalmazó txt fájl objektum. </p>
+
+</div>
+</div>
+<a class="anchor" id="a5b82eb847f5b938edd5e8b762dbf7a78"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QMap&lt;QString, quint16&gt; DataParser::codeMap</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>A jelentés-kód párokat tartalmazó asszociatív tároló. </p>
+
+</div>
+</div>
+<a class="anchor" id="ae958fe8c4d361aa2590265fcc842e665"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QMap&lt;quint16, double&gt; DataParser::dataMap</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Adatokat tartalmazó asszociatív tároló. </p>
 
 </div>
 </div>

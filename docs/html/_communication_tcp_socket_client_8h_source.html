@@ -105,10 +105,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Keresés');
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_communication_tcp_socket_client.html#ada058d58cb786f965c1dfc5ae9c0778c">connect</a>(QString url, <span class="keywordtype">int</span> port);</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_communication_tcp_socket_client.html#adcf5c0193b344da67da81e5efd4499eb">   19</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_communication_tcp_socket_client.html#adcf5c0193b344da67da81e5efd4499eb">state</a>(){<span class="keywordflow">return</span> socket.state();}</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_communication_tcp_socket_client.html#adcf5c0193b344da67da81e5efd4499eb">   19</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_communication_tcp_socket_client.html#adcf5c0193b344da67da81e5efd4499eb">state</a>(){<span class="keywordflow">return</span> <a class="code" href="class_communication_tcp_socket_client.html#a0ac5994a2fc2ef443c6495e3237d52c3">socket</a>.state();}</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    QTcpSocket socket;</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="class_communication_tcp_socket_client.html#a0ac5994a2fc2ef443c6495e3237d52c3">   23</a></span>&#160;    QTcpSocket <a class="code" href="class_communication_tcp_socket_client.html#a0ac5994a2fc2ef443c6495e3237d52c3">socket</a>;</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;};</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
@@ -120,6 +120,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Keresés');
 <div class="ttc" id="class_communication_tcp_socket_html"><div class="ttname"><a href="class_communication_tcp_socket.html">CommunicationTcpSocket</a></div><div class="ttdoc">TCP socket alapú kommunikációra kialakított leszármazottja az általános Communication osztálynak...</div><div class="ttdef"><b>Definition:</b> CommunicationTcpSocket.h:14</div></div>
 <div class="ttc" id="class_communication_tcp_socket_client_html"><div class="ttname"><a href="class_communication_tcp_socket_client.html">CommunicationTcpSocketClient</a></div><div class="ttdoc">QTcpSocket alapú kommunikáció kliens oldala. </div><div class="ttdef"><b>Definition:</b> CommunicationTcpSocketClient.h:7</div></div>
 <div class="ttc" id="class_communication_tcp_socket_client_html_a5b19ff422ca1bb012a6f402f24bcebdc"><div class="ttname"><a href="class_communication_tcp_socket_client.html#a5b19ff422ca1bb012a6f402f24bcebdc">CommunicationTcpSocketClient::~CommunicationTcpSocketClient</a></div><div class="ttdeci">virtual ~CommunicationTcpSocketClient()=default</div></div>
+<div class="ttc" id="class_communication_tcp_socket_client_html_a0ac5994a2fc2ef443c6495e3237d52c3"><div class="ttname"><a href="class_communication_tcp_socket_client.html#a0ac5994a2fc2ef443c6495e3237d52c3">CommunicationTcpSocketClient::socket</a></div><div class="ttdeci">QTcpSocket socket</div><div class="ttdef"><b>Definition:</b> CommunicationTcpSocketClient.h:23</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

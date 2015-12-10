@@ -1,0 +1,7 @@
+<map id="DCMotor::GetM" name="DCMotor::GetM">
+<area shape="rect" id="node2" href="$class_race_car.html#a7edfe623557b167aa539fd50f97233d3" title="RaceCar::PrintDataToDebug" alt="" coords="167,5,352,32"/>
+<area shape="rect" id="node3" href="$class_race_car.html#a7c2bdb79c6a9152d5781fadd267364e7" title="RaceCar::GetTorq" alt="" coords="196,56,323,83"/>
+<area shape="rect" id="node4" href="$class_application.html#aa61db470698441ef02ced6286f3a859a" title="Application::sendData" alt="" coords="419,31,568,57"/>
+<area shape="rect" id="node6" href="$class_application.html#ace28af03fbc0b49d32035210bfee522e" title="Application::sendDataDebug" alt="" coords="400,81,587,108"/>
+<area shape="rect" id="node5" href="$class_application.html#a4f945a7f8d003a3b8f716f7128206329" title="Application::Application" alt="" coords="635,31,793,57"/>
+</map>

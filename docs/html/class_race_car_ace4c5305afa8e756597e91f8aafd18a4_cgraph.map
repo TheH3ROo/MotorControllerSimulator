@@ -1,0 +1,12 @@
+<map id="RaceCar::RaceCar" name="RaceCar::RaceCar">
+<area shape="rect" id="node2" href="$class_race_car.html#a943a1d6e8c68bd6a93762d3528eb0ae6" title="RaceCar::MotTimeout" alt="" coords="207,56,355,83"/>
+<area shape="rect" id="node6" href="$class_race_car.html#acbe2a0acba345bfd8560911f3d86ef59" title="RaceCar::PITimeout" alt="" coords="212,107,351,133"/>
+<area shape="rect" id="node8" href="$class_d_c_motor.html#a5605320b0ad6f84b37781209d025be91" title="DCMotor::Tick" alt="" coords="229,157,334,184"/>
+<area shape="rect" id="node9" href="$class_p_i_ctrler.html#a064e3f3ffd68b972ef9a89964c54fb19" title="PICtrler::Tick" alt="" coords="233,208,330,235"/>
+<area shape="rect" id="node10" href="$class_accumulator.html#a4c73890dbbbe68accfd378f35e57f140" title="Accumulator::UpdateCapacity" alt="" coords="184,259,379,285"/>
+<area shape="rect" id="node3" href="$class_d_c_motor.html#a026043923b487d9d44a9e0b5b93b0701" title="DCMotor::GetW" alt="" coords="456,107,571,133"/>
+<area shape="rect" id="node4" href="$class_p_i_ctrler.html#ae0428a99bf1cd404cdb7d2715593702f" title="PICtrler::GetValue" alt="" coords="450,5,577,32"/>
+<area shape="rect" id="node5" href="$class_d_c_motor.html#aa5e21b3a40c4257502e838704659837c" title="DCMotor::GetI" alt="" coords="461,56,566,83"/>
+<area shape="rect" id="node7" href="$class_accumulator.html#a5720b8db3fa482b82f71fdda8e704795" title="Accumulator::GetVrail" alt="" coords="438,157,589,184"/>
+<area shape="rect" id="node11" href="$class_accumulator.html#a3ce2e4ac673fe424e8e127c8dc994097" title="Accumulator::UpdateCells" alt="" coords="427,259,600,285"/>
+</map>

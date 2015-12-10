@@ -1,0 +1,5 @@
+<map id="RaceCar::GetVbat" name="RaceCar::GetVbat">
+<area shape="rect" id="node2" href="$class_application.html#aa61db470698441ef02ced6286f3a859a" title="Application::sendData" alt="" coords="200,5,349,32"/>
+<area shape="rect" id="node4" href="$class_application.html#ace28af03fbc0b49d32035210bfee522e" title="Application::sendDataDebug" alt="" coords="181,56,368,83"/>
+<area shape="rect" id="node3" href="$class_application.html#a4f945a7f8d003a3b8f716f7128206329" title="Application::Application" alt="" coords="416,5,575,32"/>
+</map>

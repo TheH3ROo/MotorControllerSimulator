@@ -7,6 +7,12 @@ namespace Ui {
 class MainWindow;
 }
 
+/** @brief A GUI felület létrehozásáért felelős objektum.
+ *
+ * Jelenleg csak azért van, hogy egy ablak feljövetele jelezze a szimulátor indulását,
+ * funkciója egyenlőre nincsen.
+*/
+
 class MainWindow : public QMainWindow
 {
     Q_OBJECT

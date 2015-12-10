@@ -1,0 +1,7 @@
+<map id="Accumulator::GetVbat" name="Accumulator::GetVbat">
+<area shape="rect" id="node2" href="$class_race_car.html#a7edfe623557b167aa539fd50f97233d3" title="RaceCar::PrintDataToDebug" alt="" coords="204,5,389,32"/>
+<area shape="rect" id="node3" href="$class_race_car.html#abe76e92ec9a5701235404f162b8c0a3f" title="RaceCar::GetVbat" alt="" coords="233,56,361,83"/>
+<area shape="rect" id="node4" href="$class_application.html#aa61db470698441ef02ced6286f3a859a" title="Application::sendData" alt="" coords="456,31,605,57"/>
+<area shape="rect" id="node6" href="$class_application.html#ace28af03fbc0b49d32035210bfee522e" title="Application::sendDataDebug" alt="" coords="437,81,624,108"/>
+<area shape="rect" id="node5" href="$class_application.html#a4f945a7f8d003a3b8f716f7128206329" title="Application::Application" alt="" coords="672,31,831,57"/>
+</map>

@@ -25,7 +25,7 @@ public:
             double L=0.001, double theta=500);
     /**Visszatér a motor áramával.*/
     double GetI(){return i;}
-    /**Visszatér a motor szögsebességvéle.*/
+    /**Visszatér a motor szögsebességével.*/
     double GetW(){return w;}
     /**Visszatér a motor nyomatékával.
      * @bug A motor alapértelemezett paraméterei miatt túl nagy a számított nyomaték, irreaális: ezért leosztom 100-al.

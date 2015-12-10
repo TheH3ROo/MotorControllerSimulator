@@ -1,0 +1,10 @@
+<map id="Communication/CommunicationTcpSocket.h" name="Communication/CommunicationTcpSocket.h">
+<area shape="rect" id="node2" href="$_communication_tcp_socket_server_8h.html" title="Communication/Communication\lTcpSocketServer.h" alt="" coords="65,95,272,136"/>
+<area shape="rect" id="node7" href="$_communication_tcp_socket_client_8h.html" title="Communication/Communication\lTcpSocketClient.h" alt="" coords="296,95,503,136"/>
+<area shape="rect" id="node9" href="$_communication_tcp_socket_8cpp.html" title="Communication/Communication\lTcpSocket.cpp" alt="" coords="527,95,733,136"/>
+<area shape="rect" id="node3" href="$_application_8h.html" title="Application.h" alt="" coords="236,191,333,218"/>
+<area shape="rect" id="node6" href="$_communication_tcp_socket_server_8cpp.html" title="Communication/Communication\lTcpSocketServer.cpp" alt="" coords="5,184,212,225"/>
+<area shape="rect" id="node4" href="$_application_8cpp.html" title="Application.cpp" alt="" coords="171,273,281,300"/>
+<area shape="rect" id="node5" href="$main_8cpp.html" title="main.cpp" alt="" coords="306,273,381,300"/>
+<area shape="rect" id="node8" href="$_communication_tcp_socket_client_8cpp.html" title="Communication/Communication\lTcpSocketClient.cpp" alt="" coords="357,184,564,225"/>
+</map>

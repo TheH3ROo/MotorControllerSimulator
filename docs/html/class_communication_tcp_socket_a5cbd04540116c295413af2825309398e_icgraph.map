@@ -1,0 +1,5 @@
+<map id="CommunicationTcpSocket::setSocket" name="CommunicationTcpSocket::setSocket">
+<area shape="rect" id="node2" href="$class_communication_tcp_socket_client.html#ada058d58cb786f965c1dfc5ae9c0778c" title="CommunicationTcpSocketClient\l::connect" alt="" coords="230,5,437,47"/>
+<area shape="rect" id="node3" href="$class_communication_tcp_socket_server.html#a82f33a70276083eb7e84327c1932a526" title="CommunicationTcpSocketServer\l::newConnection" alt="" coords="228,71,439,112"/>
+<area shape="rect" id="node4" href="$class_communication_tcp_socket_server.html#a0e4924b41f809060108a495e06874ec7" title="CommunicationTcpSocketServer\l::CommunicationTcpSocketServer" alt="" coords="487,71,705,112"/>
+</map>

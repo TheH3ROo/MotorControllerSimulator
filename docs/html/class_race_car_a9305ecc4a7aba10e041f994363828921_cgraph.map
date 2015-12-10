@@ -1,0 +1,5 @@
+<map id="RaceCar::SelfTest" name="RaceCar::SelfTest">
+<area shape="rect" id="node2" href="$class_accumulator.html#ae3cf9d0bc671a57a27e400bbd95ba5e8" title="Accumulator::isOk" alt="" coords="180,5,311,32"/>
+<area shape="rect" id="node3" href="$class_p_i_ctrler.html#a79fde0bacdfad18426dd630e27fedd6e" title="PICtrler::isOk" alt="" coords="195,56,295,83"/>
+<area shape="rect" id="node4" href="$class_d_c_motor.html#afe2c32fcd30b9ef7feb9991909713cc9" title="DCMotor::isOk" alt="" coords="191,107,299,133"/>
+</map>

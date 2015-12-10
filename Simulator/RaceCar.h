@@ -10,14 +10,6 @@
 
 
 
-/** A versenyautó állapotát leíró enumeráció.
- * stop - a jármű áll
- * hven - az akku kontaktora meghúz, így a DC sín feszültség alá kerül
- * dren - hajtás engedélyezés
-*/
-enum raceCarState{
-    stop, hven, dren
-};
 
 /** @brief Elektromos versenyautót szimuláló osztály.
  *
@@ -29,6 +21,15 @@ enum raceCarState{
 class RaceCar : public QObject
 {
     Q_OBJECT
+
+    /** A versenyautó állapotát leíró enumeráció.
+     * stop - a jármű áll
+     * hven - az akku kontaktora meghúz, így a DC sín feszültség alá kerül
+     * dren - hajtás engedélyezés
+    */
+    enum raceCarState{
+        stop, hven, dren
+    };
 
 public:
     /** Konstruktor

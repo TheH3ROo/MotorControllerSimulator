@@ -1,0 +1,12 @@
+<map id="Osztályhierarchia&#45;ábra" name="Osztályhierarchia&#45;ábra">
+<area shape="rect" id="node2" href="$class_accumulator.html" title="LiIon akkumulátor csomagot megvalósító osztály. " alt="" coords="133,5,227,32"/>
+<area shape="rect" id="node3" href="$class_communication.html" title="Stream alapú kommunikációs ősosztály. " alt="" coords="124,56,236,83"/>
+<area shape="rect" id="node8" href="$class_data_parser.html" title="Az kapott adat értelmezéséért, szétbontásáért felelős objektum. " alt="" coords="137,107,223,133"/>
+<area shape="rect" id="node9" href="$class_d_c_motor.html" title="DC motort szimuláló osztály. " alt="" coords="143,157,217,184"/>
+<area shape="rect" id="node10" href="$class_p_i_ctrler.html" title="PI szabályozót megvalósító osztály. " alt="" coords="147,208,213,235"/>
+<area shape="rect" id="node11" href="$class_race_car.html" title="Elektromos versenyautót szimuláló osztály. " alt="" coords="144,259,216,285"/>
+<area shape="rect" id="node4" href="$class_communication_serial_port.html" title="Soros port kommunikáció " alt="" coords="287,31,456,57"/>
+<area shape="rect" id="node5" href="$class_communication_tcp_socket.html" title="TCP socket alapú kommunikációra kialakított leszármazottja az általános Communication osztálynak..." alt="" coords="284,81,459,108"/>
+<area shape="rect" id="node6" href="$class_communication_tcp_socket_client.html" title="QTcpSocket alapú kommunikáció kliens oldala. " alt="" coords="509,56,715,83"/>
+<area shape="rect" id="node7" href="$class_communication_tcp_socket_server.html" title="TCP/IP szerver socket. " alt="" coords="507,107,717,133"/>
+</map>

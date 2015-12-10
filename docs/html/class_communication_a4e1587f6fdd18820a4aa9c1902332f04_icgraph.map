@@ -1,0 +1,6 @@
+<map id="Communication::connectToDevice" name="Communication::connectToDevice">
+<area shape="rect" id="node2" href="$class_communication_tcp_socket.html#a5cbd04540116c295413af2825309398e" title="Beállítja a használt socketet. " alt="" coords="233,39,408,80"/>
+<area shape="rect" id="node3" href="$class_communication_tcp_socket_client.html#ada058d58cb786f965c1dfc5ae9c0778c" title="CommunicationTcpSocketClient\l::connect" alt="" coords="458,5,665,47"/>
+<area shape="rect" id="node4" href="$class_communication_tcp_socket_server.html#a82f33a70276083eb7e84327c1932a526" title="CommunicationTcpSocketServer\l::newConnection" alt="" coords="456,71,667,112"/>
+<area shape="rect" id="node5" href="$class_communication_tcp_socket_server.html#a0e4924b41f809060108a495e06874ec7" title="CommunicationTcpSocketServer\l::CommunicationTcpSocketServer" alt="" coords="715,71,933,112"/>
+</map>

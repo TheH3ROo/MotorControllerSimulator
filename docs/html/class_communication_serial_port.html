@@ -65,7 +65,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Keresés');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Osztálylista</span></a></li>
       <li><a href="classes.html"><span>Osztálymutató</span></a></li>
-      <li><a href="hierarchy.html"><span>Osztályhierarchia</span></a></li>
+      <li><a href="inherits.html"><span>Osztályhierarchia</span></a></li>
       <li><a href="functions.html"><span>Osztálytagok</span></a></li>
     </ul>
   </div>
@@ -88,6 +88,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Keresés');
   <div class="summary">
 <a href="#pub-methods">Publikus tagfüggvények</a> &#124;
 <a href="#pro-methods">Védett tagfüggvények</a> &#124;
+<a href="#pri-slots">Privát rések</a> &#124;
+<a href="#pri-attribs">Privát attribútumok</a> &#124;
 <a href="class_communication_serial_port-members.html">A tagok teljes listája</a>  </div>
   <div class="headertitle">
 <div class="title">CommunicationSerialPort osztályreferencia</div>  </div>
@@ -101,12 +103,19 @@ var searchBox = new SearchBox("searchBox", "search",false,'Keresés');
 <div class="dynheader">
 A CommunicationSerialPort osztály származási diagramja:</div>
 <div class="dyncontent">
- <div class="center">
-  <img src="class_communication_serial_port.png" usemap="#CommunicationSerialPort_map" alt=""/>
-  <map id="CommunicationSerialPort_map" name="CommunicationSerialPort_map">
-<area href="class_communication.html" title="Stream alapú kommunikációs ősosztály. " alt="Communication" shape="rect" coords="0,56,153,80"/>
+<div class="center"><img src="class_communication_serial_port__inherit__graph.png" border="0" usemap="#_communication_serial_port_inherit__map" alt="Inheritance graph"/></div>
+<map name="_communication_serial_port_inherit__map" id="_communication_serial_port_inherit__map">
+<area shape="rect" id="node2" href="class_communication.html" title="Stream alapú kommunikációs ősosztály. " alt="" coords="34,80,146,107"/>
 </map>
- </div></div>
+<center><span class="legend">[<a href="graph_legend.html">Jelmagyarázat</a>]</span></center></div>
+<div class="dynheader">
+A CommunicationSerialPort osztály együttműködési diagramja:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_communication_serial_port__coll__graph.png" border="0" usemap="#_communication_serial_port_coll__map" alt="Collaboration graph"/></div>
+<map name="_communication_serial_port_coll__map" id="_communication_serial_port_coll__map">
+<area shape="rect" id="node2" href="class_communication.html" title="Stream alapú kommunikációs ősosztály. " alt="" coords="34,80,146,107"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">Jelmagyarázat</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Publikus tagfüggvények</h2></td></tr>
@@ -140,6 +149,16 @@ Védett tagfüggvények</h2></td></tr>
 <tr class="inherit_header pro_methods_class_communication"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_communication')"><img src="closed.png" alt="-"/>&#160;Védett tagfüggvények inherited from <a class="el" href="class_communication.html">Communication</a></td></tr>
 <tr class="memitem:a55270f00472fa162061787fa4eae532b inherit pro_methods_class_communication"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; QDataStream &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_communication.html#a55270f00472fa162061787fa4eae532b">getSendStream</a> ()</td></tr>
 <tr class="separator:a55270f00472fa162061787fa4eae532b inherit pro_methods_class_communication"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-slots"></a>
+Privát rések</h2></td></tr>
+<tr class="memitem:ab1f1867d3aa930fa3b797dd1398ba0e2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_communication_serial_port.html#ab1f1867d3aa930fa3b797dd1398ba0e2">handleError</a> (QSerialPort::SerialPortError error)</td></tr>
+<tr class="separator:ab1f1867d3aa930fa3b797dd1398ba0e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Privát attribútumok</h2></td></tr>
+<tr class="memitem:aa9bb232a2f7cee4c579b40ed2f6aebd6"><td class="memItemLeft" align="right" valign="top">QSerialPort&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_communication_serial_port.html#aa9bb232a2f7cee4c579b40ed2f6aebd6">serialPort</a></td></tr>
+<tr class="separator:aa9bb232a2f7cee4c579b40ed2f6aebd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -205,6 +224,16 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p><div class="dynheader">
+A függvény hívási gráfja:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_communication_serial_port_ad07dc272819d966bb3003d1c3cf39746_cgraph.png" border="0" usemap="#class_communication_serial_port_ad07dc272819d966bb3003d1c3cf39746_cgraph" alt=""/></div>
+<map name="class_communication_serial_port_ad07dc272819d966bb3003d1c3cf39746_cgraph" id="class_communication_serial_port_ad07dc272819d966bb3003d1c3cf39746_cgraph">
+<area shape="rect" id="node2" href="class_communication_serial_port.html#ab1f1867d3aa930fa3b797dd1398ba0e2" title="CommunicationSerialPort\l::handleError" alt="" coords="231,5,400,47"/>
+</map>
+</div>
+</p>
+
 </div>
 </div>
 <a class="anchor" id="ac631532ede844a11573ec022827927eb"></a>
@@ -252,6 +281,61 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p><div class="dynheader">
+A függvény hívási gráfja:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_communication_serial_port_a9f4b0b50d8414e14732961db77c10885_cgraph.png" border="0" usemap="#class_communication_serial_port_a9f4b0b50d8414e14732961db77c10885_cgraph" alt=""/></div>
+<map name="class_communication_serial_port_a9f4b0b50d8414e14732961db77c10885_cgraph" id="class_communication_serial_port_a9f4b0b50d8414e14732961db77c10885_cgraph">
+<area shape="rect" id="node2" href="class_communication.html#ad353a908e815c98158f6145e7104bc4f" title="Communication::dataReceived" alt="" coords="223,13,420,39"/>
+<area shape="rect" id="node3" href="class_communication.html#adf0ba74b7d1e1c993a9166b68b7d5b97" title="Communication::getReceive\lStream" alt="" coords="468,5,651,47"/>
+</map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_communication_serial_port_a9f4b0b50d8414e14732961db77c10885_icgraph.png" border="0" usemap="#class_communication_serial_port_a9f4b0b50d8414e14732961db77c10885_icgraph" alt=""/></div>
+<map name="class_communication_serial_port_a9f4b0b50d8414e14732961db77c10885_icgraph" id="class_communication_serial_port_a9f4b0b50d8414e14732961db77c10885_icgraph">
+<area shape="rect" id="node2" href="class_application.html#a4f945a7f8d003a3b8f716f7128206329" title="Application::Application" alt="" coords="223,13,381,39"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ab1f1867d3aa930fa3b797dd1398ba0e2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CommunicationSerialPort::handleError </td>
+          <td>(</td>
+          <td class="paramtype">QSerialPort::SerialPortError&#160;</td>
+          <td class="paramname"><em>error</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_communication_serial_port_ab1f1867d3aa930fa3b797dd1398ba0e2_icgraph.png" border="0" usemap="#class_communication_serial_port_ab1f1867d3aa930fa3b797dd1398ba0e2_icgraph" alt=""/></div>
+<map name="class_communication_serial_port_ab1f1867d3aa930fa3b797dd1398ba0e2_icgraph" id="class_communication_serial_port_ab1f1867d3aa930fa3b797dd1398ba0e2_icgraph">
+<area shape="rect" id="node2" href="class_communication_serial_port.html#ad07dc272819d966bb3003d1c3cf39746" title="CommunicationSerialPort\l::CommunicationSerialPort" alt="" coords="223,5,400,47"/>
+</map>
+</div>
+</p>
+
 </div>
 </div>
 <a class="anchor" id="a76880601be9cac78361faf9aa30871ff"></a>
@@ -278,6 +362,16 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Megvalósítja a következőket: <a class="el" href="class_communication.html#ab91fa1703c2c460bd3b9a01a6142db20">Communication</a>.</p>
 
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_communication_serial_port_a76880601be9cac78361faf9aa30871ff_icgraph.png" border="0" usemap="#class_communication_serial_port_a76880601be9cac78361faf9aa30871ff_icgraph" alt=""/></div>
+<map name="class_communication_serial_port_a76880601be9cac78361faf9aa30871ff_icgraph" id="class_communication_serial_port_a76880601be9cac78361faf9aa30871ff_icgraph">
+<area shape="rect" id="node2" href="class_communication_serial_port.html#a8f5ece62f8c14851f2f81100283b392f" title="CommunicationSerialPort\l::sendBufferContent" alt="" coords="223,5,392,47"/>
+</map>
+</div>
+</p>
+
 </div>
 </div>
 <a class="anchor" id="a8f5ece62f8c14851f2f81100283b392f"></a>
@@ -303,6 +397,37 @@ Additional Inherited Members</h2></td></tr>
 <p>Ténylegesen elküldi a sendBuffer tartalmát. A leszármazott osztályoknak a protokolljuknak megfelelően kell implementálniuk. </p>
 
 <p>Megvalósítja a következőket: <a class="el" href="class_communication.html#ac818c645c8ed63af3e871f017e30ed02">Communication</a>.</p>
+
+<p><div class="dynheader">
+A függvény hívási gráfja:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_communication_serial_port_a8f5ece62f8c14851f2f81100283b392f_cgraph.png" border="0" usemap="#class_communication_serial_port_a8f5ece62f8c14851f2f81100283b392f_cgraph" alt=""/></div>
+<map name="class_communication_serial_port_a8f5ece62f8c14851f2f81100283b392f_cgraph" id="class_communication_serial_port_a8f5ece62f8c14851f2f81100283b392f_cgraph">
+<area shape="rect" id="node2" href="class_communication_serial_port.html#a76880601be9cac78361faf9aa30871ff" title="CommunicationSerialPort\l::isConnected" alt="" coords="223,5,392,47"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<h2 class="groupheader">Adattagok dokumentációja</h2>
+<a class="anchor" id="aa9bb232a2f7cee4c579b40ed2f6aebd6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QSerialPort CommunicationSerialPort::serialPort</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>

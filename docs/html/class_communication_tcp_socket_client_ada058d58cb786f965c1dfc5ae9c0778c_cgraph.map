@@ -1,0 +1,7 @@
+<map id="CommunicationTcpSocketClient::connect" name="CommunicationTcpSocketClient::connect">
+<area shape="rect" id="node2" href="$class_communication_tcp_socket.html#a5cbd04540116c295413af2825309398e" title="Beállítja a használt socketet. " alt="" coords="260,64,435,105"/>
+<area shape="rect" id="node3" href="$class_communication_tcp_socket.html#ae8e52251a25607afb988c43f43551b0a" title="CommunicationTcpSocket\l::handleError" alt="" coords="494,5,669,47"/>
+<area shape="rect" id="node4" href="$class_communication.html#ad353a908e815c98158f6145e7104bc4f" title="Communication::dataReceived" alt="" coords="483,71,680,98"/>
+<area shape="rect" id="node6" href="$class_communication.html#a4e1587f6fdd18820a4aa9c1902332f04" title="Communication::connectTo\lDevice" alt="" coords="491,123,671,164"/>
+<area shape="rect" id="node5" href="$class_communication.html#adf0ba74b7d1e1c993a9166b68b7d5b97" title="Communication::getReceive\lStream" alt="" coords="728,64,911,105"/>
+</map>

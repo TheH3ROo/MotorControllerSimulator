@@ -4,11 +4,6 @@
 #include "Communication/Communication.h"
 #include <QtSerialPort/QSerialPort>
 
-// http://doc.qt.io/qt-5/qtserialport-index.html
-// http://doc.qt.io/qt-5/qserialport.html
-// http://doc.qt.io/qt-5/qiodevice.html#readyRead
-// http://doc.qt.io/qt-5/qtserialport-examples.html
-
 /**
  * @brief Soros port kommunikáció
  */
@@ -32,7 +27,7 @@ private:
     QSerialPort serialPort;
 
 private slots:
-    // Forwards signal to errorOccurred.
+    // Hibakezeléshez.
     void handleError(QSerialPort::SerialPortError error);
 
 };

@@ -30,6 +30,7 @@ void SendDebugData(quint16,double);
 signals:
     /** Jelzi, hogy új kapcsolat létesült.*/
     void newConnectionSignal();
+    /** Jelzi, hogy a kapcsolat megszűnt.*/
     void disconnectedSignal();
 private slots:
     /** A szerver sockethez új kapcsolatot érkezett.

@@ -1,0 +1,8 @@
+<map id="CommunicationTcpSocketServer::newConnection" name="CommunicationTcpSocketServer::newConnection">
+<area shape="rect" id="node2" href="$class_communication_tcp_socket_server.html#a6749a2ed380ab25c41beb8d2ced5caed" title="CommunicationTcpSocketServer\l::disconnected" alt="" coords="264,5,475,47"/>
+<area shape="rect" id="node3" href="$class_communication_tcp_socket.html#a5cbd04540116c295413af2825309398e" title="Beállítja a használt socketet. " alt="" coords="282,71,457,112"/>
+<area shape="rect" id="node4" href="$class_communication_tcp_socket.html#ae8e52251a25607afb988c43f43551b0a" title="CommunicationTcpSocket\l::handleError" alt="" coords="534,12,709,53"/>
+<area shape="rect" id="node5" href="$class_communication.html#ad353a908e815c98158f6145e7104bc4f" title="Communication::dataReceived" alt="" coords="523,78,720,105"/>
+<area shape="rect" id="node7" href="$class_communication.html#a4e1587f6fdd18820a4aa9c1902332f04" title="Communication::connectTo\lDevice" alt="" coords="531,129,711,171"/>
+<area shape="rect" id="node6" href="$class_communication.html#adf0ba74b7d1e1c993a9166b68b7d5b97" title="Communication::getReceive\lStream" alt="" coords="768,71,951,112"/>
+</map>

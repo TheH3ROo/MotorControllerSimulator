@@ -65,7 +65,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Keresés');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Osztálylista</span></a></li>
       <li><a href="classes.html"><span>Osztálymutató</span></a></li>
-      <li><a href="hierarchy.html"><span>Osztályhierarchia</span></a></li>
+      <li><a href="inherits.html"><span>Osztályhierarchia</span></a></li>
       <li><a href="functions.html"><span>Osztálytagok</span></a></li>
     </ul>
   </div>
@@ -88,6 +88,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Keresés');
   <div class="summary">
 <a href="#pub-methods">Publikus tagfüggvények</a> &#124;
 <a href="#pro-methods">Védett tagfüggvények</a> &#124;
+<a href="#pri-slots">Privát rések</a> &#124;
+<a href="#pri-attribs">Privát attribútumok</a> &#124;
 <a href="class_communication_tcp_socket-members.html">A tagok teljes listája</a>  </div>
   <div class="headertitle">
 <div class="title">CommunicationTcpSocket osztályreferencia</div>  </div>
@@ -101,14 +103,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Keresés');
 <div class="dynheader">
 A CommunicationTcpSocket osztály származási diagramja:</div>
 <div class="dyncontent">
- <div class="center">
-  <img src="class_communication_tcp_socket.png" usemap="#CommunicationTcpSocket_map" alt=""/>
-  <map id="CommunicationTcpSocket_map" name="CommunicationTcpSocket_map">
-<area href="class_communication.html" title="Stream alapú kommunikációs ősosztály. " alt="Communication" shape="rect" coords="102,56,297,80"/>
-<area href="class_communication_tcp_socket_client.html" title="QTcpSocket alapú kommunikáció kliens oldala. " alt="CommunicationTcpSocketClient" shape="rect" coords="0,168,195,192"/>
-<area href="class_communication_tcp_socket_server.html" title="TCP/IP szerver socket. " alt="CommunicationTcpSocketServer" shape="rect" coords="205,168,400,192"/>
+<div class="center"><img src="class_communication_tcp_socket__inherit__graph.png" border="0" usemap="#_communication_tcp_socket_inherit__map" alt="Inheritance graph"/></div>
+<map name="_communication_tcp_socket_inherit__map" id="_communication_tcp_socket_inherit__map">
+<area shape="rect" id="node4" href="class_communication_tcp_socket_client.html" title="QTcpSocket alapú kommunikáció kliens oldala. " alt="" coords="5,229,212,256"/>
+<area shape="rect" id="node5" href="class_communication_tcp_socket_server.html" title="TCP/IP szerver socket. " alt="" coords="237,229,447,256"/>
+<area shape="rect" id="node2" href="class_communication.html" title="Stream alapú kommunikációs ősosztály. " alt="" coords="169,80,281,107"/>
 </map>
- </div></div>
+<center><span class="legend">[<a href="graph_legend.html">Jelmagyarázat</a>]</span></center></div>
+<div class="dynheader">
+A CommunicationTcpSocket osztály együttműködési diagramja:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_communication_tcp_socket__coll__graph.png" border="0" usemap="#_communication_tcp_socket_coll__map" alt="Collaboration graph"/></div>
+<map name="_communication_tcp_socket_coll__map" id="_communication_tcp_socket_coll__map">
+<area shape="rect" id="node2" href="class_communication.html" title="Stream alapú kommunikációs ősosztály. " alt="" coords="37,80,149,107"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">Jelmagyarázat</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Publikus tagfüggvények</h2></td></tr>
@@ -145,6 +154,16 @@ Védett tagfüggvények</h2></td></tr>
 <tr class="inherit_header pro_methods_class_communication"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_communication')"><img src="closed.png" alt="-"/>&#160;Védett tagfüggvények inherited from <a class="el" href="class_communication.html">Communication</a></td></tr>
 <tr class="memitem:a55270f00472fa162061787fa4eae532b inherit pro_methods_class_communication"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; QDataStream &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_communication.html#a55270f00472fa162061787fa4eae532b">getSendStream</a> ()</td></tr>
 <tr class="separator:a55270f00472fa162061787fa4eae532b inherit pro_methods_class_communication"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-slots"></a>
+Privát rések</h2></td></tr>
+<tr class="memitem:ae8e52251a25607afb988c43f43551b0a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_communication_tcp_socket.html#ae8e52251a25607afb988c43f43551b0a">handleError</a> (QAbstractSocket::SocketError socketError)</td></tr>
+<tr class="separator:ae8e52251a25607afb988c43f43551b0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Privát attribútumok</h2></td></tr>
+<tr class="memitem:a76cf147cd2e1f13d69e11f5a8127f843"><td class="memItemLeft" align="right" valign="top">QTcpSocket *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_communication_tcp_socket.html#a76cf147cd2e1f13d69e11f5a8127f843">socket</a></td></tr>
+<tr class="separator:a76cf147cd2e1f13d69e11f5a8127f843"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -225,6 +244,44 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="ae8e52251a25607afb988c43f43551b0a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CommunicationTcpSocket::handleError </td>
+          <td>(</td>
+          <td class="paramtype">QAbstractSocket::SocketError&#160;</td>
+          <td class="paramname"><em>socketError</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Továbbítja a hibajelzést. </p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_communication_tcp_socket_ae8e52251a25607afb988c43f43551b0a_icgraph.png" border="0" usemap="#class_communication_tcp_socket_ae8e52251a25607afb988c43f43551b0a_icgraph" alt=""/></div>
+<map name="class_communication_tcp_socket_ae8e52251a25607afb988c43f43551b0a_icgraph" id="class_communication_tcp_socket_ae8e52251a25607afb988c43f43551b0a_icgraph">
+<area shape="rect" id="node2" href="class_communication_tcp_socket.html#a5cbd04540116c295413af2825309398e" title="Beállítja a használt socketet. " alt="" coords="228,39,403,80"/>
+<area shape="rect" id="node3" href="class_communication_tcp_socket_client.html#ada058d58cb786f965c1dfc5ae9c0778c" title="CommunicationTcpSocketClient\l::connect" alt="" coords="453,5,659,47"/>
+<area shape="rect" id="node4" href="class_communication_tcp_socket_server.html#a82f33a70276083eb7e84327c1932a526" title="CommunicationTcpSocketServer\l::newConnection" alt="" coords="451,71,661,112"/>
+<area shape="rect" id="node5" href="class_communication_tcp_socket_server.html#a0e4924b41f809060108a495e06874ec7" title="CommunicationTcpSocketServer\l::CommunicationTcpSocketServer" alt="" coords="709,71,928,112"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
 <a class="anchor" id="a9b0cb039b4b7083fbbaac22302dcc835"></a>
 <div class="memitem">
 <div class="memproto">
@@ -248,6 +305,16 @@ Additional Inherited Members</h2></td></tr>
 <p>Visszaadja, hogy van-e kapcsolat. </p>
 
 <p>Megvalósítja a következőket: <a class="el" href="class_communication.html#ab91fa1703c2c460bd3b9a01a6142db20">Communication</a>.</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_communication_tcp_socket_a9b0cb039b4b7083fbbaac22302dcc835_icgraph.png" border="0" usemap="#class_communication_tcp_socket_a9b0cb039b4b7083fbbaac22302dcc835_icgraph" alt=""/></div>
+<map name="class_communication_tcp_socket_a9b0cb039b4b7083fbbaac22302dcc835_icgraph" id="class_communication_tcp_socket_a9b0cb039b4b7083fbbaac22302dcc835_icgraph">
+<area shape="rect" id="node2" href="class_communication_tcp_socket.html#abe7e810371ab1df67adacaea55f7b82a" title="CommunicationTcpSocket\l::sendBufferContent" alt="" coords="228,5,403,47"/>
+</map>
+</div>
+</p>
 
 </div>
 </div>
@@ -275,6 +342,16 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Megvalósítja a következőket: <a class="el" href="class_communication.html#ac818c645c8ed63af3e871f017e30ed02">Communication</a>.</p>
 
+<p><div class="dynheader">
+A függvény hívási gráfja:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_communication_tcp_socket_abe7e810371ab1df67adacaea55f7b82a_cgraph.png" border="0" usemap="#class_communication_tcp_socket_abe7e810371ab1df67adacaea55f7b82a_cgraph" alt=""/></div>
+<map name="class_communication_tcp_socket_abe7e810371ab1df67adacaea55f7b82a_cgraph" id="class_communication_tcp_socket_abe7e810371ab1df67adacaea55f7b82a_cgraph">
+<area shape="rect" id="node2" href="class_communication_tcp_socket.html#a9b0cb039b4b7083fbbaac22302dcc835" title="CommunicationTcpSocket\l::isConnected" alt="" coords="228,5,403,47"/>
+</map>
+</div>
+</p>
+
 </div>
 </div>
 <a class="anchor" id="a5cbd04540116c295413af2825309398e"></a>
@@ -298,6 +375,53 @@ Additional Inherited Members</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+<p><div class="dynheader">
+A függvény hívási gráfja:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_communication_tcp_socket_a5cbd04540116c295413af2825309398e_cgraph.png" border="0" usemap="#class_communication_tcp_socket_a5cbd04540116c295413af2825309398e_cgraph" alt=""/></div>
+<map name="class_communication_tcp_socket_a5cbd04540116c295413af2825309398e_cgraph" id="class_communication_tcp_socket_a5cbd04540116c295413af2825309398e_cgraph">
+<area shape="rect" id="node2" href="class_communication_tcp_socket.html#ae8e52251a25607afb988c43f43551b0a" title="CommunicationTcpSocket\l::handleError" alt="" coords="239,5,414,47"/>
+<area shape="rect" id="node3" href="class_communication.html#ad353a908e815c98158f6145e7104bc4f" title="Communication::dataReceived" alt="" coords="228,71,425,98"/>
+<area shape="rect" id="node5" href="class_communication.html#a4e1587f6fdd18820a4aa9c1902332f04" title="Communication::connectTo\lDevice" alt="" coords="237,123,417,164"/>
+<area shape="rect" id="node4" href="class_communication.html#adf0ba74b7d1e1c993a9166b68b7d5b97" title="Communication::getReceive\lStream" alt="" coords="473,64,656,105"/>
+</map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_communication_tcp_socket_a5cbd04540116c295413af2825309398e_icgraph.png" border="0" usemap="#class_communication_tcp_socket_a5cbd04540116c295413af2825309398e_icgraph" alt=""/></div>
+<map name="class_communication_tcp_socket_a5cbd04540116c295413af2825309398e_icgraph" id="class_communication_tcp_socket_a5cbd04540116c295413af2825309398e_icgraph">
+<area shape="rect" id="node2" href="class_communication_tcp_socket_client.html#ada058d58cb786f965c1dfc5ae9c0778c" title="CommunicationTcpSocketClient\l::connect" alt="" coords="230,5,437,47"/>
+<area shape="rect" id="node3" href="class_communication_tcp_socket_server.html#a82f33a70276083eb7e84327c1932a526" title="CommunicationTcpSocketServer\l::newConnection" alt="" coords="228,71,439,112"/>
+<area shape="rect" id="node4" href="class_communication_tcp_socket_server.html#a0e4924b41f809060108a495e06874ec7" title="CommunicationTcpSocketServer\l::CommunicationTcpSocketServer" alt="" coords="487,71,705,112"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<h2 class="groupheader">Adattagok dokumentációja</h2>
+<a class="anchor" id="a76cf147cd2e1f13d69e11f5a8127f843"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QTcpSocket* CommunicationTcpSocket::socket</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Ha van felépült kapcsolat, arra mutató pointer. Egyébként nullptr. </p>
 
 </div>
 </div>

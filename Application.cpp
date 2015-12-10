@@ -21,7 +21,7 @@ Application::Application(int argc, char *argv[])
     QObject::connect(&serialPort,SIGNAL(dataReady(QDataStream&)),
                      &dataParser,SLOT(dataInput(QDataStream&)));
 
-    /** Ha a TCP szerverre kapcsolat érkezik, indulhat az adatok kiküldése, előtte felesleges.*/
+     /** Ha a TCP szerverre kapcsolat érkezik, indulhat az adatok kiküldése, előtte felesleges.*/
     QObject::connect(&tcpServer,SIGNAL(newConnectionSignal()),
                      this,SLOT(startDataSendTimer()));
     QObject::connect(&tcpServer,SIGNAL(disconnectedSignal()),
@@ -41,17 +41,16 @@ Application::Application(int argc, char *argv[])
     QObject::connect(&serialPort,SIGNAL(errorOccurred(const QString&)),
                      this,SLOT(errorHandling(const QString&)));
 
-//DEBUG!
-    /** Kommunikáció indítása, kapcsolódás.*/
+    /** Kommunikáció indítása, kapcsolódás. A szerver már fut, a soros port nyitása van még hátra.*/
     serialPort.connect();
-//DEBUG! vége
+
     /** String küldéséhez tartozó jelek bekötése.*/
     connect(&car, SIGNAL(sendString(QString)),
             this, SLOT(sendString(QString)));
+
     /** Adat küldés timer inicializálása.*/
     connect(&dataSendTimer,SIGNAL(timeout()),
             this,SLOT(sendData()));
-    /** Folyamatos timer legyen.*/
     dataSendTimer.setSingleShot(false);
     dataSendTimer.setInterval(dataSendTimerTimeout);
 }
@@ -63,7 +62,6 @@ void Application::PutInByteArray(quint16 code, double value, QByteArray& ba)
     ba.resize(i+k);
     memcpy(ba.data() + i, &code, sizeof(quint16));
     memcpy(ba.data()+sizeof(quint16)+i, &value, sizeof(double));
-    //i++;
 }
 void Application::PutVectorInByteArray(quint16 code, QVector<double>& value, QByteArray& ba)
 {
@@ -134,7 +132,6 @@ void Application::sendDataDebug()
         SendData(dataParser.GetCode(QString("vacc")),car.GetVbat());
         SendData(dataParser.GetCode(QString("vrail")),car.GetVrail());
         SendData(dataParser.GetCode(QString("vref")),car.GetVrail());
-
         SendDataFromClient(dataParser.GetCode(QString("hven")),0x10);
         SendDataFromClient(dataParser.GetCode(QString("dren")),0x10);
         SendDataFromClient(dataParser.GetCode(QString("vref")),5);

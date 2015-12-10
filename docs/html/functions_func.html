@@ -65,7 +65,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Keresés');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Osztálylista</span></a></li>
       <li><a href="classes.html"><span>Osztálymutató</span></a></li>
-      <li><a href="hierarchy.html"><span>Osztályhierarchia</span></a></li>
+      <li><a href="inherits.html"><span>Osztályhierarchia</span></a></li>
       <li class="current"><a href="functions.html"><span>Osztálytagok</span></a></li>
     </ul>
   </div>
@@ -74,6 +74,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Keresés');
       <li><a href="functions.html"><span>Összes</span></a></li>
       <li class="current"><a href="functions_func.html"><span>Függvények</span></a></li>
       <li><a href="functions_vars.html"><span>Változók</span></a></li>
+      <li><a href="functions_enum.html"><span>Enumerációk</span></a></li>
+      <li><a href="functions_eval.html"><span>Enumeráció-értékek</span></a></li>
     </ul>
   </div>
   <div id="navrow4" class="tabs3">
@@ -157,7 +159,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Keresés');
 : <a class="el" href="class_data_parser.html#a24c86fd9ac500f8e5afcca66a6ad7368">DataParser</a>
 </li>
 <li>DataParser()
-: <a class="el" href="class_data_parser.html#a85fdc7505703e498030efeb457aec240">DataParser</a>
+: <a class="el" href="class_data_parser.html#a2db453cb5399fcf6682dec468fdb871e">DataParser</a>
 </li>
 <li>DataProc()
 : <a class="el" href="class_race_car.html#a542518cd574219c53d76d42500268168">RaceCar</a>
@@ -174,6 +176,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Keresés');
 </li>
 <li>disconnect()
 : <a class="el" href="class_communication_tcp_socket.html#ab1dd1b1524b6dd6c85220bb3759de8a6">CommunicationTcpSocket</a>
+</li>
+<li>disconnected()
+: <a class="el" href="class_communication_tcp_socket_server.html#a6749a2ed380ab25c41beb8d2ced5caed">CommunicationTcpSocketServer</a>
 </li>
 <li>disconnectedSignal()
 : <a class="el" href="class_communication_tcp_socket_server.html#a2bf0e2b9c14717a3b7ddf44906e2b30d">CommunicationTcpSocketServer</a>
@@ -207,9 +212,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Keresés');
 </li>
 <li>GetCurr()
 : <a class="el" href="class_race_car.html#aa41241995c89892f43914564c1efd249">RaceCar</a>
-</li>
-<li>GetData()
-: <a class="el" href="class_data_parser.html#a9ced1c167e730241fe3e17e08959e1eb">DataParser</a>
 </li>
 <li>GetI()
 : <a class="el" href="class_d_c_motor.html#aa5e21b3a40c4257502e838704659837c">DCMotor</a>
@@ -254,8 +256,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Keresés');
 
 
 <h3><a class="anchor" id="index_h"></a>- h -</h3><ul>
+<li>handleError()
+: <a class="el" href="class_communication_serial_port.html#ab1f1867d3aa930fa3b797dd1398ba0e2">CommunicationSerialPort</a>
+, <a class="el" href="class_communication_tcp_socket.html#ae8e52251a25607afb988c43f43551b0a">CommunicationTcpSocket</a>
+</li>
 <li>HVEN()
-: <a class="el" href="class_accumulator.html#a250216084252ecf0a089ab8992494406">Accumulator</a>
+: <a class="el" href="class_accumulator.html#aeabef30ece6baf466fd252abbc311bf0">Accumulator</a>
 </li>
 </ul>
 
@@ -290,10 +296,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Keresés');
 <li>MotorTick()
 : <a class="el" href="class_race_car.html#aacd2284d78c1e3f21fc8759f7901639a">RaceCar</a>
 </li>
+<li>MotTimeout()
+: <a class="el" href="class_race_car.html#a943a1d6e8c68bd6a93762d3528eb0ae6">RaceCar</a>
+</li>
 </ul>
 
 
 <h3><a class="anchor" id="index_n"></a>- n -</h3><ul>
+<li>newConnection()
+: <a class="el" href="class_communication_tcp_socket_server.html#a82f33a70276083eb7e84327c1932a526">CommunicationTcpSocketServer</a>
+</li>
 <li>newConnectionSignal()
 : <a class="el" href="class_communication_tcp_socket_server.html#a8cce415f5901a2fae1026b08cba1de93">CommunicationTcpSocketServer</a>
 </li>
@@ -307,8 +319,18 @@ var searchBox = new SearchBox("searchBox", "search",false,'Keresés');
 <li>PITick()
 : <a class="el" href="class_race_car.html#abd2003886a2eeef3428bc80fc5d73d26">RaceCar</a>
 </li>
+<li>PITimeout()
+: <a class="el" href="class_race_car.html#acbe2a0acba345bfd8560911f3d86ef59">RaceCar</a>
+</li>
 <li>PrintDataToDebug()
 : <a class="el" href="class_data_parser.html#a602f4d9e0b6aef51b9de3a153c7d0bb6">DataParser</a>
+, <a class="el" href="class_race_car.html#a7edfe623557b167aa539fd50f97233d3">RaceCar</a>
+</li>
+<li>PutInByteArray()
+: <a class="el" href="class_application.html#a785ce03e0ed49f448a56d7d3dbac1cce">Application</a>
+</li>
+<li>PutVectorInByteArray()
+: <a class="el" href="class_application.html#ae1f74c1b7effc3a53812c2799447e850">Application</a>
 </li>
 </ul>
 
@@ -321,6 +343,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Keresés');
 
 
 <h3><a class="anchor" id="index_s"></a>- s -</h3><ul>
+<li>SelfTest()
+: <a class="el" href="class_race_car.html#a9305ecc4a7aba10e041f994363828921">RaceCar</a>
+</li>
 <li>send()
 : <a class="el" href="class_communication.html#a758523fe047afcb715d2c62f469570aa">Communication</a>
 </li>
@@ -329,11 +354,22 @@ var searchBox = new SearchBox("searchBox", "search",false,'Keresés');
 , <a class="el" href="class_communication_serial_port.html#a8f5ece62f8c14851f2f81100283b392f">CommunicationSerialPort</a>
 , <a class="el" href="class_communication_tcp_socket.html#abe7e810371ab1df67adacaea55f7b82a">CommunicationTcpSocket</a>
 </li>
+<li>SendData()
+: <a class="el" href="class_application.html#aae140ebe65e3415cd70f2ee247f9d435">Application</a>
+</li>
 <li>sendData()
-: <a class="el" href="class_communication.html#a60e79fe6d830b0afc000cdf6769641b6">Communication</a>
+: <a class="el" href="class_application.html#aa61db470698441ef02ced6286f3a859a">Application</a>
+, <a class="el" href="class_communication.html#a60e79fe6d830b0afc000cdf6769641b6">Communication</a>
+</li>
+<li>sendDataDebug()
+: <a class="el" href="class_application.html#ace28af03fbc0b49d32035210bfee522e">Application</a>
+</li>
+<li>SendDataFromClient()
+: <a class="el" href="class_application.html#a6eb519251f443e418a59a91f05ea5cee">Application</a>
 </li>
 <li>SendDebugData()
 : <a class="el" href="class_communication.html#a4288c649e24446d493381cad681863b5">Communication</a>
+, <a class="el" href="class_communication_tcp_socket_server.html#a0acff730c1d48db73c5a39a6a3941ba2">CommunicationTcpSocketServer</a>
 </li>
 <li>sendString()
 : <a class="el" href="class_application.html#abdf132e4c5a31d10b800610659c33e66">Application</a>
@@ -342,8 +378,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Keresés');
 <li>setSocket()
 : <a class="el" href="class_communication_tcp_socket.html#a5cbd04540116c295413af2825309398e">CommunicationTcpSocket</a>
 </li>
+<li>startDataSendTimer()
+: <a class="el" href="class_application.html#ab6b3296dc5ce46190ac30cc7f6135e92">Application</a>
+</li>
 <li>state()
 : <a class="el" href="class_communication_tcp_socket_client.html#adcf5c0193b344da67da81e5efd4499eb">CommunicationTcpSocketClient</a>
+</li>
+<li>stopDataSendTimer()
+: <a class="el" href="class_application.html#ad8ef60ede362fbf8f3b92964dad123d7">Application</a>
 </li>
 </ul>
 
@@ -359,6 +401,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Keresés');
 <h3><a class="anchor" id="index_u"></a>- u -</h3><ul>
 <li>UpdateCapacity()
 : <a class="el" href="class_accumulator.html#a4c73890dbbbe68accfd378f35e57f140">Accumulator</a>
+</li>
+<li>UpdateCells()
+: <a class="el" href="class_accumulator.html#a3ce2e4ac673fe424e8e127c8dc994097">Accumulator</a>
+</li>
+<li>UpdateState()
+: <a class="el" href="class_race_car.html#a4bd072290142cca13884d2cef23c4bc3">RaceCar</a>
 </li>
 </ul>
 

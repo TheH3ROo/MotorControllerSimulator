@@ -65,7 +65,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Keresés');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Osztálylista</span></a></li>
       <li><a href="classes.html"><span>Osztálymutató</span></a></li>
-      <li><a href="hierarchy.html"><span>Osztályhierarchia</span></a></li>
+      <li><a href="inherits.html"><span>Osztályhierarchia</span></a></li>
       <li><a href="functions.html"><span>Osztálytagok</span></a></li>
     </ul>
   </div>
@@ -89,6 +89,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Keresés');
 <a href="#pub-slots">Publikus rések</a> &#124;
 <a href="#signals">Szignálok</a> &#124;
 <a href="#pub-methods">Publikus tagfüggvények</a> &#124;
+<a href="#pri-types">Privát típusok</a> &#124;
+<a href="#pri-slots">Privát rések</a> &#124;
+<a href="#pri-methods">Privát tagfüggvények</a> &#124;
+<a href="#pri-attribs">Privát attribútumok</a> &#124;
 <a href="class_race_car-members.html">A tagok teljes listája</a>  </div>
   <div class="headertitle">
 <div class="title">RaceCar osztályreferencia</div>  </div>
@@ -102,11 +106,18 @@ var searchBox = new SearchBox("searchBox", "search",false,'Keresés');
 <div class="dynheader">
 A RaceCar osztály származási diagramja:</div>
 <div class="dyncontent">
- <div class="center">
-  <img src="class_race_car.png" usemap="#RaceCar_map" alt=""/>
-  <map id="RaceCar_map" name="RaceCar_map">
+<div class="center"><img src="class_race_car__inherit__graph.png" border="0" usemap="#_race_car_inherit__map" alt="Inheritance graph"/></div>
+<center><span class="legend">[<a href="graph_legend.html">Jelmagyarázat</a>]</span></center></div>
+<div class="dynheader">
+A RaceCar osztály együttműködési diagramja:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_race_car__coll__graph.png" border="0" usemap="#_race_car_coll__map" alt="Collaboration graph"/></div>
+<map name="_race_car_coll__map" id="_race_car_coll__map">
+<area shape="rect" id="node3" href="class_accumulator.html" title="LiIon akkumulátor csomagot megvalósító osztály. " alt="" coords="23,81,118,108"/>
+<area shape="rect" id="node4" href="class_p_i_ctrler.html" title="PI szabályozót megvalósító osztály. " alt="" coords="142,81,207,108"/>
+<area shape="rect" id="node5" href="class_d_c_motor.html" title="DC motort szimuláló osztály. " alt="" coords="231,81,305,108"/>
 </map>
- </div></div>
+<center><span class="legend">[<a href="graph_legend.html">Jelmagyarázat</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-slots"></a>
 Publikus rések</h2></td></tr>
@@ -126,7 +137,7 @@ Szignálok</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Publikus tagfüggvények</h2></td></tr>
-<tr class="memitem:ace4c5305afa8e756597e91f8aafd18a4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_race_car.html#ace4c5305afa8e756597e91f8aafd18a4">RaceCar</a> (QObject *parent=0, double dtm=1, double dtpi=5, double D=0.2, double C=10, double m=200)</td></tr>
+<tr class="memitem:ace4c5305afa8e756597e91f8aafd18a4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_race_car.html#ace4c5305afa8e756597e91f8aafd18a4">RaceCar</a> (QObject *parent=0, double <a class="el" href="class_race_car.html#a2f05309d320b5eafb6075648193cd0c6">dtm</a>=1, double <a class="el" href="class_race_car.html#a87996e0e4c95ca6f09cabcc014740f1f">dtpi</a>=5, double <a class="el" href="class_race_car.html#aef5583fb5bda40a77767ca31e9bd0422">D</a>=0.2, double <a class="el" href="class_race_car.html#a9b0f3758553664ed5b2f9467dda69ab7">C</a>=10, double <a class="el" href="class_race_car.html#a59298d22418713df33ee7d64ba15b33d">m</a>=200)</td></tr>
 <tr class="separator:ace4c5305afa8e756597e91f8aafd18a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3189f80cfa5b724352e254d61bf1b892"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_race_car.html#a3189f80cfa5b724352e254d61bf1b892">GetSpeed</a> ()</td></tr>
 <tr class="separator:a3189f80cfa5b724352e254d61bf1b892"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -152,11 +163,96 @@ Publikus tagfüggvények</h2></td></tr>
 <tr class="separator:a9f99f6ed0883839d20ae1661c385fb94"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a33d9d86e76d0799a188b56c0ff32e32c"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_race_car.html#a33d9d86e76d0799a188b56c0ff32e32c">IsDREN</a> ()</td></tr>
 <tr class="separator:a33d9d86e76d0799a188b56c0ff32e32c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-types"></a>
+Privát típusok</h2></td></tr>
+<tr class="memitem:a5e50c87e892a815fff94623c156c3f60"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_race_car.html#a5e50c87e892a815fff94623c156c3f60">raceCarState</a> { <a class="el" href="class_race_car.html#a5e50c87e892a815fff94623c156c3f60a65bfc09654a2225b495ec7af5decf87c">stop</a>, 
+<a class="el" href="class_race_car.html#a5e50c87e892a815fff94623c156c3f60a61afa77c49c2766230de3bf1df9ee3c7">hven</a>, 
+<a class="el" href="class_race_car.html#a5e50c87e892a815fff94623c156c3f60abd7cdd74d047c13a6fd81b8b5f0668ff">dren</a>
+ }<tr class="separator:a5e50c87e892a815fff94623c156c3f60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-slots"></a>
+Privát rések</h2></td></tr>
+<tr class="memitem:a943a1d6e8c68bd6a93762d3528eb0ae6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_race_car.html#a943a1d6e8c68bd6a93762d3528eb0ae6">MotTimeout</a> ()</td></tr>
+<tr class="separator:a943a1d6e8c68bd6a93762d3528eb0ae6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbe2a0acba345bfd8560911f3d86ef59"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_race_car.html#acbe2a0acba345bfd8560911f3d86ef59">PITimeout</a> ()</td></tr>
+<tr class="separator:acbe2a0acba345bfd8560911f3d86ef59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Privát tagfüggvények</h2></td></tr>
+<tr class="memitem:a4bd072290142cca13884d2cef23c4bc3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_race_car.html#a4bd072290142cca13884d2cef23c4bc3">UpdateState</a> (double M, double v)</td></tr>
+<tr class="separator:a4bd072290142cca13884d2cef23c4bc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9305ecc4a7aba10e041f994363828921"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_race_car.html#a9305ecc4a7aba10e041f994363828921">SelfTest</a> ()</td></tr>
+<tr class="separator:a9305ecc4a7aba10e041f994363828921"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7edfe623557b167aa539fd50f97233d3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_race_car.html#a7edfe623557b167aa539fd50f97233d3">PrintDataToDebug</a> ()</td></tr>
+<tr class="separator:a7edfe623557b167aa539fd50f97233d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Privát attribútumok</h2></td></tr>
+<tr class="memitem:a70187293aa199c81e513c0b2ff982a69"><td class="memItemLeft" align="right" valign="top">QTimer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_race_car.html#a70187293aa199c81e513c0b2ff982a69">motTmr</a></td></tr>
+<tr class="separator:a70187293aa199c81e513c0b2ff982a69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4ca8847b348e5e748be5dedd9df1a76"><td class="memItemLeft" align="right" valign="top">QTimer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_race_car.html#aa4ca8847b348e5e748be5dedd9df1a76">PITmr</a></td></tr>
+<tr class="separator:aa4ca8847b348e5e748be5dedd9df1a76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56e884f32983c5c0a9a8b5d2db96472f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_d_c_motor.html">DCMotor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_race_car.html#a56e884f32983c5c0a9a8b5d2db96472f">motor</a></td></tr>
+<tr class="separator:a56e884f32983c5c0a9a8b5d2db96472f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25139b0c9cdee229078a1c26d4e563d0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_p_i_ctrler.html">PICtrler</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_race_car.html#a25139b0c9cdee229078a1c26d4e563d0">ctrler</a></td></tr>
+<tr class="separator:a25139b0c9cdee229078a1c26d4e563d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8bc400f1cb6be7fbf664d63f7b77f7a1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_accumulator.html">Accumulator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_race_car.html#a8bc400f1cb6be7fbf664d63f7b77f7a1">accu</a></td></tr>
+<tr class="separator:a8bc400f1cb6be7fbf664d63f7b77f7a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0ce655c3c4900afcaf7fe9a10b063d9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_race_car.html#a5e50c87e892a815fff94623c156c3f60">raceCarState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_race_car.html#ab0ce655c3c4900afcaf7fe9a10b063d9">state</a></td></tr>
+<tr class="separator:ab0ce655c3c4900afcaf7fe9a10b063d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f05309d320b5eafb6075648193cd0c6"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_race_car.html#a2f05309d320b5eafb6075648193cd0c6">dtm</a></td></tr>
+<tr class="separator:a2f05309d320b5eafb6075648193cd0c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87996e0e4c95ca6f09cabcc014740f1f"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_race_car.html#a87996e0e4c95ca6f09cabcc014740f1f">dtpi</a></td></tr>
+<tr class="separator:a87996e0e4c95ca6f09cabcc014740f1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef5583fb5bda40a77767ca31e9bd0422"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_race_car.html#aef5583fb5bda40a77767ca31e9bd0422">D</a></td></tr>
+<tr class="separator:aef5583fb5bda40a77767ca31e9bd0422"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b0f3758553664ed5b2f9467dda69ab7"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_race_car.html#a9b0f3758553664ed5b2f9467dda69ab7">C</a></td></tr>
+<tr class="separator:a9b0f3758553664ed5b2f9467dda69ab7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59298d22418713df33ee7d64ba15b33d"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_race_car.html#a59298d22418713df33ee7d64ba15b33d">m</a></td></tr>
+<tr class="separator:a59298d22418713df33ee7d64ba15b33d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d6b1c6e503fc5346cb6a3a9f4dd3f03"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_race_car.html#a7d6b1c6e503fc5346cb6a3a9f4dd3f03">vpre</a></td></tr>
+<tr class="separator:a7d6b1c6e503fc5346cb6a3a9f4dd3f03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2ba9de0281dc2aaab00924b7a832489"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_race_car.html#ae2ba9de0281dc2aaab00924b7a832489">Mref</a></td></tr>
+<tr class="separator:ae2ba9de0281dc2aaab00924b7a832489"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb80470b39d184ab331e386b3f2959e3"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_race_car.html#adb80470b39d184ab331e386b3f2959e3">vref</a></td></tr>
+<tr class="separator:adb80470b39d184ab331e386b3f2959e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Részletes leírás</h2>
 <div class="textblock"><p>Elektromos versenyautót szimuláló osztály. </p>
 <p>Akkumulátort, DC motort és szabályozót tartalmaz. A különféle elemek állapotát a Get... kezdetű függvényekkel lehet lekérni. Két timert is tartalmaz (a motorhoz és a szabályozóhoz), ezek signaljai indítják a számításokat. A konstrukorban adhatóak meg ezek a paraméterek. </p>
-</div><h2 class="groupheader">Konstruktorok és destruktorok dokumentációja</h2>
+</div><h2 class="groupheader">Enumeráció-tagok dokumentációja</h2>
+<a class="anchor" id="a5e50c87e892a815fff94623c156c3f60"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="class_race_car.html#a5e50c87e892a815fff94623c156c3f60">RaceCar::raceCarState</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>A versenyautó állapotát leíró enumeráció. stop - a jármű áll hven - az akku kontaktora meghúz, így a DC sín feszültség alá kerül dren - hajtás engedélyezés </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumeráció-értékek</th></tr><tr><td class="fieldname"><a class="anchor" id="a5e50c87e892a815fff94623c156c3f60a65bfc09654a2225b495ec7af5decf87c"></a>stop&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a5e50c87e892a815fff94623c156c3f60a61afa77c49c2766230de3bf1df9ee3c7"></a>hven&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a5e50c87e892a815fff94623c156c3f60abd7cdd74d047c13a6fd81b8b5f0668ff"></a>dren&#160;</td><td class="fielddoc">
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Konstruktorok és destruktorok dokumentációja</h2>
 <a class="anchor" id="ace4c5305afa8e756597e91f8aafd18a4"></a>
 <div class="memitem">
 <div class="memproto">
@@ -215,6 +311,25 @@ Publikus tagfüggvények</h2></td></tr>
   </dd>
 </dl>
 
+<p><div class="dynheader">
+A függvény hívási gráfja:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_race_car_ace4c5305afa8e756597e91f8aafd18a4_cgraph.png" border="0" usemap="#class_race_car_ace4c5305afa8e756597e91f8aafd18a4_cgraph" alt=""/></div>
+<map name="class_race_car_ace4c5305afa8e756597e91f8aafd18a4_cgraph" id="class_race_car_ace4c5305afa8e756597e91f8aafd18a4_cgraph">
+<area shape="rect" id="node2" href="class_race_car.html#a943a1d6e8c68bd6a93762d3528eb0ae6" title="RaceCar::MotTimeout" alt="" coords="207,56,355,83"/>
+<area shape="rect" id="node6" href="class_race_car.html#acbe2a0acba345bfd8560911f3d86ef59" title="RaceCar::PITimeout" alt="" coords="212,107,351,133"/>
+<area shape="rect" id="node8" href="class_d_c_motor.html#a5605320b0ad6f84b37781209d025be91" title="DCMotor::Tick" alt="" coords="229,157,334,184"/>
+<area shape="rect" id="node9" href="class_p_i_ctrler.html#a064e3f3ffd68b972ef9a89964c54fb19" title="PICtrler::Tick" alt="" coords="233,208,330,235"/>
+<area shape="rect" id="node10" href="class_accumulator.html#a4c73890dbbbe68accfd378f35e57f140" title="Accumulator::UpdateCapacity" alt="" coords="184,259,379,285"/>
+<area shape="rect" id="node3" href="class_d_c_motor.html#a026043923b487d9d44a9e0b5b93b0701" title="DCMotor::GetW" alt="" coords="456,107,571,133"/>
+<area shape="rect" id="node4" href="class_p_i_ctrler.html#ae0428a99bf1cd404cdb7d2715593702f" title="PICtrler::GetValue" alt="" coords="450,5,577,32"/>
+<area shape="rect" id="node5" href="class_d_c_motor.html#aa5e21b3a40c4257502e838704659837c" title="DCMotor::GetI" alt="" coords="461,56,566,83"/>
+<area shape="rect" id="node7" href="class_accumulator.html#a5720b8db3fa482b82f71fdda8e704795" title="Accumulator::GetVrail" alt="" coords="438,157,589,184"/>
+<area shape="rect" id="node11" href="class_accumulator.html#a3ce2e4ac673fe424e8e127c8dc994097" title="Accumulator::UpdateCells" alt="" coords="427,259,600,285"/>
+</map>
+</div>
+</p>
+
 </div>
 </div>
 <h2 class="groupheader">Tagfüggvények dokumentációja</h2>
@@ -257,6 +372,17 @@ Publikus tagfüggvények</h2></td></tr>
   </dd>
 </dl>
 
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_race_car_aff6bc3cc3d423aa29af0a1001b2526da_icgraph.png" border="0" usemap="#class_race_car_aff6bc3cc3d423aa29af0a1001b2526da_icgraph" alt=""/></div>
+<map name="class_race_car_aff6bc3cc3d423aa29af0a1001b2526da_icgraph" id="class_race_car_aff6bc3cc3d423aa29af0a1001b2526da_icgraph">
+<area shape="rect" id="node2" href="class_race_car.html#ace4c5305afa8e756597e91f8aafd18a4" title="RaceCar::RaceCar" alt="" coords="400,5,531,32"/>
+<area shape="rect" id="node3" href="class_race_car.html#a943a1d6e8c68bd6a93762d3528eb0ae6" title="RaceCar::MotTimeout" alt="" coords="204,31,352,57"/>
+</map>
+</div>
+</p>
+
 </div>
 </div>
 <a class="anchor" id="a542518cd574219c53d76d42500268168"></a>
@@ -296,14 +422,29 @@ Publikus tagfüggvények</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>Lásd még</dt><dd>DataParser::dataMap </dd></dl>
+<dl class="section see"><dt>Lásd még</dt><dd><a class="el" href="class_data_parser.html#ae958fe8c4d361aa2590265fcc842e665">DataParser::dataMap</a> </dd></dl>
 <dl class="params"><dt>Paraméterek</dt><dd>
   <table class="params">
     <tr><td class="paramname">code</td><td>A jelentés-kódot tároló asszociatív tároló. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>Lásd még</dt><dd>DataParser::codeMap </dd></dl>
+<dl class="section see"><dt>Lásd még</dt><dd><a class="el" href="class_data_parser.html#a5b82eb847f5b938edd5e8b762dbf7a78">DataParser::codeMap</a> </dd></dl>
+
+<p><div class="dynheader">
+A függvény hívási gráfja:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_race_car_a542518cd574219c53d76d42500268168_cgraph.png" border="0" usemap="#class_race_car_a542518cd574219c53d76d42500268168_cgraph" alt=""/></div>
+<map name="class_race_car_a542518cd574219c53d76d42500268168_cgraph" id="class_race_car_a542518cd574219c53d76d42500268168_cgraph">
+<area shape="rect" id="node2" href="class_race_car.html#a4bd072290142cca13884d2cef23c4bc3" title="RaceCar::UpdateState" alt="" coords="188,19,340,45"/>
+<area shape="rect" id="node4" href="class_race_car.html#a9305ecc4a7aba10e041f994363828921" title="RaceCar::SelfTest" alt="" coords="201,95,327,121"/>
+<area shape="rect" id="node3" href="class_accumulator.html#aeabef30ece6baf466fd252abbc311bf0" title="Accumulator::HVEN" alt="" coords="388,5,527,32"/>
+<area shape="rect" id="node5" href="class_accumulator.html#ae3cf9d0bc671a57a27e400bbd95ba5e8" title="Accumulator::isOk" alt="" coords="392,56,523,83"/>
+<area shape="rect" id="node6" href="class_p_i_ctrler.html#a79fde0bacdfad18426dd630e27fedd6e" title="PICtrler::isOk" alt="" coords="407,107,507,133"/>
+<area shape="rect" id="node7" href="class_d_c_motor.html#afe2c32fcd30b9ef7feb9991909713cc9" title="DCMotor::isOk" alt="" coords="403,157,511,184"/>
+</map>
+</div>
+</p>
 
 </div>
 </div>
@@ -329,6 +470,28 @@ Publikus tagfüggvények</h2></td></tr>
 </div><div class="memdoc">
 <p>Visszatér a pillanatnyi szögsebességgel. </p>
 
+<p><div class="dynheader">
+A függvény hívási gráfja:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_race_car_afaf526970a2bb73a3526eeb6670253af_cgraph.png" border="0" usemap="#class_race_car_afaf526970a2bb73a3526eeb6670253af_cgraph" alt=""/></div>
+<map name="class_race_car_afaf526970a2bb73a3526eeb6670253af_cgraph" id="class_race_car_afaf526970a2bb73a3526eeb6670253af_cgraph">
+<area shape="rect" id="node2" href="class_d_c_motor.html#a026043923b487d9d44a9e0b5b93b0701" title="DCMotor::GetW" alt="" coords="215,5,329,32"/>
+</map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_race_car_afaf526970a2bb73a3526eeb6670253af_icgraph.png" border="0" usemap="#class_race_car_afaf526970a2bb73a3526eeb6670253af_icgraph" alt=""/></div>
+<map name="class_race_car_afaf526970a2bb73a3526eeb6670253af_icgraph" id="class_race_car_afaf526970a2bb73a3526eeb6670253af_icgraph">
+<area shape="rect" id="node2" href="class_application.html#aa61db470698441ef02ced6286f3a859a" title="Application::sendData" alt="" coords="233,5,383,32"/>
+<area shape="rect" id="node4" href="class_application.html#ace28af03fbc0b49d32035210bfee522e" title="Application::sendDataDebug" alt="" coords="215,56,401,83"/>
+<area shape="rect" id="node3" href="class_application.html#a4f945a7f8d003a3b8f716f7128206329" title="Application::Application" alt="" coords="449,5,608,32"/>
+</map>
+</div>
+</p>
+
 </div>
 </div>
 <a class="anchor" id="acf47a00d02df89a73225cf322d9be5c0"></a>
@@ -352,6 +515,28 @@ Publikus tagfüggvények</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Visszatér az akkumulátor maradék kapacitással. </p>
+
+<p><div class="dynheader">
+A függvény hívási gráfja:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_race_car_acf47a00d02df89a73225cf322d9be5c0_cgraph.png" border="0" usemap="#class_race_car_acf47a00d02df89a73225cf322d9be5c0_cgraph" alt=""/></div>
+<map name="class_race_car_acf47a00d02df89a73225cf322d9be5c0_cgraph" id="class_race_car_acf47a00d02df89a73225cf322d9be5c0_cgraph">
+<area shape="rect" id="node2" href="class_accumulator.html#a4821f445e39d461046f9fa8630be00fe" title="Accumulator::GetAh" alt="" coords="192,5,332,32"/>
+</map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_race_car_acf47a00d02df89a73225cf322d9be5c0_icgraph.png" border="0" usemap="#class_race_car_acf47a00d02df89a73225cf322d9be5c0_icgraph" alt=""/></div>
+<map name="class_race_car_acf47a00d02df89a73225cf322d9be5c0_icgraph" id="class_race_car_acf47a00d02df89a73225cf322d9be5c0_icgraph">
+<area shape="rect" id="node2" href="class_application.html#aa61db470698441ef02ced6286f3a859a" title="Application::sendData" alt="" coords="211,5,360,32"/>
+<area shape="rect" id="node4" href="class_application.html#ace28af03fbc0b49d32035210bfee522e" title="Application::sendDataDebug" alt="" coords="192,56,379,83"/>
+<area shape="rect" id="node3" href="class_application.html#a4f945a7f8d003a3b8f716f7128206329" title="Application::Application" alt="" coords="427,5,585,32"/>
+</map>
+</div>
+</p>
 
 </div>
 </div>
@@ -377,6 +562,28 @@ Publikus tagfüggvények</h2></td></tr>
 </div><div class="memdoc">
 <p>Visszatér a pillanatnyi motorárammal. </p>
 
+<p><div class="dynheader">
+A függvény hívási gráfja:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_race_car_aa41241995c89892f43914564c1efd249_cgraph.png" border="0" usemap="#class_race_car_aa41241995c89892f43914564c1efd249_cgraph" alt=""/></div>
+<map name="class_race_car_aa41241995c89892f43914564c1efd249_cgraph" id="class_race_car_aa41241995c89892f43914564c1efd249_cgraph">
+<area shape="rect" id="node2" href="class_d_c_motor.html#aa5e21b3a40c4257502e838704659837c" title="DCMotor::GetI" alt="" coords="179,5,284,32"/>
+</map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_race_car_aa41241995c89892f43914564c1efd249_icgraph.png" border="0" usemap="#class_race_car_aa41241995c89892f43914564c1efd249_icgraph" alt=""/></div>
+<map name="class_race_car_aa41241995c89892f43914564c1efd249_icgraph" id="class_race_car_aa41241995c89892f43914564c1efd249_icgraph">
+<area shape="rect" id="node2" href="class_application.html#aa61db470698441ef02ced6286f3a859a" title="Application::sendData" alt="" coords="197,5,347,32"/>
+<area shape="rect" id="node4" href="class_application.html#ace28af03fbc0b49d32035210bfee522e" title="Application::sendDataDebug" alt="" coords="179,56,365,83"/>
+<area shape="rect" id="node3" href="class_application.html#a4f945a7f8d003a3b8f716f7128206329" title="Application::Application" alt="" coords="413,5,572,32"/>
+</map>
+</div>
+</p>
+
 </div>
 </div>
 <a class="anchor" id="a3189f80cfa5b724352e254d61bf1b892"></a>
@@ -400,6 +607,18 @@ Publikus tagfüggvények</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Visszatér a pillanatnyi sebességgel. </p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_race_car_a3189f80cfa5b724352e254d61bf1b892_icgraph.png" border="0" usemap="#class_race_car_a3189f80cfa5b724352e254d61bf1b892_icgraph" alt=""/></div>
+<map name="class_race_car_a3189f80cfa5b724352e254d61bf1b892_icgraph" id="class_race_car_a3189f80cfa5b724352e254d61bf1b892_icgraph">
+<area shape="rect" id="node2" href="class_application.html#aa61db470698441ef02ced6286f3a859a" title="Application::sendData" alt="" coords="211,5,360,32"/>
+<area shape="rect" id="node4" href="class_application.html#ace28af03fbc0b49d32035210bfee522e" title="Application::sendDataDebug" alt="" coords="192,56,379,83"/>
+<area shape="rect" id="node3" href="class_application.html#a4f945a7f8d003a3b8f716f7128206329" title="Application::Application" alt="" coords="427,5,585,32"/>
+</map>
+</div>
+</p>
 
 </div>
 </div>
@@ -425,6 +644,28 @@ Publikus tagfüggvények</h2></td></tr>
 </div><div class="memdoc">
 <p>Visszatér a pillanatnyi nyomatékkal. </p>
 
+<p><div class="dynheader">
+A függvény hívási gráfja:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_race_car_a7c2bdb79c6a9152d5781fadd267364e7_cgraph.png" border="0" usemap="#class_race_car_a7c2bdb79c6a9152d5781fadd267364e7_cgraph" alt=""/></div>
+<map name="class_race_car_a7c2bdb79c6a9152d5781fadd267364e7_cgraph" id="class_race_car_a7c2bdb79c6a9152d5781fadd267364e7_cgraph">
+<area shape="rect" id="node2" href="class_d_c_motor.html#aac21b47f32e489b1ceb910e991dc63de" title="DCMotor::GetM" alt="" coords="180,5,293,32"/>
+</map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_race_car_a7c2bdb79c6a9152d5781fadd267364e7_icgraph.png" border="0" usemap="#class_race_car_a7c2bdb79c6a9152d5781fadd267364e7_icgraph" alt=""/></div>
+<map name="class_race_car_a7c2bdb79c6a9152d5781fadd267364e7_icgraph" id="class_race_car_a7c2bdb79c6a9152d5781fadd267364e7_icgraph">
+<area shape="rect" id="node2" href="class_application.html#aa61db470698441ef02ced6286f3a859a" title="Application::sendData" alt="" coords="199,5,348,32"/>
+<area shape="rect" id="node4" href="class_application.html#ace28af03fbc0b49d32035210bfee522e" title="Application::sendDataDebug" alt="" coords="180,56,367,83"/>
+<area shape="rect" id="node3" href="class_application.html#a4f945a7f8d003a3b8f716f7128206329" title="Application::Application" alt="" coords="415,5,573,32"/>
+</map>
+</div>
+</p>
+
 </div>
 </div>
 <a class="anchor" id="abe76e92ec9a5701235404f162b8c0a3f"></a>
@@ -448,6 +689,28 @@ Publikus tagfüggvények</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Visszatér az akkupakk feszültséggel. </p>
+
+<p><div class="dynheader">
+A függvény hívási gráfja:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_race_car_abe76e92ec9a5701235404f162b8c0a3f_cgraph.png" border="0" usemap="#class_race_car_abe76e92ec9a5701235404f162b8c0a3f_cgraph" alt=""/></div>
+<map name="class_race_car_abe76e92ec9a5701235404f162b8c0a3f_cgraph" id="class_race_car_abe76e92ec9a5701235404f162b8c0a3f_cgraph">
+<area shape="rect" id="node2" href="class_accumulator.html#af22fd564b9635f4641e903eac84f5d00" title="Accumulator::GetVbat" alt="" coords="181,5,332,32"/>
+</map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_race_car_abe76e92ec9a5701235404f162b8c0a3f_icgraph.png" border="0" usemap="#class_race_car_abe76e92ec9a5701235404f162b8c0a3f_icgraph" alt=""/></div>
+<map name="class_race_car_abe76e92ec9a5701235404f162b8c0a3f_icgraph" id="class_race_car_abe76e92ec9a5701235404f162b8c0a3f_icgraph">
+<area shape="rect" id="node2" href="class_application.html#aa61db470698441ef02ced6286f3a859a" title="Application::sendData" alt="" coords="200,5,349,32"/>
+<area shape="rect" id="node4" href="class_application.html#ace28af03fbc0b49d32035210bfee522e" title="Application::sendDataDebug" alt="" coords="181,56,368,83"/>
+<area shape="rect" id="node3" href="class_application.html#a4f945a7f8d003a3b8f716f7128206329" title="Application::Application" alt="" coords="416,5,575,32"/>
+</map>
+</div>
+</p>
 
 </div>
 </div>
@@ -473,6 +736,27 @@ Publikus tagfüggvények</h2></td></tr>
 </div><div class="memdoc">
 <p>Visszatér a cellafeszültségeket tartalmazó vektorral. </p>
 
+<p><div class="dynheader">
+A függvény hívási gráfja:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_race_car_a85367304dbc71deea7b54f3da3ac4c90_cgraph.png" border="0" usemap="#class_race_car_a85367304dbc71deea7b54f3da3ac4c90_cgraph" alt=""/></div>
+<map name="class_race_car_a85367304dbc71deea7b54f3da3ac4c90_cgraph" id="class_race_car_a85367304dbc71deea7b54f3da3ac4c90_cgraph">
+<area shape="rect" id="node2" href="class_accumulator.html#adc96c9233a2f5b4d4c4a54609d1a5ce9" title="Accumulator::GetVCell" alt="" coords="185,5,340,32"/>
+</map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_race_car_a85367304dbc71deea7b54f3da3ac4c90_icgraph.png" border="0" usemap="#class_race_car_a85367304dbc71deea7b54f3da3ac4c90_icgraph" alt=""/></div>
+<map name="class_race_car_a85367304dbc71deea7b54f3da3ac4c90_icgraph" id="class_race_car_a85367304dbc71deea7b54f3da3ac4c90_icgraph">
+<area shape="rect" id="node2" href="class_application.html#aa61db470698441ef02ced6286f3a859a" title="Application::sendData" alt="" coords="185,5,335,32"/>
+<area shape="rect" id="node3" href="class_application.html#a4f945a7f8d003a3b8f716f7128206329" title="Application::Application" alt="" coords="383,5,541,32"/>
+</map>
+</div>
+</p>
+
 </div>
 </div>
 <a class="anchor" id="a03d94de7065a5293e9ea142055d27a05"></a>
@@ -496,6 +780,28 @@ Publikus tagfüggvények</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Visszatér a DC sín feszültséggel. </p>
+
+<p><div class="dynheader">
+A függvény hívási gráfja:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_race_car_a03d94de7065a5293e9ea142055d27a05_cgraph.png" border="0" usemap="#class_race_car_a03d94de7065a5293e9ea142055d27a05_cgraph" alt=""/></div>
+<map name="class_race_car_a03d94de7065a5293e9ea142055d27a05_cgraph" id="class_race_car_a03d94de7065a5293e9ea142055d27a05_cgraph">
+<area shape="rect" id="node2" href="class_accumulator.html#a5720b8db3fa482b82f71fdda8e704795" title="Accumulator::GetVrail" alt="" coords="180,5,331,32"/>
+</map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_race_car_a03d94de7065a5293e9ea142055d27a05_icgraph.png" border="0" usemap="#class_race_car_a03d94de7065a5293e9ea142055d27a05_icgraph" alt=""/></div>
+<map name="class_race_car_a03d94de7065a5293e9ea142055d27a05_icgraph" id="class_race_car_a03d94de7065a5293e9ea142055d27a05_icgraph">
+<area shape="rect" id="node2" href="class_application.html#aa61db470698441ef02ced6286f3a859a" title="Application::sendData" alt="" coords="199,5,348,32"/>
+<area shape="rect" id="node4" href="class_application.html#ace28af03fbc0b49d32035210bfee522e" title="Application::sendDataDebug" alt="" coords="180,56,367,83"/>
+<area shape="rect" id="node3" href="class_application.html#a4f945a7f8d003a3b8f716f7128206329" title="Application::Application" alt="" coords="415,5,573,32"/>
+</map>
+</div>
+</p>
 
 </div>
 </div>
@@ -521,6 +827,17 @@ Publikus tagfüggvények</h2></td></tr>
 </div><div class="memdoc">
 <p>Visszatér a sebességalapjel értékével. </p>
 
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_race_car_a78f6da7999486db4750a14f05727db32_icgraph.png" border="0" usemap="#class_race_car_a78f6da7999486db4750a14f05727db32_icgraph" alt=""/></div>
+<map name="class_race_car_a78f6da7999486db4750a14f05727db32_icgraph" id="class_race_car_a78f6da7999486db4750a14f05727db32_icgraph">
+<area shape="rect" id="node2" href="class_application.html#aa61db470698441ef02ced6286f3a859a" title="Application::sendData" alt="" coords="177,5,327,32"/>
+<area shape="rect" id="node3" href="class_application.html#a4f945a7f8d003a3b8f716f7128206329" title="Application::Application" alt="" coords="375,5,533,32"/>
+</map>
+</div>
+</p>
+
 </div>
 </div>
 <a class="anchor" id="a33d9d86e76d0799a188b56c0ff32e32c"></a>
@@ -536,6 +853,17 @@ Publikus tagfüggvények</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Visszatér az autó állapotával. </p><dl class="section return"><dt>Visszatérési érték</dt><dd>10, ha az állapot "dren", egyébként 0 </dd></dl>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_race_car_a33d9d86e76d0799a188b56c0ff32e32c_icgraph.png" border="0" usemap="#class_race_car_a33d9d86e76d0799a188b56c0ff32e32c_icgraph" alt=""/></div>
+<map name="class_race_car_a33d9d86e76d0799a188b56c0ff32e32c_icgraph" id="class_race_car_a33d9d86e76d0799a188b56c0ff32e32c_icgraph">
+<area shape="rect" id="node2" href="class_application.html#aa61db470698441ef02ced6286f3a859a" title="Application::sendData" alt="" coords="180,5,329,32"/>
+<area shape="rect" id="node3" href="class_application.html#a4f945a7f8d003a3b8f716f7128206329" title="Application::Application" alt="" coords="377,5,536,32"/>
+</map>
+</div>
+</p>
 
 </div>
 </div>
@@ -553,6 +881,17 @@ Publikus tagfüggvények</h2></td></tr>
 </div><div class="memdoc">
 <p>Visszatér az autó állapotával. </p><dl class="section return"><dt>Visszatérési érték</dt><dd>10, ha az állapot "hven", egyébként 0 </dd></dl>
 
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_race_car_a9f99f6ed0883839d20ae1661c385fb94_icgraph.png" border="0" usemap="#class_race_car_a9f99f6ed0883839d20ae1661c385fb94_icgraph" alt=""/></div>
+<map name="class_race_car_a9f99f6ed0883839d20ae1661c385fb94_icgraph" id="class_race_car_a9f99f6ed0883839d20ae1661c385fb94_icgraph">
+<area shape="rect" id="node2" href="class_application.html#aa61db470698441ef02ced6286f3a859a" title="Application::sendData" alt="" coords="180,5,329,32"/>
+<area shape="rect" id="node3" href="class_application.html#a4f945a7f8d003a3b8f716f7128206329" title="Application::Application" alt="" coords="377,5,536,32"/>
+</map>
+</div>
+</p>
+
 </div>
 </div>
 <a class="anchor" id="a2fb4e4fee325b978ecf8eccc0c33c5b1"></a>
@@ -568,6 +907,17 @@ Publikus tagfüggvények</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Visszatér az autó állapotával. </p><dl class="section return"><dt>Visszatérési érték</dt><dd>10, ha az állapot "stop", egyébként 0 </dd></dl>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_race_car_a2fb4e4fee325b978ecf8eccc0c33c5b1_icgraph.png" border="0" usemap="#class_race_car_a2fb4e4fee325b978ecf8eccc0c33c5b1_icgraph" alt=""/></div>
+<map name="class_race_car_a2fb4e4fee325b978ecf8eccc0c33c5b1_icgraph" id="class_race_car_a2fb4e4fee325b978ecf8eccc0c33c5b1_icgraph">
+<area shape="rect" id="node2" href="class_application.html#aa61db470698441ef02ced6286f3a859a" title="Application::sendData" alt="" coords="171,5,320,32"/>
+<area shape="rect" id="node3" href="class_application.html#a4f945a7f8d003a3b8f716f7128206329" title="Application::Application" alt="" coords="368,5,527,32"/>
+</map>
+</div>
+</p>
 
 </div>
 </div>
@@ -609,6 +959,63 @@ Publikus tagfüggvények</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>A motorhoz kell bekötni, ennek hatására kell az új motorparamétereket számolni. </p><dl class="section see"><dt>Lásd még</dt><dd><a class="el" href="class_d_c_motor.html#a5605320b0ad6f84b37781209d025be91">DCMotor::Tick</a> </dd></dl>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_race_car_aacd2284d78c1e3f21fc8759f7901639a_icgraph.png" border="0" usemap="#class_race_car_aacd2284d78c1e3f21fc8759f7901639a_icgraph" alt=""/></div>
+<map name="class_race_car_aacd2284d78c1e3f21fc8759f7901639a_icgraph" id="class_race_car_aacd2284d78c1e3f21fc8759f7901639a_icgraph">
+<area shape="rect" id="node2" href="class_race_car.html#ace4c5305afa8e756597e91f8aafd18a4" title="RaceCar::RaceCar" alt="" coords="387,5,517,32"/>
+<area shape="rect" id="node3" href="class_race_car.html#a943a1d6e8c68bd6a93762d3528eb0ae6" title="RaceCar::MotTimeout" alt="" coords="191,31,339,57"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a943a1d6e8c68bd6a93762d3528eb0ae6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RaceCar::MotTimeout </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Kiszámítja a szükséges változókat és átadja azt a motornak, hogy számítsa újra a saját paramétereit. A motor timer timeout() signalját érdemes ide bekötni. </p>
+
+<p><div class="dynheader">
+A függvény hívási gráfja:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_race_car_a943a1d6e8c68bd6a93762d3528eb0ae6_cgraph.png" border="0" usemap="#class_race_car_a943a1d6e8c68bd6a93762d3528eb0ae6_cgraph" alt=""/></div>
+<map name="class_race_car_a943a1d6e8c68bd6a93762d3528eb0ae6_cgraph" id="class_race_car_a943a1d6e8c68bd6a93762d3528eb0ae6_cgraph">
+<area shape="rect" id="node2" href="class_d_c_motor.html#a026043923b487d9d44a9e0b5b93b0701" title="DCMotor::GetW" alt="" coords="207,5,322,32"/>
+<area shape="rect" id="node3" href="class_p_i_ctrler.html#ae0428a99bf1cd404cdb7d2715593702f" title="PICtrler::GetValue" alt="" coords="201,56,328,83"/>
+<area shape="rect" id="node4" href="class_d_c_motor.html#aa5e21b3a40c4257502e838704659837c" title="DCMotor::GetI" alt="" coords="212,107,317,133"/>
+</map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_race_car_a943a1d6e8c68bd6a93762d3528eb0ae6_icgraph.png" border="0" usemap="#class_race_car_a943a1d6e8c68bd6a93762d3528eb0ae6_icgraph" alt=""/></div>
+<map name="class_race_car_a943a1d6e8c68bd6a93762d3528eb0ae6_icgraph" id="class_race_car_a943a1d6e8c68bd6a93762d3528eb0ae6_icgraph">
+<area shape="rect" id="node2" href="class_race_car.html#ace4c5305afa8e756597e91f8aafd18a4" title="RaceCar::RaceCar" alt="" coords="201,5,332,32"/>
+</map>
+</div>
+</p>
 
 </div>
 </div>
@@ -657,6 +1064,147 @@ Publikus tagfüggvények</h2></td></tr>
 </div><div class="memdoc">
 <p>A szabályozóhoz kell bekötni, ennek hatására kell a szabályozót lefuttatni. </p><dl class="section see"><dt>Lásd még</dt><dd><a class="el" href="class_p_i_ctrler.html#a064e3f3ffd68b972ef9a89964c54fb19">PICtrler::Tick</a> </dd></dl>
 
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_race_car_abd2003886a2eeef3428bc80fc5d73d26_icgraph.png" border="0" usemap="#class_race_car_abd2003886a2eeef3428bc80fc5d73d26_icgraph" alt=""/></div>
+<map name="class_race_car_abd2003886a2eeef3428bc80fc5d73d26_icgraph" id="class_race_car_abd2003886a2eeef3428bc80fc5d73d26_icgraph">
+<area shape="rect" id="node2" href="class_race_car.html#ace4c5305afa8e756597e91f8aafd18a4" title="RaceCar::RaceCar" alt="" coords="356,5,487,32"/>
+<area shape="rect" id="node3" href="class_race_car.html#acbe2a0acba345bfd8560911f3d86ef59" title="RaceCar::PITimeout" alt="" coords="169,31,308,57"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="acbe2a0acba345bfd8560911f3d86ef59"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RaceCar::PITimeout </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Kiszámítja a szükséges változókat és átadja azt a szabályzónak, hogy számítsa újra a saját paramétereit. A szabályzó timer timeout() signalját érdemes ide bekötni. </p>
+
+<p><div class="dynheader">
+A függvény hívási gráfja:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_race_car_acbe2a0acba345bfd8560911f3d86ef59_cgraph.png" border="0" usemap="#class_race_car_acbe2a0acba345bfd8560911f3d86ef59_cgraph" alt=""/></div>
+<map name="class_race_car_acbe2a0acba345bfd8560911f3d86ef59_cgraph" id="class_race_car_acbe2a0acba345bfd8560911f3d86ef59_cgraph">
+<area shape="rect" id="node2" href="class_d_c_motor.html#a026043923b487d9d44a9e0b5b93b0701" title="DCMotor::GetW" alt="" coords="210,5,325,32"/>
+<area shape="rect" id="node3" href="class_accumulator.html#a5720b8db3fa482b82f71fdda8e704795" title="Accumulator::GetVrail" alt="" coords="192,56,343,83"/>
+</map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_race_car_acbe2a0acba345bfd8560911f3d86ef59_icgraph.png" border="0" usemap="#class_race_car_acbe2a0acba345bfd8560911f3d86ef59_icgraph" alt=""/></div>
+<map name="class_race_car_acbe2a0acba345bfd8560911f3d86ef59_icgraph" id="class_race_car_acbe2a0acba345bfd8560911f3d86ef59_icgraph">
+<area shape="rect" id="node2" href="class_race_car.html#ace4c5305afa8e756597e91f8aafd18a4" title="RaceCar::RaceCar" alt="" coords="192,5,323,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a7edfe623557b167aa539fd50f97233d3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RaceCar::PrintDataToDebug </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Debughoz használható függvény. A konzolra kiírja a privát változókat. </p>
+
+<p><div class="dynheader">
+A függvény hívási gráfja:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_race_car_a7edfe623557b167aa539fd50f97233d3_cgraph.png" border="0" usemap="#class_race_car_a7edfe623557b167aa539fd50f97233d3_cgraph" alt=""/></div>
+<map name="class_race_car_a7edfe623557b167aa539fd50f97233d3_cgraph" id="class_race_car_a7edfe623557b167aa539fd50f97233d3_cgraph">
+<area shape="rect" id="node2" href="class_d_c_motor.html#a026043923b487d9d44a9e0b5b93b0701" title="DCMotor::GetW" alt="" coords="257,5,371,32"/>
+<area shape="rect" id="node3" href="class_d_c_motor.html#aac21b47f32e489b1ceb910e991dc63de" title="DCMotor::GetM" alt="" coords="257,56,371,83"/>
+<area shape="rect" id="node4" href="class_d_c_motor.html#aa5e21b3a40c4257502e838704659837c" title="DCMotor::GetI" alt="" coords="261,107,367,133"/>
+<area shape="rect" id="node5" href="class_accumulator.html#a4821f445e39d461046f9fa8630be00fe" title="Accumulator::GetAh" alt="" coords="244,157,384,184"/>
+<area shape="rect" id="node6" href="class_accumulator.html#af22fd564b9635f4641e903eac84f5d00" title="Accumulator::GetVbat" alt="" coords="239,208,389,235"/>
+<area shape="rect" id="node7" href="class_accumulator.html#a5720b8db3fa482b82f71fdda8e704795" title="Accumulator::GetVrail" alt="" coords="239,259,389,285"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a9305ecc4a7aba10e041f994363828921"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RaceCar::SelfTest </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Önteszt. Lekérdezni az akkumulátor, a motor és a szabályzó állapotát, majd elküldi a kliensnek. A kliens "selftest" üzenetére hívja meg a <a class="el" href="class_race_car.html#a542518cd574219c53d76d42500268168">DataProc()</a> függvény. </p><dl class="section see"><dt>Lásd még</dt><dd><a class="el" href="class_race_car.html#a542518cd574219c53d76d42500268168">RaceCar::DataProc()</a> </dd></dl>
+
+<p><div class="dynheader">
+A függvény hívási gráfja:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_race_car_a9305ecc4a7aba10e041f994363828921_cgraph.png" border="0" usemap="#class_race_car_a9305ecc4a7aba10e041f994363828921_cgraph" alt=""/></div>
+<map name="class_race_car_a9305ecc4a7aba10e041f994363828921_cgraph" id="class_race_car_a9305ecc4a7aba10e041f994363828921_cgraph">
+<area shape="rect" id="node2" href="class_accumulator.html#ae3cf9d0bc671a57a27e400bbd95ba5e8" title="Accumulator::isOk" alt="" coords="180,5,311,32"/>
+<area shape="rect" id="node3" href="class_p_i_ctrler.html#a79fde0bacdfad18426dd630e27fedd6e" title="PICtrler::isOk" alt="" coords="195,56,295,83"/>
+<area shape="rect" id="node4" href="class_d_c_motor.html#afe2c32fcd30b9ef7feb9991909713cc9" title="DCMotor::isOk" alt="" coords="191,107,299,133"/>
+</map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_race_car_a9305ecc4a7aba10e041f994363828921_icgraph.png" border="0" usemap="#class_race_car_a9305ecc4a7aba10e041f994363828921_icgraph" alt=""/></div>
+<map name="class_race_car_a9305ecc4a7aba10e041f994363828921_icgraph" id="class_race_car_a9305ecc4a7aba10e041f994363828921_icgraph">
+<area shape="rect" id="node2" href="class_race_car.html#a542518cd574219c53d76d42500268168" title="RaceCar::DataProc" alt="" coords="180,5,315,32"/>
+</map>
+</div>
+</p>
+
 </div>
 </div>
 <a class="anchor" id="ad7a2e1285bcfbe1e635dcac6600d2a9d"></a>
@@ -681,6 +1229,370 @@ Publikus tagfüggvények</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Stringet ad át a bekötött slotnak. Debugra, selftest üzenetek küldésére használható. </p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_race_car_ad7a2e1285bcfbe1e635dcac6600d2a9d_icgraph.png" border="0" usemap="#class_race_car_ad7a2e1285bcfbe1e635dcac6600d2a9d_icgraph" alt=""/></div>
+<map name="class_race_car_ad7a2e1285bcfbe1e635dcac6600d2a9d_icgraph" id="class_race_car_ad7a2e1285bcfbe1e635dcac6600d2a9d_icgraph">
+<area shape="rect" id="node2" href="class_race_car.html#a9305ecc4a7aba10e041f994363828921" title="RaceCar::SelfTest" alt="" coords="196,5,323,32"/>
+<area shape="rect" id="node3" href="class_race_car.html#a542518cd574219c53d76d42500268168" title="RaceCar::DataProc" alt="" coords="371,31,505,57"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a4bd072290142cca13884d2cef23c4bc3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RaceCar::UpdateState </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>M</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>v</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Frissíti a belső változókat az állapot alapján. </p><dl class="params"><dt>Paraméterek</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">M</td><td>nyomatékalapjel </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Megjegyzés</dt><dd>M jelenleg nem támogatott </dd></dl>
+<dl class="params"><dt>Paraméterek</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">v</td><td>sebességalapjel </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><div class="dynheader">
+A függvény hívási gráfja:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_race_car_a4bd072290142cca13884d2cef23c4bc3_cgraph.png" border="0" usemap="#class_race_car_a4bd072290142cca13884d2cef23c4bc3_cgraph" alt=""/></div>
+<map name="class_race_car_a4bd072290142cca13884d2cef23c4bc3_cgraph" id="class_race_car_a4bd072290142cca13884d2cef23c4bc3_cgraph">
+<area shape="rect" id="node2" href="class_accumulator.html#aeabef30ece6baf466fd252abbc311bf0" title="Accumulator::HVEN" alt="" coords="205,5,344,32"/>
+</map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_race_car_a4bd072290142cca13884d2cef23c4bc3_icgraph.png" border="0" usemap="#class_race_car_a4bd072290142cca13884d2cef23c4bc3_icgraph" alt=""/></div>
+<map name="class_race_car_a4bd072290142cca13884d2cef23c4bc3_icgraph" id="class_race_car_a4bd072290142cca13884d2cef23c4bc3_icgraph">
+<area shape="rect" id="node2" href="class_race_car.html#a542518cd574219c53d76d42500268168" title="RaceCar::DataProc" alt="" coords="205,5,340,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<h2 class="groupheader">Adattagok dokumentációja</h2>
+<a class="anchor" id="a8bc400f1cb6be7fbf664d63f7b77f7a1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_accumulator.html">Accumulator</a> RaceCar::accu</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9b0f3758553664ed5b2f9467dda69ab7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double RaceCar::C</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a25139b0c9cdee229078a1c26d4e563d0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_p_i_ctrler.html">PICtrler</a> RaceCar::ctrler</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aef5583fb5bda40a77767ca31e9bd0422"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double RaceCar::D</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a2f05309d320b5eafb6075648193cd0c6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double RaceCar::dtm</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>A PI szabályozó és a DC motor közötti számítokhoz tartozó változók. </p>
+
+</div>
+</div>
+<a class="anchor" id="a87996e0e4c95ca6f09cabcc014740f1f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double RaceCar::dtpi</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a59298d22418713df33ee7d64ba15b33d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double RaceCar::m</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a56e884f32983c5c0a9a8b5d2db96472f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_d_c_motor.html">DCMotor</a> RaceCar::motor</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Példányosított objektumok. </p>
+
+</div>
+</div>
+<a class="anchor" id="a70187293aa199c81e513c0b2ff982a69"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QTimer RaceCar::motTmr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Időzítők a motorhoz és a szabályozóhoz. </p>
+
+</div>
+</div>
+<a class="anchor" id="ae2ba9de0281dc2aaab00924b7a832489"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double RaceCar::Mref</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Alapjelek </p>
+
+</div>
+</div>
+<a class="anchor" id="aa4ca8847b348e5e748be5dedd9df1a76"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QTimer RaceCar::PITmr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab0ce655c3c4900afcaf7fe9a10b063d9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_race_car.html#a5e50c87e892a815fff94623c156c3f60">raceCarState</a> RaceCar::state</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Az autó állapotát tároló enumeráció példányosítása. </p>
+
+</div>
+</div>
+<a class="anchor" id="a7d6b1c6e503fc5346cb6a3a9f4dd3f03"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double RaceCar::vpre</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="adb80470b39d184ab331e386b3f2959e3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double RaceCar::vref</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>

@@ -65,7 +65,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Keresés');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Osztálylista</span></a></li>
       <li><a href="classes.html"><span>Osztálymutató</span></a></li>
-      <li><a href="hierarchy.html"><span>Osztályhierarchia</span></a></li>
+      <li><a href="inherits.html"><span>Osztályhierarchia</span></a></li>
       <li><a href="functions.html"><span>Osztálytagok</span></a></li>
     </ul>
   </div>
@@ -88,21 +88,29 @@ var searchBox = new SearchBox("searchBox", "search",false,'Keresés');
   <div class="summary">
 <a href="#pub-slots">Publikus rések</a> &#124;
 <a href="#pub-methods">Publikus tagfüggvények</a> &#124;
+<a href="#pri-types">Privát típusok</a> &#124;
+<a href="#pri-methods">Privát tagfüggvények</a> &#124;
+<a href="#pri-attribs">Privát attribútumok</a> &#124;
 <a href="class_accumulator-members.html">A tagok teljes listája</a>  </div>
   <div class="headertitle">
 <div class="title">Accumulator osztályreferencia</div>  </div>
 </div><!--header-->
 <div class="contents">
 
+<p>LiIon akkumulátor csomagot megvalósító osztály.  
+ <a href="class_accumulator.html#details">Részletek...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_accumulator_8h_source.html">Accumulator.h</a>&gt;</code></p>
 <div class="dynheader">
 Az Accumulator osztály származási diagramja:</div>
 <div class="dyncontent">
- <div class="center">
-  <img src="class_accumulator.png" usemap="#Accumulator_map" alt=""/>
-  <map id="Accumulator_map" name="Accumulator_map">
-</map>
- </div></div>
+<div class="center"><img src="class_accumulator__inherit__graph.png" border="0" usemap="#_accumulator_inherit__map" alt="Inheritance graph"/></div>
+<center><span class="legend">[<a href="graph_legend.html">Jelmagyarázat</a>]</span></center></div>
+<div class="dynheader">
+Az Accumulator osztály együttműködési diagramja:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_accumulator__coll__graph.png" border="0" usemap="#_accumulator_coll__map" alt="Collaboration graph"/></div>
+<center><span class="legend">[<a href="graph_legend.html">Jelmagyarázat</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-slots"></a>
 Publikus rések</h2></td></tr>
@@ -121,11 +129,75 @@ Publikus tagfüggvények</h2></td></tr>
 <tr class="separator:a4821f445e39d461046f9fa8630be00fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc96c9233a2f5b4d4c4a54609d1a5ce9"><td class="memItemLeft" align="right" valign="top">const QVector&lt; double &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_accumulator.html#adc96c9233a2f5b4d4c4a54609d1a5ce9">GetVCell</a> ()</td></tr>
 <tr class="separator:adc96c9233a2f5b4d4c4a54609d1a5ce9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a250216084252ecf0a089ab8992494406"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_accumulator.html#a250216084252ecf0a089ab8992494406">HVEN</a> (bool)</td></tr>
-<tr class="separator:a250216084252ecf0a089ab8992494406"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeabef30ece6baf466fd252abbc311bf0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_accumulator.html#aeabef30ece6baf466fd252abbc311bf0">HVEN</a> (bool en)</td></tr>
+<tr class="separator:aeabef30ece6baf466fd252abbc311bf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae3cf9d0bc671a57a27e400bbd95ba5e8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_accumulator.html#ae3cf9d0bc671a57a27e400bbd95ba5e8">isOk</a> ()</td></tr>
 <tr class="separator:ae3cf9d0bc671a57a27e400bbd95ba5e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-types"></a>
+Privát típusok</h2></td></tr>
+<tr class="memitem:a8e17a7c811eea7917d5715e045faa611"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_accumulator.html#a8e17a7c811eea7917d5715e045faa611">contactorState</a> { <a class="el" href="class_accumulator.html#a8e17a7c811eea7917d5715e045faa611a0baf7e071d463158b080a4ca96e15907">closed</a>, 
+<a class="el" href="class_accumulator.html#a8e17a7c811eea7917d5715e045faa611af55b4e35f471b5c2f5facf45988b2341">opened</a>
+ }<tr class="separator:a8e17a7c811eea7917d5715e045faa611"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Privát tagfüggvények</h2></td></tr>
+<tr class="memitem:a3ce2e4ac673fe424e8e127c8dc994097"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_accumulator.html#a3ce2e4ac673fe424e8e127c8dc994097">UpdateCells</a> ()</td></tr>
+<tr class="separator:a3ce2e4ac673fe424e8e127c8dc994097"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Privát attribútumok</h2></td></tr>
+<tr class="memitem:a48d8234a7425b920c5d7a4e3de2c410d"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_accumulator.html#a48d8234a7425b920c5d7a4e3de2c410d">umax</a></td></tr>
+<tr class="separator:a48d8234a7425b920c5d7a4e3de2c410d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3db53806c17ba427209566cb17049bdf"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_accumulator.html#a3db53806c17ba427209566cb17049bdf">umin</a></td></tr>
+<tr class="separator:a3db53806c17ba427209566cb17049bdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15be98f631fa29efa7762da2df7f9e54"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_accumulator.html#a15be98f631fa29efa7762da2df7f9e54">ah</a></td></tr>
+<tr class="separator:a15be98f631fa29efa7762da2df7f9e54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91a91a6ab735b666219071856b5d8352"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_accumulator.html#a91a91a6ab735b666219071856b5d8352">u</a></td></tr>
+<tr class="separator:a91a91a6ab735b666219071856b5d8352"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6a3e90002b7db18474ba6d6821039cc"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_accumulator.html#af6a3e90002b7db18474ba6d6821039cc">urail</a></td></tr>
+<tr class="separator:af6a3e90002b7db18474ba6d6821039cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21b53c2362b9cb197309f4ea5688d36b"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_accumulator.html#a21b53c2362b9cb197309f4ea5688d36b">cellnum</a></td></tr>
+<tr class="separator:a21b53c2362b9cb197309f4ea5688d36b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1dda486a01346b8f4655675629287ef1"><td class="memItemLeft" align="right" valign="top">QVector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_accumulator.html#a1dda486a01346b8f4655675629287ef1">ucell</a></td></tr>
+<tr class="separator:a1dda486a01346b8f4655675629287ef1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5109c26b0ad606f44398b1211978e18f"><td class="memItemLeft" align="right" valign="top">QVector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_accumulator.html#a5109c26b0ad606f44398b1211978e18f">celldiff</a></td></tr>
+<tr class="separator:a5109c26b0ad606f44398b1211978e18f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b9f3706ca2bb72f227c8d83d7d92c45"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_accumulator.html#a8e17a7c811eea7917d5715e045faa611">contactorState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_accumulator.html#a0b9f3706ca2bb72f227c8d83d7d92c45">contactor</a></td></tr>
+<tr class="separator:a0b9f3706ca2bb72f227c8d83d7d92c45"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Részletes leírás</h2>
+<div class="textblock"><p>LiIon akkumulátor csomagot megvalósító osztály. </p>
+<p>A slot segítségével csökkenthető a kapacitása a kivett árammal, a Get...() függvényekkel az állapot kérhető le. </p>
+</div><h2 class="groupheader">Enumeráció-tagok dokumentációja</h2>
+<a class="anchor" id="a8e17a7c811eea7917d5715e045faa611"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="class_accumulator.html#a8e17a7c811eea7917d5715e045faa611">Accumulator::contactorState</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Kontaktor állapotát leképző enumeráció. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumeráció-értékek</th></tr><tr><td class="fieldname"><a class="anchor" id="a8e17a7c811eea7917d5715e045faa611a0baf7e071d463158b080a4ca96e15907"></a>closed&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a8e17a7c811eea7917d5715e045faa611af55b4e35f471b5c2f5facf45988b2341"></a>opened&#160;</td><td class="fielddoc">
+</td></tr>
+</table>
+
+</div>
+</div>
 <h2 class="groupheader">Konstruktorok és destruktorok dokumentációja</h2>
 <a class="anchor" id="a19845ea4f3d7bee830437adcdf197e3e"></a>
 <div class="memitem">
@@ -139,7 +211,16 @@ Publikus tagfüggvények</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>A cellafeszültségek nem egyformák a valóságban, ezt kis mértékű offszettel valósítom meg. </p>
+
+<p><div class="dynheader">
+A függvény hívási gráfja:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_accumulator_a19845ea4f3d7bee830437adcdf197e3e_cgraph.png" border="0" usemap="#class_accumulator_a19845ea4f3d7bee830437adcdf197e3e_cgraph" alt=""/></div>
+<map name="class_accumulator_a19845ea4f3d7bee830437adcdf197e3e_cgraph" id="class_accumulator_a19845ea4f3d7bee830437adcdf197e3e_cgraph">
+<area shape="rect" id="node2" href="class_accumulator.html#a3ce2e4ac673fe424e8e127c8dc994097" title="Accumulator::UpdateCells" alt="" coords="229,5,403,32"/>
+</map>
+</div>
+</p>
 
 </div>
 </div>
@@ -164,6 +245,21 @@ Publikus tagfüggvények</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Visszatér az akku fennmaradó kapacitásával. </p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_accumulator_a4821f445e39d461046f9fa8630be00fe_icgraph.png" border="0" usemap="#class_accumulator_a4821f445e39d461046f9fa8630be00fe_icgraph" alt=""/></div>
+<map name="class_accumulator_a4821f445e39d461046f9fa8630be00fe_icgraph" id="class_accumulator_a4821f445e39d461046f9fa8630be00fe_icgraph">
+<area shape="rect" id="node2" href="class_race_car.html#a7edfe623557b167aa539fd50f97233d3" title="RaceCar::PrintDataToDebug" alt="" coords="193,5,379,32"/>
+<area shape="rect" id="node3" href="class_race_car.html#acf47a00d02df89a73225cf322d9be5c0" title="RaceCar::GetCapac" alt="" coords="217,56,355,83"/>
+<area shape="rect" id="node4" href="class_application.html#aa61db470698441ef02ced6286f3a859a" title="Application::sendData" alt="" coords="445,31,595,57"/>
+<area shape="rect" id="node6" href="class_application.html#ace28af03fbc0b49d32035210bfee522e" title="Application::sendDataDebug" alt="" coords="427,81,613,108"/>
+<area shape="rect" id="node5" href="class_application.html#a4f945a7f8d003a3b8f716f7128206329" title="Application::Application" alt="" coords="661,31,820,57"/>
+</map>
+</div>
+</p>
 
 </div>
 </div>
@@ -187,6 +283,21 @@ Publikus tagfüggvények</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Visszatér a teljes csomag feszültségével. </p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_accumulator_af22fd564b9635f4641e903eac84f5d00_icgraph.png" border="0" usemap="#class_accumulator_af22fd564b9635f4641e903eac84f5d00_icgraph" alt=""/></div>
+<map name="class_accumulator_af22fd564b9635f4641e903eac84f5d00_icgraph" id="class_accumulator_af22fd564b9635f4641e903eac84f5d00_icgraph">
+<area shape="rect" id="node2" href="class_race_car.html#a7edfe623557b167aa539fd50f97233d3" title="RaceCar::PrintDataToDebug" alt="" coords="204,5,389,32"/>
+<area shape="rect" id="node3" href="class_race_car.html#abe76e92ec9a5701235404f162b8c0a3f" title="RaceCar::GetVbat" alt="" coords="233,56,361,83"/>
+<area shape="rect" id="node4" href="class_application.html#aa61db470698441ef02ced6286f3a859a" title="Application::sendData" alt="" coords="456,31,605,57"/>
+<area shape="rect" id="node6" href="class_application.html#ace28af03fbc0b49d32035210bfee522e" title="Application::sendDataDebug" alt="" coords="437,81,624,108"/>
+<area shape="rect" id="node5" href="class_application.html#a4f945a7f8d003a3b8f716f7128206329" title="Application::Application" alt="" coords="672,31,831,57"/>
+</map>
+</div>
+</p>
 
 </div>
 </div>
@@ -210,6 +321,19 @@ Publikus tagfüggvények</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Visszatér az akku celláinak feszültségvektorával. </p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_accumulator_adc96c9233a2f5b4d4c4a54609d1a5ce9_icgraph.png" border="0" usemap="#class_accumulator_adc96c9233a2f5b4d4c4a54609d1a5ce9_icgraph" alt=""/></div>
+<map name="class_accumulator_adc96c9233a2f5b4d4c4a54609d1a5ce9_icgraph" id="class_accumulator_adc96c9233a2f5b4d4c4a54609d1a5ce9_icgraph">
+<area shape="rect" id="node2" href="class_race_car.html#a85367304dbc71deea7b54f3da3ac4c90" title="RaceCar::GetVCell" alt="" coords="208,5,340,32"/>
+<area shape="rect" id="node3" href="class_application.html#aa61db470698441ef02ced6286f3a859a" title="Application::sendData" alt="" coords="388,5,537,32"/>
+<area shape="rect" id="node4" href="class_application.html#a4f945a7f8d003a3b8f716f7128206329" title="Application::Application" alt="" coords="585,5,744,32"/>
+</map>
+</div>
+</p>
 
 </div>
 </div>
@@ -233,10 +357,27 @@ Publikus tagfüggvények</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Visszatér a DC sín feszültségével. Csak akkor egyezik a meg az akku feszültséggel, ha a kontaktor meghúzott. </p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_accumulator_a5720b8db3fa482b82f71fdda8e704795_icgraph.png" border="0" usemap="#class_accumulator_a5720b8db3fa482b82f71fdda8e704795_icgraph" alt=""/></div>
+<map name="class_accumulator_a5720b8db3fa482b82f71fdda8e704795_icgraph" id="class_accumulator_a5720b8db3fa482b82f71fdda8e704795_icgraph">
+<area shape="rect" id="node2" href="class_race_car.html#acbe2a0acba345bfd8560911f3d86ef59" title="RaceCar::PITimeout" alt="" coords="227,5,366,32"/>
+<area shape="rect" id="node4" href="class_race_car.html#a7edfe623557b167aa539fd50f97233d3" title="RaceCar::PrintDataToDebug" alt="" coords="204,56,389,83"/>
+<area shape="rect" id="node5" href="class_race_car.html#a03d94de7065a5293e9ea142055d27a05" title="RaceCar::GetVrail" alt="" coords="233,107,360,133"/>
+<area shape="rect" id="node3" href="class_race_car.html#ace4c5305afa8e756597e91f8aafd18a4" title="RaceCar::RaceCar" alt="" coords="465,5,596,32"/>
+<area shape="rect" id="node6" href="class_application.html#aa61db470698441ef02ced6286f3a859a" title="Application::sendData" alt="" coords="456,81,605,108"/>
+<area shape="rect" id="node8" href="class_application.html#ace28af03fbc0b49d32035210bfee522e" title="Application::sendDataDebug" alt="" coords="437,132,624,159"/>
+<area shape="rect" id="node7" href="class_application.html#a4f945a7f8d003a3b8f716f7128206329" title="Application::Application" alt="" coords="672,81,831,108"/>
+</map>
+</div>
+</p>
 
 </div>
 </div>
-<a class="anchor" id="a250216084252ecf0a089ab8992494406"></a>
+<a class="anchor" id="aeabef30ece6baf466fd252abbc311bf0"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -249,6 +390,24 @@ Publikus tagfüggvények</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Kontaktor manipulálása. </p><dl class="params"><dt>Paraméterek</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">en</td><td>Engedélyezés. true=meghúzás, false=elengedés. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Visszatérési érték</dt><dd>en, ha sikerült a módosítás. !en, ha nem sikerült a módosítás. </dd></dl>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_accumulator_aeabef30ece6baf466fd252abbc311bf0_icgraph.png" border="0" usemap="#class_accumulator_aeabef30ece6baf466fd252abbc311bf0_icgraph" alt=""/></div>
+<map name="class_accumulator_aeabef30ece6baf466fd252abbc311bf0_icgraph" id="class_accumulator_aeabef30ece6baf466fd252abbc311bf0_icgraph">
+<area shape="rect" id="node2" href="class_race_car.html#a4bd072290142cca13884d2cef23c4bc3" title="RaceCar::UpdateState" alt="" coords="192,5,344,32"/>
+<area shape="rect" id="node3" href="class_race_car.html#a542518cd574219c53d76d42500268168" title="RaceCar::DataProc" alt="" coords="392,5,527,32"/>
+</map>
+</div>
+</p>
 
 </div>
 </div>
@@ -264,6 +423,18 @@ Publikus tagfüggvények</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Állapot lekérdezés. </p><dl class="section return"><dt>Visszatérési érték</dt><dd>true, ha az akku rendben. false, ha az akku lemerült. </dd></dl>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_accumulator_ae3cf9d0bc671a57a27e400bbd95ba5e8_icgraph.png" border="0" usemap="#class_accumulator_ae3cf9d0bc671a57a27e400bbd95ba5e8_icgraph" alt=""/></div>
+<map name="class_accumulator_ae3cf9d0bc671a57a27e400bbd95ba5e8_icgraph" id="class_accumulator_ae3cf9d0bc671a57a27e400bbd95ba5e8_icgraph">
+<area shape="rect" id="node2" href="class_race_car.html#a9305ecc4a7aba10e041f994363828921" title="RaceCar::SelfTest" alt="" coords="184,5,311,32"/>
+<area shape="rect" id="node3" href="class_race_car.html#a542518cd574219c53d76d42500268168" title="RaceCar::DataProc" alt="" coords="359,5,493,32"/>
+</map>
+</div>
+</p>
 
 </div>
 </div>
@@ -295,6 +466,251 @@ Publikus tagfüggvények</h2></td></tr>
   </td>
   <td class="mlabels-right">
 <span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Ennek hatására fog a kivett áram és idő arányában csökkenni a kapacitás. </p><dl class="params"><dt>Paraméterek</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i</td><td>Vételezett áram nagysága. </td></tr>
+    <tr><td class="paramname">dt</td><td>Áramfelvétel időtartama. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>Lásd még</dt><dd>RaceCar::UpdateCapacity </dd></dl>
+
+<p><div class="dynheader">
+A függvény hívási gráfja:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_accumulator_a4c73890dbbbe68accfd378f35e57f140_cgraph.png" border="0" usemap="#class_accumulator_a4c73890dbbbe68accfd378f35e57f140_cgraph" alt=""/></div>
+<map name="class_accumulator_a4c73890dbbbe68accfd378f35e57f140_cgraph" id="class_accumulator_a4c73890dbbbe68accfd378f35e57f140_cgraph">
+<area shape="rect" id="node2" href="class_accumulator.html#a3ce2e4ac673fe424e8e127c8dc994097" title="Accumulator::UpdateCells" alt="" coords="248,5,421,32"/>
+</map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_accumulator_a4c73890dbbbe68accfd378f35e57f140_icgraph.png" border="0" usemap="#class_accumulator_a4c73890dbbbe68accfd378f35e57f140_icgraph" alt=""/></div>
+<map name="class_accumulator_a4c73890dbbbe68accfd378f35e57f140_icgraph" id="class_accumulator_a4c73890dbbbe68accfd378f35e57f140_icgraph">
+<area shape="rect" id="node2" href="class_race_car.html#ace4c5305afa8e756597e91f8aafd18a4" title="RaceCar::RaceCar" alt="" coords="248,5,379,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a3ce2e4ac673fe424e8e127c8dc994097"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Accumulator::UpdateCells </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Cellafeszültségek újraszámolása, ha változott a fennmaradó kapacitás. </p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_accumulator_a3ce2e4ac673fe424e8e127c8dc994097_icgraph.png" border="0" usemap="#class_accumulator_a3ce2e4ac673fe424e8e127c8dc994097_icgraph" alt=""/></div>
+<map name="class_accumulator_a3ce2e4ac673fe424e8e127c8dc994097_icgraph" id="class_accumulator_a3ce2e4ac673fe424e8e127c8dc994097_icgraph">
+<area shape="rect" id="node2" href="class_accumulator.html#a19845ea4f3d7bee830437adcdf197e3e" title="Accumulator::Accumulator" alt="" coords="236,5,412,32"/>
+<area shape="rect" id="node3" href="class_accumulator.html#a4c73890dbbbe68accfd378f35e57f140" title="Accumulator::UpdateCapacity" alt="" coords="227,56,421,83"/>
+<area shape="rect" id="node4" href="class_race_car.html#ace4c5305afa8e756597e91f8aafd18a4" title="RaceCar::RaceCar" alt="" coords="469,56,600,83"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<h2 class="groupheader">Adattagok dokumentációja</h2>
+<a class="anchor" id="a15be98f631fa29efa7762da2df7f9e54"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Accumulator::ah</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a5109c26b0ad606f44398b1211978e18f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QVector&lt;double&gt; Accumulator::celldiff</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a21b53c2362b9cb197309f4ea5688d36b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Accumulator::cellnum</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a0b9f3706ca2bb72f227c8d83d7d92c45"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_accumulator.html#a8e17a7c811eea7917d5715e045faa611">contactorState</a> Accumulator::contactor</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a91a91a6ab735b666219071856b5d8352"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Accumulator::u</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a1dda486a01346b8f4655675629287ef1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QVector&lt;double&gt; Accumulator::ucell</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a48d8234a7425b920c5d7a4e3de2c410d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Accumulator::umax</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a3db53806c17ba427209566cb17049bdf"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Accumulator::umin</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af6a3e90002b7db18474ba6d6821039cc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Accumulator::urail</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">

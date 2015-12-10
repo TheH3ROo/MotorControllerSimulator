@@ -1,0 +1,5 @@
+<map id="Communication::SendDebugData" name="Communication::SendDebugData">
+<area shape="rect" id="node2" href="$class_communication.html#a758523fe047afcb715d2c62f469570aa" title="Communication::send" alt="" coords="268,35,416,61"/>
+<area shape="rect" id="node3" href="$class_communication.html#a55270f00472fa162061787fa4eae532b" title="Communication::getSendStream" alt="" coords="464,5,675,32"/>
+<area shape="rect" id="node4" href="$class_communication.html#ac818c645c8ed63af3e871f017e30ed02" title="Communication::sendBuffer\lContent" alt="" coords="479,57,660,98"/>
+</map>

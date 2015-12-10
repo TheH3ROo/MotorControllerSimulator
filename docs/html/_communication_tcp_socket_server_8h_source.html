@@ -106,27 +106,31 @@ var searchBox = new SearchBox("searchBox", "search",false,'Keresés');
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="class_communication_tcp_socket_server.html#a30c6d60f852cac341e568535a324f724">~CommunicationTcpSocketServer</a>() = <span class="keywordflow">default</span>;</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    QTcpServer serverSocket;</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="class_communication_tcp_socket_server.html#a2fae4940e5ecf4dd09790f4d9e3431df">   26</a></span>&#160;    QTcpServer <a class="code" href="class_communication_tcp_socket_server.html#a2fae4940e5ecf4dd09790f4d9e3431df">serverSocket</a>;</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keywordtype">void</span> SendDebugData(quint16,<span class="keywordtype">double</span>);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_communication_tcp_socket_server.html#a0acff730c1d48db73c5a39a6a3941ba2">SendDebugData</a>(quint16,<span class="keywordtype">double</span>);</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;signals:</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_communication_tcp_socket_server.html#a8cce415f5901a2fae1026b08cba1de93">newConnectionSignal</a>();</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_communication_tcp_socket_server.html#a2bf0e2b9c14717a3b7ddf44906e2b30d">disconnectedSignal</a>();</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">private</span> slots:</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">void</span> newConnection();</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">void</span> disconnected();</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;};</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#endif // COMMUNICATIONTCPSOCKETSERVER_H</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_communication_tcp_socket_server.html#a2bf0e2b9c14717a3b7ddf44906e2b30d">disconnectedSignal</a>();</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">private</span> slots:</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_communication_tcp_socket_server.html#a82f33a70276083eb7e84327c1932a526">newConnection</a>();</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_communication_tcp_socket_server.html#a6749a2ed380ab25c41beb8d2ced5caed">disconnected</a>();</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;};</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#endif // COMMUNICATIONTCPSOCKETSERVER_H</span></div>
 <div class="ttc" id="class_communication_tcp_socket_server_html_a8cce415f5901a2fae1026b08cba1de93"><div class="ttname"><a href="class_communication_tcp_socket_server.html#a8cce415f5901a2fae1026b08cba1de93">CommunicationTcpSocketServer::newConnectionSignal</a></div><div class="ttdeci">void newConnectionSignal()</div></div>
 <div class="ttc" id="_communication_tcp_socket_8h_html"><div class="ttname"><a href="_communication_tcp_socket_8h.html">CommunicationTcpSocket.h</a></div></div>
 <div class="ttc" id="class_communication_tcp_socket_server_html_a30c6d60f852cac341e568535a324f724"><div class="ttname"><a href="class_communication_tcp_socket_server.html#a30c6d60f852cac341e568535a324f724">CommunicationTcpSocketServer::~CommunicationTcpSocketServer</a></div><div class="ttdeci">virtual ~CommunicationTcpSocketServer()=default</div></div>
 <div class="ttc" id="class_communication_tcp_socket_server_html_a0e4924b41f809060108a495e06874ec7"><div class="ttname"><a href="class_communication_tcp_socket_server.html#a0e4924b41f809060108a495e06874ec7">CommunicationTcpSocketServer::CommunicationTcpSocketServer</a></div><div class="ttdeci">CommunicationTcpSocketServer(int port)</div><div class="ttdef"><b>Definition:</b> CommunicationTcpSocketServer.cpp:3</div></div>
+<div class="ttc" id="class_communication_tcp_socket_server_html_a0acff730c1d48db73c5a39a6a3941ba2"><div class="ttname"><a href="class_communication_tcp_socket_server.html#a0acff730c1d48db73c5a39a6a3941ba2">CommunicationTcpSocketServer::SendDebugData</a></div><div class="ttdeci">void SendDebugData(quint16, double)</div></div>
 <div class="ttc" id="class_communication_tcp_socket_server_html_a2bf0e2b9c14717a3b7ddf44906e2b30d"><div class="ttname"><a href="class_communication_tcp_socket_server.html#a2bf0e2b9c14717a3b7ddf44906e2b30d">CommunicationTcpSocketServer::disconnectedSignal</a></div><div class="ttdeci">void disconnectedSignal()</div></div>
 <div class="ttc" id="class_communication_tcp_socket_html"><div class="ttname"><a href="class_communication_tcp_socket.html">CommunicationTcpSocket</a></div><div class="ttdoc">TCP socket alapú kommunikációra kialakított leszármazottja az általános Communication osztálynak...</div><div class="ttdef"><b>Definition:</b> CommunicationTcpSocket.h:14</div></div>
+<div class="ttc" id="class_communication_tcp_socket_server_html_a82f33a70276083eb7e84327c1932a526"><div class="ttname"><a href="class_communication_tcp_socket_server.html#a82f33a70276083eb7e84327c1932a526">CommunicationTcpSocketServer::newConnection</a></div><div class="ttdeci">void newConnection()</div><div class="ttdef"><b>Definition:</b> CommunicationTcpSocketServer.cpp:20</div></div>
+<div class="ttc" id="class_communication_tcp_socket_server_html_a6749a2ed380ab25c41beb8d2ced5caed"><div class="ttname"><a href="class_communication_tcp_socket_server.html#a6749a2ed380ab25c41beb8d2ced5caed">CommunicationTcpSocketServer::disconnected</a></div><div class="ttdeci">void disconnected()</div><div class="ttdef"><b>Definition:</b> CommunicationTcpSocketServer.cpp:34</div></div>
 <div class="ttc" id="class_communication_tcp_socket_server_html"><div class="ttname"><a href="class_communication_tcp_socket_server.html">CommunicationTcpSocketServer</a></div><div class="ttdoc">TCP/IP szerver socket. </div><div class="ttdef"><b>Definition:</b> CommunicationTcpSocketServer.h:15</div></div>
+<div class="ttc" id="class_communication_tcp_socket_server_html_a2fae4940e5ecf4dd09790f4d9e3431df"><div class="ttname"><a href="class_communication_tcp_socket_server.html#a2fae4940e5ecf4dd09790f4d9e3431df">CommunicationTcpSocketServer::serverSocket</a></div><div class="ttdeci">QTcpServer serverSocket</div><div class="ttdef"><b>Definition:</b> CommunicationTcpSocketServer.h:26</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
