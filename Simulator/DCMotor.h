@@ -18,7 +18,7 @@ public:
             double L=0.001, double theta=500);
     double GetI(){return i;}
     double GetW(){return w;}
-    double GetM(){return kf*i;}
+    double GetM(){return kf*i/100;}
 private:
     /** Szimulációval számított értékek.*/
     double i, ipre;

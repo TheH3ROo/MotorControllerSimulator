@@ -78,52 +78,53 @@ void RaceCar::UpdateState(double M, double v)
     switch(state)
     {
         case stop:
-            str.append("stop.");
             Mref = vref = 0;
             accu.HVEN(false);
             break;
         case hven:
             if(!accu.HVEN(true))
             {
-                str.append("stop.");
                 state = stop;
                 break;
             }
-            str.append("hven.");
             Mref = vref = 0;
             break;
         case dren:
             if(!accu.HVEN(true))
             {
-                str.append("stop.");
                 state = stop;
                 break;
             }
-            str.append("dren.");
             Mref = M;
             vref = v;
             break;
         default:
             break;
     }
-    emit sendString(str);
 }
 
 void RaceCar::DataProc(QMap<quint16, double>& data, QMap<QString, quint16>& code)
 {
     //State beállítása
+    QString str;
     if(data.value(code["state"]) < 5)
     {
+        if(state!=stop)
+            emit sendString("Az autó megáll.");
         state=stop;
     }
     else if(data.value(code["state"]) > 5)
     {
         if(data.value(code["state"]) > 15)
         {
+            if(state!=dren)
+                emit sendString("Hajtás engedélyezve. Indulás!");
             state=dren;
         }
         else
         {
+            if(state!=hven)
+                emit sendString("DC sín feszültség alá helyezve!");
             state=hven;
         }
     }
