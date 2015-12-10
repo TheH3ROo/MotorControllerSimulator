@@ -1,5 +1,7 @@
 #include "RaceCar.h"
 
+const double
+
 RaceCar::RaceCar(QObject *parent, double dtm, double dtpi, double D, double C, double m)
     : QObject(parent), dtm(dtm), dtpi(dtpi), D(D), C(C), m(m)
 {
@@ -63,8 +65,6 @@ void RaceCar::MotTimeout()
 
     emit AccuUpdate(motor.GetI(),dtm/1000);
     vpre = v;
-//DEBUG!
-    //PrintDataToDebug();
 }
 
 void RaceCar::PITimeout()
@@ -74,7 +74,6 @@ void RaceCar::PITimeout()
 
 void RaceCar::UpdateState(double M, double v)
 {
-    QString str("State: ");
     switch(state)
     {
         case stop:

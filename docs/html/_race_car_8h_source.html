@@ -1,0 +1,204 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>Motor Controller Simulator: Simulator/RaceCar.h Forrásfájl</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Motor Controller Simulator
+   </div>
+   <div id="projectbrief">Alkalmazásfejlesztés házi feladathoz készítetett versenyautó szimulátor</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Készítette Doxygen 1.8.10 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Keresés');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Főoldal</span></a></li>
+      <li><a href="pages.html"><span>Kapcsolódó&#160;lapok</span></a></li>
+      <li><a href="namespaces.html"><span>Névterek</span></a></li>
+      <li><a href="annotated.html"><span>Osztályok</span></a></li>
+      <li class="current"><a href="files.html"><span>Fájl</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Keresés" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Fájllista</span></a></li>
+      <li><a href="globals.html"><span>Fájlelemek</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_02de32643c62db6df59640b35d9a9cf0.html">Simulator</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">RaceCar.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_race_car_8h.html">Ugrás a fájl dokumentációjához.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef RACECAR_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define RACECAR_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_d_c_motor_8h.html">DCMotor.h</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_p_i_ctrler_8h.html">PICtrler.h</a>&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_accumulator_8h.html">Accumulator.h</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;QObject&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;QTimer&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;QDebug&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="_race_car_8h.html#a3af67486dd044871a99ef366715dffd9">   18</a></span>&#160;<span class="keyword">enum</span> <a class="code" href="_race_car_8h.html#a3af67486dd044871a99ef366715dffd9">raceCarState</a>{</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="_race_car_8h.html#a3af67486dd044871a99ef366715dffd9ad82a4ca4dc1f04bf9453ad19f9341028">   19</a></span>&#160;    <a class="code" href="_race_car_8h.html#a3af67486dd044871a99ef366715dffd9ad82a4ca4dc1f04bf9453ad19f9341028">stop</a>, <a class="code" href="_race_car_8h.html#a3af67486dd044871a99ef366715dffd9ae9342d866c0a154bf96af0234485190c">hven</a>, <a class="code" href="_race_car_8h.html#a3af67486dd044871a99ef366715dffd9a8be09b62a704595e37d2d54a2e438c52">dren</a></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;};</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="class_race_car.html">   29</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_race_car.html">RaceCar</a> : <span class="keyword">public</span> QObject</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;{</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    Q_OBJECT</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="class_race_car.html#abe5e6539e0feb64fbb4cf1385fa6244c">RaceCar</a>(QObject *parent = 0, <span class="keywordtype">double</span> dtm=1,</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            <span class="keywordtype">double</span> dtpi=5, <span class="keywordtype">double</span> D=0.2,</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <span class="keywordtype">double</span> C=10, <span class="keywordtype">double</span> m=200);</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="class_race_car.html#a3189f80cfa5b724352e254d61bf1b892">   45</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="class_race_car.html#a3189f80cfa5b724352e254d61bf1b892">GetSpeed</a>(){<span class="keywordflow">return</span> vpre;}</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="class_race_car.html#afaf526970a2bb73a3526eeb6670253af">   47</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="class_race_car.html#afaf526970a2bb73a3526eeb6670253af">GetAngSpeed</a>(){<span class="keywordflow">return</span> motor.<a class="code" href="class_d_c_motor.html#a026043923b487d9d44a9e0b5b93b0701">GetW</a>();}</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="class_race_car.html#a7c2bdb79c6a9152d5781fadd267364e7">   49</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="class_race_car.html#a7c2bdb79c6a9152d5781fadd267364e7">GetTorq</a>(){<span class="keywordflow">return</span> (motor.<a class="code" href="class_d_c_motor.html#aac21b47f32e489b1ceb910e991dc63de">GetM</a>()+C*vpre*vpre);}</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="class_race_car.html#aa41241995c89892f43914564c1efd249">   51</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="class_race_car.html#aa41241995c89892f43914564c1efd249">GetCurr</a>(){<span class="keywordflow">return</span> motor.<a class="code" href="class_d_c_motor.html#aa5e21b3a40c4257502e838704659837c">GetI</a>();}</div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="class_race_car.html#acf47a00d02df89a73225cf322d9be5c0">   53</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="class_race_car.html#acf47a00d02df89a73225cf322d9be5c0">GetCapac</a>(){<span class="keywordflow">return</span> accu.<a class="code" href="class_accumulator.html#a4821f445e39d461046f9fa8630be00fe">GetAh</a>();}</div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="class_race_car.html#abe76e92ec9a5701235404f162b8c0a3f">   55</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="class_race_car.html#abe76e92ec9a5701235404f162b8c0a3f">GetVbat</a>(){<span class="keywordflow">return</span> accu.<a class="code" href="class_accumulator.html#af22fd564b9635f4641e903eac84f5d00">GetVbat</a>();}</div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="class_race_car.html#a03d94de7065a5293e9ea142055d27a05">   57</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="class_race_car.html#a03d94de7065a5293e9ea142055d27a05">GetVrail</a>(){<span class="keywordflow">return</span> accu.<a class="code" href="class_accumulator.html#a5720b8db3fa482b82f71fdda8e704795">GetVrail</a>();}</div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="class_race_car.html#a78f6da7999486db4750a14f05727db32">   59</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="class_race_car.html#a78f6da7999486db4750a14f05727db32">GetVref</a>(){<span class="keywordflow">return</span> vref;}</div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="class_race_car.html#a85367304dbc71deea7b54f3da3ac4c90">   61</a></span>&#160;    <span class="keyword">const</span> QVector&lt;double&gt;&amp; <a class="code" href="class_race_car.html#a85367304dbc71deea7b54f3da3ac4c90">GetVCell</a>(){<span class="keywordflow">return</span> accu.<a class="code" href="class_accumulator.html#adc96c9233a2f5b4d4c4a54609d1a5ce9">GetVCell</a>();}</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">double</span> <a class="code" href="class_race_car.html#a2fb4e4fee325b978ecf8eccc0c33c5b1">IsStop</a>();</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">double</span> <a class="code" href="class_race_car.html#a9f99f6ed0883839d20ae1661c385fb94">IsHVEN</a>();</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordtype">double</span> <a class="code" href="class_race_car.html#a33d9d86e76d0799a188b56c0ff32e32c">IsDREN</a>();</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    QTimer motTmr, PITmr;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <a class="code" href="class_d_c_motor.html">DCMotor</a> motor;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <a class="code" href="class_p_i_ctrler.html">PICtrler</a> ctrler;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <a class="code" href="class_accumulator.html">Accumulator</a> accu;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <a class="code" href="_race_car_8h.html#a3af67486dd044871a99ef366715dffd9">raceCarState</a> state;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordtype">double</span> dtm, dtpi, D, C, m, vpre;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordtype">double</span> Mref, vref;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordtype">void</span> UpdateState(<span class="keywordtype">double</span> M, <span class="keywordtype">double</span> v);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordtype">void</span> SelfTest();</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordtype">void</span> PrintDataToDebug();</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;signals:</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_race_car.html#aacd2284d78c1e3f21fc8759f7901639a">MotorTick</a>(<span class="keywordtype">double</span> Mt, <span class="keywordtype">double</span> u, <span class="keywordtype">double</span> dt);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_race_car.html#abd2003886a2eeef3428bc80fc5d73d26">PITick</a>(<span class="keywordtype">double</span> uBase, <span class="keywordtype">double</span> uSense, <span class="keywordtype">double</span> Ts, <span class="keywordtype">double</span> umax);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_race_car.html#aff6bc3cc3d423aa29af0a1001b2526da">AccuUpdate</a>(<span class="keywordtype">double</span> i, <span class="keywordtype">double</span> dt);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_race_car.html#ad7a2e1285bcfbe1e635dcac6600d2a9d">sendString</a>(<span class="keyword">const</span> QString&amp;);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="keyword">private</span> slots:</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keywordtype">void</span> MotTimeout();</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordtype">void</span> PITimeout();</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="keyword">public</span> slots:</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_race_car.html#a62abf7126b3bb081f2edb651113695ee">DataProc</a>(QMap&lt;quint16, double&gt;&amp;, QMap&lt;QString, quint16&gt;&amp;);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;};</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="preprocessor">#endif // RACECAR_H</span></div>
+<div class="ttc" id="class_race_car_html_a33d9d86e76d0799a188b56c0ff32e32c"><div class="ttname"><a href="class_race_car.html#a33d9d86e76d0799a188b56c0ff32e32c">RaceCar::IsDREN</a></div><div class="ttdeci">double IsDREN()</div><div class="ttdef"><b>Definition:</b> RaceCar.cpp:39</div></div>
+<div class="ttc" id="class_race_car_html_aa41241995c89892f43914564c1efd249"><div class="ttname"><a href="class_race_car.html#aa41241995c89892f43914564c1efd249">RaceCar::GetCurr</a></div><div class="ttdeci">double GetCurr()</div><div class="ttdef"><b>Definition:</b> RaceCar.h:51</div></div>
+<div class="ttc" id="class_accumulator_html_adc96c9233a2f5b4d4c4a54609d1a5ce9"><div class="ttname"><a href="class_accumulator.html#adc96c9233a2f5b4d4c4a54609d1a5ce9">Accumulator::GetVCell</a></div><div class="ttdeci">const QVector&lt; double &gt; &amp; GetVCell()</div><div class="ttdef"><b>Definition:</b> Accumulator.h:20</div></div>
+<div class="ttc" id="class_race_car_html_a62abf7126b3bb081f2edb651113695ee"><div class="ttname"><a href="class_race_car.html#a62abf7126b3bb081f2edb651113695ee">RaceCar::DataProc</a></div><div class="ttdeci">void DataProc(QMap&lt; quint16, double &gt; &amp;, QMap&lt; QString, quint16 &gt; &amp;)</div><div class="ttdef"><b>Definition:</b> RaceCar.cpp:133</div></div>
+<div class="ttc" id="class_d_c_motor_html"><div class="ttname"><a href="class_d_c_motor.html">DCMotor</a></div><div class="ttdoc">DC motort szimuláló osztály. </div><div class="ttdef"><b>Definition:</b> DCMotor.h:12</div></div>
+<div class="ttc" id="class_race_car_html_a85367304dbc71deea7b54f3da3ac4c90"><div class="ttname"><a href="class_race_car.html#a85367304dbc71deea7b54f3da3ac4c90">RaceCar::GetVCell</a></div><div class="ttdeci">const QVector&lt; double &gt; &amp; GetVCell()</div><div class="ttdef"><b>Definition:</b> RaceCar.h:61</div></div>
+<div class="ttc" id="class_race_car_html_abd2003886a2eeef3428bc80fc5d73d26"><div class="ttname"><a href="class_race_car.html#abd2003886a2eeef3428bc80fc5d73d26">RaceCar::PITick</a></div><div class="ttdeci">void PITick(double uBase, double uSense, double Ts, double umax)</div></div>
+<div class="ttc" id="class_accumulator_html_a5720b8db3fa482b82f71fdda8e704795"><div class="ttname"><a href="class_accumulator.html#a5720b8db3fa482b82f71fdda8e704795">Accumulator::GetVrail</a></div><div class="ttdeci">double GetVrail()</div><div class="ttdef"><b>Definition:</b> Accumulator.h:18</div></div>
+<div class="ttc" id="class_race_car_html_aacd2284d78c1e3f21fc8759f7901639a"><div class="ttname"><a href="class_race_car.html#aacd2284d78c1e3f21fc8759f7901639a">RaceCar::MotorTick</a></div><div class="ttdeci">void MotorTick(double Mt, double u, double dt)</div></div>
+<div class="ttc" id="class_d_c_motor_html_a026043923b487d9d44a9e0b5b93b0701"><div class="ttname"><a href="class_d_c_motor.html#a026043923b487d9d44a9e0b5b93b0701">DCMotor::GetW</a></div><div class="ttdeci">double GetW()</div><div class="ttdef"><b>Definition:</b> DCMotor.h:20</div></div>
+<div class="ttc" id="_race_car_8h_html_a3af67486dd044871a99ef366715dffd9"><div class="ttname"><a href="_race_car_8h.html#a3af67486dd044871a99ef366715dffd9">raceCarState</a></div><div class="ttdeci">raceCarState</div><div class="ttdef"><b>Definition:</b> RaceCar.h:18</div></div>
+<div class="ttc" id="_p_i_ctrler_8h_html"><div class="ttname"><a href="_p_i_ctrler_8h.html">PICtrler.h</a></div></div>
+<div class="ttc" id="class_race_car_html_a7c2bdb79c6a9152d5781fadd267364e7"><div class="ttname"><a href="class_race_car.html#a7c2bdb79c6a9152d5781fadd267364e7">RaceCar::GetTorq</a></div><div class="ttdeci">double GetTorq()</div><div class="ttdef"><b>Definition:</b> RaceCar.h:49</div></div>
+<div class="ttc" id="_race_car_8h_html_a3af67486dd044871a99ef366715dffd9ad82a4ca4dc1f04bf9453ad19f9341028"><div class="ttname"><a href="_race_car_8h.html#a3af67486dd044871a99ef366715dffd9ad82a4ca4dc1f04bf9453ad19f9341028">stop</a></div><div class="ttdef"><b>Definition:</b> RaceCar.h:19</div></div>
+<div class="ttc" id="class_race_car_html_a3189f80cfa5b724352e254d61bf1b892"><div class="ttname"><a href="class_race_car.html#a3189f80cfa5b724352e254d61bf1b892">RaceCar::GetSpeed</a></div><div class="ttdeci">double GetSpeed()</div><div class="ttdef"><b>Definition:</b> RaceCar.h:45</div></div>
+<div class="ttc" id="_d_c_motor_8h_html"><div class="ttname"><a href="_d_c_motor_8h.html">DCMotor.h</a></div></div>
+<div class="ttc" id="class_accumulator_html_af22fd564b9635f4641e903eac84f5d00"><div class="ttname"><a href="class_accumulator.html#af22fd564b9635f4641e903eac84f5d00">Accumulator::GetVbat</a></div><div class="ttdeci">double GetVbat()</div><div class="ttdef"><b>Definition:</b> Accumulator.h:17</div></div>
+<div class="ttc" id="class_race_car_html_abe5e6539e0feb64fbb4cf1385fa6244c"><div class="ttname"><a href="class_race_car.html#abe5e6539e0feb64fbb4cf1385fa6244c">RaceCar::RaceCar</a></div><div class="ttdeci">RaceCar(QObject *parent=0, double dtm=1, double dtpi=5, double D=0.2, double C=10, double m=200)</div><div class="ttdef"><b>Definition:</b> RaceCar.cpp:5</div></div>
+<div class="ttc" id="class_p_i_ctrler_html"><div class="ttname"><a href="class_p_i_ctrler.html">PICtrler</a></div><div class="ttdef"><b>Definition:</b> PICtrler.h:6</div></div>
+<div class="ttc" id="class_race_car_html_abe76e92ec9a5701235404f162b8c0a3f"><div class="ttname"><a href="class_race_car.html#abe76e92ec9a5701235404f162b8c0a3f">RaceCar::GetVbat</a></div><div class="ttdeci">double GetVbat()</div><div class="ttdef"><b>Definition:</b> RaceCar.h:55</div></div>
+<div class="ttc" id="class_race_car_html_aff6bc3cc3d423aa29af0a1001b2526da"><div class="ttname"><a href="class_race_car.html#aff6bc3cc3d423aa29af0a1001b2526da">RaceCar::AccuUpdate</a></div><div class="ttdeci">void AccuUpdate(double i, double dt)</div></div>
+<div class="ttc" id="class_race_car_html_ad7a2e1285bcfbe1e635dcac6600d2a9d"><div class="ttname"><a href="class_race_car.html#ad7a2e1285bcfbe1e635dcac6600d2a9d">RaceCar::sendString</a></div><div class="ttdeci">void sendString(const QString &amp;)</div></div>
+<div class="ttc" id="_race_car_8h_html_a3af67486dd044871a99ef366715dffd9a8be09b62a704595e37d2d54a2e438c52"><div class="ttname"><a href="_race_car_8h.html#a3af67486dd044871a99ef366715dffd9a8be09b62a704595e37d2d54a2e438c52">dren</a></div><div class="ttdef"><b>Definition:</b> RaceCar.h:19</div></div>
+<div class="ttc" id="class_d_c_motor_html_aac21b47f32e489b1ceb910e991dc63de"><div class="ttname"><a href="class_d_c_motor.html#aac21b47f32e489b1ceb910e991dc63de">DCMotor::GetM</a></div><div class="ttdeci">double GetM()</div><div class="ttdef"><b>Definition:</b> DCMotor.h:21</div></div>
+<div class="ttc" id="class_accumulator_html"><div class="ttname"><a href="class_accumulator.html">Accumulator</a></div><div class="ttdef"><b>Definition:</b> Accumulator.h:6</div></div>
+<div class="ttc" id="class_accumulator_html_a4821f445e39d461046f9fa8630be00fe"><div class="ttname"><a href="class_accumulator.html#a4821f445e39d461046f9fa8630be00fe">Accumulator::GetAh</a></div><div class="ttdeci">double GetAh()</div><div class="ttdef"><b>Definition:</b> Accumulator.h:19</div></div>
+<div class="ttc" id="_race_car_8h_html_a3af67486dd044871a99ef366715dffd9ae9342d866c0a154bf96af0234485190c"><div class="ttname"><a href="_race_car_8h.html#a3af67486dd044871a99ef366715dffd9ae9342d866c0a154bf96af0234485190c">hven</a></div><div class="ttdef"><b>Definition:</b> RaceCar.h:19</div></div>
+<div class="ttc" id="class_race_car_html_a03d94de7065a5293e9ea142055d27a05"><div class="ttname"><a href="class_race_car.html#a03d94de7065a5293e9ea142055d27a05">RaceCar::GetVrail</a></div><div class="ttdeci">double GetVrail()</div><div class="ttdef"><b>Definition:</b> RaceCar.h:57</div></div>
+<div class="ttc" id="_accumulator_8h_html"><div class="ttname"><a href="_accumulator_8h.html">Accumulator.h</a></div></div>
+<div class="ttc" id="class_race_car_html_acf47a00d02df89a73225cf322d9be5c0"><div class="ttname"><a href="class_race_car.html#acf47a00d02df89a73225cf322d9be5c0">RaceCar::GetCapac</a></div><div class="ttdeci">double GetCapac()</div><div class="ttdef"><b>Definition:</b> RaceCar.h:53</div></div>
+<div class="ttc" id="class_race_car_html_a9f99f6ed0883839d20ae1661c385fb94"><div class="ttname"><a href="class_race_car.html#a9f99f6ed0883839d20ae1661c385fb94">RaceCar::IsHVEN</a></div><div class="ttdeci">double IsHVEN()</div><div class="ttdef"><b>Definition:</b> RaceCar.cpp:47</div></div>
+<div class="ttc" id="class_race_car_html_a78f6da7999486db4750a14f05727db32"><div class="ttname"><a href="class_race_car.html#a78f6da7999486db4750a14f05727db32">RaceCar::GetVref</a></div><div class="ttdeci">double GetVref()</div><div class="ttdef"><b>Definition:</b> RaceCar.h:59</div></div>
+<div class="ttc" id="class_race_car_html_a2fb4e4fee325b978ecf8eccc0c33c5b1"><div class="ttname"><a href="class_race_car.html#a2fb4e4fee325b978ecf8eccc0c33c5b1">RaceCar::IsStop</a></div><div class="ttdeci">double IsStop()</div><div class="ttdef"><b>Definition:</b> RaceCar.cpp:31</div></div>
+<div class="ttc" id="class_d_c_motor_html_aa5e21b3a40c4257502e838704659837c"><div class="ttname"><a href="class_d_c_motor.html#aa5e21b3a40c4257502e838704659837c">DCMotor::GetI</a></div><div class="ttdeci">double GetI()</div><div class="ttdef"><b>Definition:</b> DCMotor.h:19</div></div>
+<div class="ttc" id="class_race_car_html"><div class="ttname"><a href="class_race_car.html">RaceCar</a></div><div class="ttdoc">Elektromos versenyautót szimuláló osztály. </div><div class="ttdef"><b>Definition:</b> RaceCar.h:29</div></div>
+<div class="ttc" id="class_race_car_html_afaf526970a2bb73a3526eeb6670253af"><div class="ttname"><a href="class_race_car.html#afaf526970a2bb73a3526eeb6670253af">RaceCar::GetAngSpeed</a></div><div class="ttdeci">double GetAngSpeed()</div><div class="ttdef"><b>Definition:</b> RaceCar.h:47</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Készítette &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.10
+</small></address>
+</body>
+</html>

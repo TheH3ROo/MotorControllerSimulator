@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>Motor Controller Simulator: Simulator/Accumulator.h Forrásfájl</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Motor Controller Simulator
+   </div>
+   <div id="projectbrief">Alkalmazásfejlesztés házi feladathoz készítetett versenyautó szimulátor</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Készítette Doxygen 1.8.10 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Keresés');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Főoldal</span></a></li>
+      <li><a href="pages.html"><span>Kapcsolódó&#160;lapok</span></a></li>
+      <li><a href="namespaces.html"><span>Névterek</span></a></li>
+      <li><a href="annotated.html"><span>Osztályok</span></a></li>
+      <li class="current"><a href="files.html"><span>Fájl</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Keresés" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Fájllista</span></a></li>
+      <li><a href="globals.html"><span>Fájlelemek</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_02de32643c62db6df59640b35d9a9cf0.html">Simulator</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Accumulator.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_accumulator_8h.html">Ugrás a fájl dokumentációjához.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef ACCUMULATOR_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define ACCUMULATOR_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;QObject&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;QVector&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="class_accumulator.html">    6</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_accumulator.html">Accumulator</a>: <span class="keyword">public</span> QObject</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    Q_OBJECT</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">enum</span> contactorState</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    closed, opened</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;};</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="class_accumulator.html#a19845ea4f3d7bee830437adcdf197e3e">Accumulator</a>();</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_accumulator.html#af22fd564b9635f4641e903eac84f5d00">   17</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="class_accumulator.html#af22fd564b9635f4641e903eac84f5d00">GetVbat</a>(){<span class="keywordflow">return</span> u;}</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_accumulator.html#a5720b8db3fa482b82f71fdda8e704795">   18</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="class_accumulator.html#a5720b8db3fa482b82f71fdda8e704795">GetVrail</a>(){<span class="keywordflow">return</span> urail;}</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_accumulator.html#a4821f445e39d461046f9fa8630be00fe">   19</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="class_accumulator.html#a4821f445e39d461046f9fa8630be00fe">GetAh</a>(){<span class="keywordflow">return</span> ah;}</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="class_accumulator.html#adc96c9233a2f5b4d4c4a54609d1a5ce9">   20</a></span>&#160;    <span class="keyword">const</span> QVector&lt;double&gt;&amp; <a class="code" href="class_accumulator.html#adc96c9233a2f5b4d4c4a54609d1a5ce9">GetVCell</a>(){<span class="keywordflow">return</span> ucell;}</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_accumulator.html#a250216084252ecf0a089ab8992494406">HVEN</a>(<span class="keywordtype">bool</span>);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_accumulator.html#ae3cf9d0bc671a57a27e400bbd95ba5e8">isOk</a>();</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">double</span> umax, umin, ah, u, urail, cellnum;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    QVector&lt;double&gt; ucell, celldiff;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    contactorState contactor;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">void</span> UpdateCells();</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">public</span> slots:</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_accumulator.html#a4c73890dbbbe68accfd378f35e57f140">UpdateCapacity</a>(<span class="keywordtype">double</span> i, <span class="keywordtype">double</span> dt);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;};</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#endif // ACCUMULATOR_H</span></div>
+<div class="ttc" id="class_accumulator_html_adc96c9233a2f5b4d4c4a54609d1a5ce9"><div class="ttname"><a href="class_accumulator.html#adc96c9233a2f5b4d4c4a54609d1a5ce9">Accumulator::GetVCell</a></div><div class="ttdeci">const QVector&lt; double &gt; &amp; GetVCell()</div><div class="ttdef"><b>Definition:</b> Accumulator.h:20</div></div>
+<div class="ttc" id="class_accumulator_html_a5720b8db3fa482b82f71fdda8e704795"><div class="ttname"><a href="class_accumulator.html#a5720b8db3fa482b82f71fdda8e704795">Accumulator::GetVrail</a></div><div class="ttdeci">double GetVrail()</div><div class="ttdef"><b>Definition:</b> Accumulator.h:18</div></div>
+<div class="ttc" id="class_accumulator_html_a250216084252ecf0a089ab8992494406"><div class="ttname"><a href="class_accumulator.html#a250216084252ecf0a089ab8992494406">Accumulator::HVEN</a></div><div class="ttdeci">bool HVEN(bool)</div><div class="ttdef"><b>Definition:</b> Accumulator.cpp:75</div></div>
+<div class="ttc" id="class_accumulator_html_af22fd564b9635f4641e903eac84f5d00"><div class="ttname"><a href="class_accumulator.html#af22fd564b9635f4641e903eac84f5d00">Accumulator::GetVbat</a></div><div class="ttdeci">double GetVbat()</div><div class="ttdef"><b>Definition:</b> Accumulator.h:17</div></div>
+<div class="ttc" id="class_accumulator_html_a4c73890dbbbe68accfd378f35e57f140"><div class="ttname"><a href="class_accumulator.html#a4c73890dbbbe68accfd378f35e57f140">Accumulator::UpdateCapacity</a></div><div class="ttdeci">void UpdateCapacity(double i, double dt)</div><div class="ttdef"><b>Definition:</b> Accumulator.cpp:55</div></div>
+<div class="ttc" id="class_accumulator_html_a19845ea4f3d7bee830437adcdf197e3e"><div class="ttname"><a href="class_accumulator.html#a19845ea4f3d7bee830437adcdf197e3e">Accumulator::Accumulator</a></div><div class="ttdeci">Accumulator()</div><div class="ttdef"><b>Definition:</b> Accumulator.cpp:12</div></div>
+<div class="ttc" id="class_accumulator_html"><div class="ttname"><a href="class_accumulator.html">Accumulator</a></div><div class="ttdef"><b>Definition:</b> Accumulator.h:6</div></div>
+<div class="ttc" id="class_accumulator_html_ae3cf9d0bc671a57a27e400bbd95ba5e8"><div class="ttname"><a href="class_accumulator.html#ae3cf9d0bc671a57a27e400bbd95ba5e8">Accumulator::isOk</a></div><div class="ttdeci">bool isOk()</div><div class="ttdef"><b>Definition:</b> Accumulator.cpp:37</div></div>
+<div class="ttc" id="class_accumulator_html_a4821f445e39d461046f9fa8630be00fe"><div class="ttname"><a href="class_accumulator.html#a4821f445e39d461046f9fa8630be00fe">Accumulator::GetAh</a></div><div class="ttdeci">double GetAh()</div><div class="ttdef"><b>Definition:</b> Accumulator.h:19</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Készítette &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.10
+</small></address>
+</body>
+</html>

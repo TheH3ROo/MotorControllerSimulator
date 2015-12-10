@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>Motor Controller Simulator: DataParser.h Forrásfájl</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Motor Controller Simulator
+   </div>
+   <div id="projectbrief">Alkalmazásfejlesztés házi feladathoz készítetett versenyautó szimulátor</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Készítette Doxygen 1.8.10 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Keresés');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Főoldal</span></a></li>
+      <li><a href="pages.html"><span>Kapcsolódó&#160;lapok</span></a></li>
+      <li><a href="namespaces.html"><span>Névterek</span></a></li>
+      <li><a href="annotated.html"><span>Osztályok</span></a></li>
+      <li class="current"><a href="files.html"><span>Fájl</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Keresés" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Fájllista</span></a></li>
+      <li><a href="globals.html"><span>Fájlelemek</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">DataParser.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_data_parser_8h.html">Ugrás a fájl dokumentációjához.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;QObject&gt;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;QMap&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;QString&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;QErrorMessage&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;QFile&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;QTextStream&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;QDebug&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;QtMath&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;QDateTime&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;QQueue&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;QtGlobal&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_data_parser.html">   14</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_data_parser.html">DataParser</a> : <span class="keyword">public</span> QObject</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    Q_OBJECT</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="class_data_parser.html#a85fdc7505703e498030efeb457aec240">DataParser</a>(<span class="keyword">const</span> QString&amp;);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">//DEBUG!</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_data_parser.html#a602f4d9e0b6aef51b9de3a153c7d0bb6">PrintDataToDebug</a>();</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">//DEBUG!</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_data_parser.html#a9ced1c167e730241fe3e17e08959e1eb">   24</a></span>&#160;<span class="comment"></span>    QQueue&lt;QMap&lt;quint16, double&gt;&gt;* <a class="code" href="class_data_parser.html#a9ced1c167e730241fe3e17e08959e1eb">GetData</a>(){<span class="keywordflow">return</span> &amp;dataQueue;}</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="class_data_parser.html#abfec1884cfd3235e0d46cd4a1dc112df">   26</a></span>&#160;    quint16 <a class="code" href="class_data_parser.html#abfec1884cfd3235e0d46cd4a1dc112df">GetCode</a>(QString str){<span class="keywordflow">return</span> codeMap[str];}</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    QFile codeFile;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    QMap&lt;QString, quint16&gt; codeMap;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    QMap&lt;quint16, double&gt; dataMap;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    QQueue&lt;QMap&lt;quint16, double&gt;&gt; dataQueue;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;signals:</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_data_parser.html#a8807cc85cefd0641355cc7aed83dc5f6">errorOccurred</a>(<span class="keyword">const</span> QString&amp;);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_data_parser.html#a31b3b813861971e119b8b90b705e8932">dataReady</a>(QMap&lt;quint16, double&gt;&amp;, QMap&lt;QString, quint16&gt;&amp;);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keyword">public</span> slots:</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_data_parser.html#a24c86fd9ac500f8e5afcca66a6ad7368">dataInput</a>(QDataStream&amp;);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;};</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="ttc" id="class_data_parser_html_abfec1884cfd3235e0d46cd4a1dc112df"><div class="ttname"><a href="class_data_parser.html#abfec1884cfd3235e0d46cd4a1dc112df">DataParser::GetCode</a></div><div class="ttdeci">quint16 GetCode(QString str)</div><div class="ttdef"><b>Definition:</b> DataParser.h:26</div></div>
+<div class="ttc" id="class_data_parser_html_a8807cc85cefd0641355cc7aed83dc5f6"><div class="ttname"><a href="class_data_parser.html#a8807cc85cefd0641355cc7aed83dc5f6">DataParser::errorOccurred</a></div><div class="ttdeci">void errorOccurred(const QString &amp;)</div></div>
+<div class="ttc" id="class_data_parser_html_a602f4d9e0b6aef51b9de3a153c7d0bb6"><div class="ttname"><a href="class_data_parser.html#a602f4d9e0b6aef51b9de3a153c7d0bb6">DataParser::PrintDataToDebug</a></div><div class="ttdeci">void PrintDataToDebug()</div><div class="ttdef"><b>Definition:</b> DataParser.cpp:66</div></div>
+<div class="ttc" id="class_data_parser_html_a31b3b813861971e119b8b90b705e8932"><div class="ttname"><a href="class_data_parser.html#a31b3b813861971e119b8b90b705e8932">DataParser::dataReady</a></div><div class="ttdeci">void dataReady(QMap&lt; quint16, double &gt; &amp;, QMap&lt; QString, quint16 &gt; &amp;)</div></div>
+<div class="ttc" id="class_data_parser_html_a9ced1c167e730241fe3e17e08959e1eb"><div class="ttname"><a href="class_data_parser.html#a9ced1c167e730241fe3e17e08959e1eb">DataParser::GetData</a></div><div class="ttdeci">QQueue&lt; QMap&lt; quint16, double &gt; &gt; * GetData()</div><div class="ttdef"><b>Definition:</b> DataParser.h:24</div></div>
+<div class="ttc" id="class_data_parser_html"><div class="ttname"><a href="class_data_parser.html">DataParser</a></div><div class="ttdef"><b>Definition:</b> DataParser.h:14</div></div>
+<div class="ttc" id="class_data_parser_html_a85fdc7505703e498030efeb457aec240"><div class="ttname"><a href="class_data_parser.html#a85fdc7505703e498030efeb457aec240">DataParser::DataParser</a></div><div class="ttdeci">DataParser(const QString &amp;)</div><div class="ttdef"><b>Definition:</b> DataParser.cpp:3</div></div>
+<div class="ttc" id="class_data_parser_html_a24c86fd9ac500f8e5afcca66a6ad7368"><div class="ttname"><a href="class_data_parser.html#a24c86fd9ac500f8e5afcca66a6ad7368">DataParser::dataInput</a></div><div class="ttdeci">void dataInput(QDataStream &amp;)</div><div class="ttdef"><b>Definition:</b> DataParser.cpp:36</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Készítette &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.10
+</small></address>
+</body>
+</html>
