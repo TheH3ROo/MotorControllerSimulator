@@ -15,11 +15,8 @@ DCMotor::DCMotor(QObject *parent,
 void DCMotor::Tick(double Mt, double u, double dt)
 {
     double Mmech;
-    //i = (u-kf*wpre+L*ipre/dt)/(R+L/dt+kf*kf*dt/theta);
     i=(u + L/dt*ipre + kf*dt/theta*Mt - kf*wpre) / (L/dt + R + dt/theta*kf*kf);
     Mmech = kf*i - Mt;
-    /*if(M<0.05 && M>-0.05)
-        M=0;*/
     w = (Mmech)*dt/theta+wpre;
     ipre = i;
     wpre = w;

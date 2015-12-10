@@ -94,6 +94,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Keresés');
 </div><!--header-->
 <div class="contents">
 
+<p>PI szabályozót megvalósító osztály.  
+ <a href="class_p_i_ctrler.html#details">Részletek...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_p_i_ctrler_8h_source.html">PICtrler.h</a>&gt;</code></p>
 <div class="dynheader">
 A PICtrler osztály származási diagramja:</div>
@@ -118,7 +121,10 @@ Publikus tagfüggvények</h2></td></tr>
 <tr class="memitem:a79fde0bacdfad18426dd630e27fedd6e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_i_ctrler.html#a79fde0bacdfad18426dd630e27fedd6e">isOk</a> ()</td></tr>
 <tr class="separator:a79fde0bacdfad18426dd630e27fedd6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Konstruktorok és destruktorok dokumentációja</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Részletes leírás</h2>
+<div class="textblock"><p>PI szabályozót megvalósító osztály. </p>
+<p>Minden Tick(..) slot híváskor lefut, a <a class="el" href="class_p_i_ctrler.html#ae0428a99bf1cd404cdb7d2715593702f">GetValue()</a> függvénnyel lekérhető a kimenet értéke. </p>
+</div><h2 class="groupheader">Konstruktorok és destruktorok dokumentációja</h2>
 <a class="anchor" id="a9c7ffaa55bb37974cf482687e021ea7d"></a>
 <div class="memitem">
 <div class="memproto">
@@ -156,6 +162,13 @@ Publikus tagfüggvények</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Konstruktor. </p><dl class="params"><dt>Paraméterek</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Ap</td><td>A szabályozó erősítése. </td></tr>
+    <tr><td class="paramname">Ti</td><td>Integrálási idő [sec]. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -180,6 +193,7 @@ Publikus tagfüggvények</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>A szabályozó kimenetével tér vissza. </p>
 
 </div>
 </div>
@@ -203,6 +217,7 @@ Publikus tagfüggvények</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>SelfTest függvény. </p><dl class="section return"><dt>Visszatérési érték</dt><dd>true, ha minden rendben. </dd></dl>
 
 </div>
 </div>
@@ -249,7 +264,15 @@ Publikus tagfüggvények</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Ts in s </p>
+<p>Ez a slot futtatja le a szabályzási algoritmust. </p><dl class="params"><dt>Paraméterek</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">uBase</td><td>Alapjel bemenet. </td></tr>
+    <tr><td class="paramname">uSense</td><td>Érzékelt, szabályozni kívánt jel. </td></tr>
+    <tr><td class="paramname">Ts</td><td>Két hívás között eltelt idő [sec] </td></tr>
+    <tr><td class="paramname">umax</td><td>Maximális DC feszültség. A kimenet +/- Umax/2 között változhat. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

@@ -7,6 +7,7 @@ class Accumulator: public QObject
 {
     Q_OBJECT
 
+/** */
 enum contactorState
 {
     closed, opened

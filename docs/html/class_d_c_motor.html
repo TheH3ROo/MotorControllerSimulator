@@ -127,7 +127,7 @@ Publikus tagfüggvények</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Részletes leírás</h2>
 <div class="textblock"><p>DC motort szimuláló osztály. </p>
-<p>A </p>
+<p>A <a class="el" href="class_d_c_motor.html#a5605320b0ad6f84b37781209d025be91">Tick()</a> slot hatására kiszámítja az új paramétereket, megvalósít egy szimulációs lépésközt. A Get...() függvényekkel lehet lekérdezni az aktuális állapotokat. </p>
 </div><h2 class="groupheader">Konstruktorok és destruktorok dokumentációja</h2>
 <a class="anchor" id="a8f1ceeaea31cbd19f91a6d267b22becf"></a>
 <div class="memitem">
@@ -170,6 +170,15 @@ Publikus tagfüggvények</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Konstruktor. </p><dl class="params"><dt>Paraméterek</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">kf</td><td>motorállandó szorozva a fluxussal (k*fi). </td></tr>
+    <tr><td class="paramname">R</td><td>Rézellenállás. </td></tr>
+    <tr><td class="paramname">L</td><td>Motor induktivitása. </td></tr>
+    <tr><td class="paramname">theta</td><td>Motor tehetetlenségi nyomatéka. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -194,6 +203,7 @@ Publikus tagfüggvények</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Visszatér a motor áramával. </p>
 
 </div>
 </div>
@@ -217,6 +227,7 @@ Publikus tagfüggvények</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Visszatér a motor nyomatékával. </p><dl class="bug"><dt><b><a class="el" href="bug.html#_bug000001">Hiba:</a></b></dt><dd>A motor alapértelemezett paraméterei miatt túl nagy a számított nyomaték, irreaális: ezért leosztom 100-al. </dd></dl>
 
 </div>
 </div>
@@ -240,6 +251,7 @@ Publikus tagfüggvények</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Visszatér a motor szögsebességvéle. </p>
 
 </div>
 </div>
@@ -263,6 +275,7 @@ Publikus tagfüggvények</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Motor állapot lekérdezése. </p><dl class="section return"><dt>Visszatérési érték</dt><dd>true, ha minden rendben. </dd></dl>
 
 </div>
 </div>
@@ -303,6 +316,14 @@ Publikus tagfüggvények</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Hatására lefut egy paraméterszámítás, egy szimulációs lépésköz. </p><dl class="params"><dt>Paraméterek</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Mt</td><td>Terhelő nyomaték, tipikusan a súrlódás, légellenállás, gyorsítás miatt. [Nm] </td></tr>
+    <tr><td class="paramname">u</td><td>Motorra kapcsolt feszültség pillanatértéke. [V] </td></tr>
+    <tr><td class="paramname">dt</td><td>Két hívás közötti idő [s]. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

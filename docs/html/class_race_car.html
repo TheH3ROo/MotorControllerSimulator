@@ -110,8 +110,8 @@ A RaceCar osztály származási diagramja:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-slots"></a>
 Publikus rések</h2></td></tr>
-<tr class="memitem:a62abf7126b3bb081f2edb651113695ee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_race_car.html#a62abf7126b3bb081f2edb651113695ee">DataProc</a> (QMap&lt; quint16, double &gt; &amp;, QMap&lt; QString, quint16 &gt; &amp;)</td></tr>
-<tr class="separator:a62abf7126b3bb081f2edb651113695ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a542518cd574219c53d76d42500268168"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_race_car.html#a542518cd574219c53d76d42500268168">DataProc</a> (QMap&lt; quint16, double &gt; &amp;data, QMap&lt; QString, quint16 &gt; &amp;code)</td></tr>
+<tr class="separator:a542518cd574219c53d76d42500268168"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="signals"></a>
 Szignálok</h2></td></tr>
@@ -126,8 +126,8 @@ Szignálok</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Publikus tagfüggvények</h2></td></tr>
-<tr class="memitem:abe5e6539e0feb64fbb4cf1385fa6244c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_race_car.html#abe5e6539e0feb64fbb4cf1385fa6244c">RaceCar</a> (QObject *parent=0, double dtm=1, double dtpi=5, double D=0.2, double C=10, double m=200)</td></tr>
-<tr class="separator:abe5e6539e0feb64fbb4cf1385fa6244c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace4c5305afa8e756597e91f8aafd18a4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_race_car.html#ace4c5305afa8e756597e91f8aafd18a4">RaceCar</a> (QObject *parent=0, double dtm=1, double dtpi=5, double D=0.2, double C=10, double m=200)</td></tr>
+<tr class="separator:ace4c5305afa8e756597e91f8aafd18a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3189f80cfa5b724352e254d61bf1b892"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_race_car.html#a3189f80cfa5b724352e254d61bf1b892">GetSpeed</a> ()</td></tr>
 <tr class="separator:a3189f80cfa5b724352e254d61bf1b892"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afaf526970a2bb73a3526eeb6670253af"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_race_car.html#afaf526970a2bb73a3526eeb6670253af">GetAngSpeed</a> ()</td></tr>
@@ -157,12 +157,12 @@ Publikus tagfüggvények</h2></td></tr>
 <div class="textblock"><p>Elektromos versenyautót szimuláló osztály. </p>
 <p>Akkumulátort, DC motort és szabályozót tartalmaz. A különféle elemek állapotát a Get... kezdetű függvényekkel lehet lekérni. Két timert is tartalmaz (a motorhoz és a szabályozóhoz), ezek signaljai indítják a számításokat. A konstrukorban adhatóak meg ezek a paraméterek. </p>
 </div><h2 class="groupheader">Konstruktorok és destruktorok dokumentációja</h2>
-<a class="anchor" id="abe5e6539e0feb64fbb4cf1385fa6244c"></a>
+<a class="anchor" id="ace4c5305afa8e756597e91f8aafd18a4"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const double RaceCar::RaceCar </td>
+          <td class="memname">RaceCar::RaceCar </td>
           <td>(</td>
           <td class="paramtype">QObject *&#160;</td>
           <td class="paramname"><em>parent</em> = <code>0</code>, </td>
@@ -249,10 +249,17 @@ Publikus tagfüggvények</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Utasítja az akkumulátort, hogy számolja újra a kapacitását, ugyanis energiát vettünk ki belőle. </p><dl class="params"><dt>Paraméterek</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i</td><td>A kinyert áram nagysága. </td></tr>
+    <tr><td class="paramname">dt</td><td>A kinyerés időtartama. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
-<a class="anchor" id="a62abf7126b3bb081f2edb651113695ee"></a>
+<a class="anchor" id="a542518cd574219c53d76d42500268168"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -283,6 +290,20 @@ Publikus tagfüggvények</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>A dataParser objektum <a class="el" href="class_data_parser.html#a31b3b813861971e119b8b90b705e8932">DataParser::dataReady</a>(...) jelével kell összekötni. </p><dl class="params"><dt>Paraméterek</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>Az adatokat tároló asszociatív tároló. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>Lásd még</dt><dd>DataParser::dataMap </dd></dl>
+<dl class="params"><dt>Paraméterek</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">code</td><td>A jelentés-kódot tároló asszociatív tároló. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>Lásd még</dt><dd>DataParser::codeMap </dd></dl>
 
 </div>
 </div>
@@ -306,7 +327,7 @@ Publikus tagfüggvények</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Visszatér a pillanatnyi szögsebességet. </p>
+<p>Visszatér a pillanatnyi szögsebességgel. </p>
 
 </div>
 </div>
@@ -330,7 +351,7 @@ Publikus tagfüggvények</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Visszatér az akkumulátor maradék kapacitását. </p>
+<p>Visszatér az akkumulátor maradék kapacitással. </p>
 
 </div>
 </div>
@@ -354,7 +375,7 @@ Publikus tagfüggvények</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Visszatér a pillanatnyi motoráramot. </p>
+<p>Visszatér a pillanatnyi motorárammal. </p>
 
 </div>
 </div>
@@ -378,7 +399,7 @@ Publikus tagfüggvények</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Visszatér a pillanatnyi sebességet. </p>
+<p>Visszatér a pillanatnyi sebességgel. </p>
 
 </div>
 </div>
@@ -402,7 +423,7 @@ Publikus tagfüggvények</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Visszatér a pillanatnyi nyomatékot. </p>
+<p>Visszatér a pillanatnyi nyomatékkal. </p>
 
 </div>
 </div>
@@ -426,7 +447,7 @@ Publikus tagfüggvények</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Visszatér az akkupakk feszültségét. </p>
+<p>Visszatér az akkupakk feszültséggel. </p>
 
 </div>
 </div>
@@ -450,7 +471,7 @@ Publikus tagfüggvények</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Visszatér a cellafeszültségeket tartalmazó vektort. </p>
+<p>Visszatér a cellafeszültségeket tartalmazó vektorral. </p>
 
 </div>
 </div>
@@ -474,7 +495,7 @@ Publikus tagfüggvények</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Visszatér a DC sín feszültségét. </p>
+<p>Visszatér a DC sín feszültséggel. </p>
 
 </div>
 </div>
@@ -498,7 +519,7 @@ Publikus tagfüggvények</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Visszatér a sebességalapjel értékét. </p>
+<p>Visszatér a sebességalapjel értékével. </p>
 
 </div>
 </div>
@@ -514,7 +535,7 @@ Publikus tagfüggvények</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Visszatér az autó állapotával. </p><dl class="section return"><dt>Visszatérési érték</dt><dd>true, ha az állapot "dren" </dd></dl>
+<p>Visszatér az autó állapotával. </p><dl class="section return"><dt>Visszatérési érték</dt><dd>10, ha az állapot "dren", egyébként 0 </dd></dl>
 
 </div>
 </div>
@@ -530,7 +551,7 @@ Publikus tagfüggvények</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Visszatér az autó állapotával. </p><dl class="section return"><dt>Visszatérési érték</dt><dd>true, ha az állapot "hven" </dd></dl>
+<p>Visszatér az autó állapotával. </p><dl class="section return"><dt>Visszatérési érték</dt><dd>10, ha az állapot "hven", egyébként 0 </dd></dl>
 
 </div>
 </div>
@@ -546,7 +567,7 @@ Publikus tagfüggvények</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Visszatér az autó állapotával. </p><dl class="section return"><dt>Visszatérési érték</dt><dd>true, ha az állapot "stop" </dd></dl>
+<p>Visszatér az autó állapotával. </p><dl class="section return"><dt>Visszatérési érték</dt><dd>10, ha az állapot "stop", egyébként 0 </dd></dl>
 
 </div>
 </div>
@@ -587,6 +608,7 @@ Publikus tagfüggvények</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>A motorhoz kell bekötni, ennek hatására kell az új motorparamétereket számolni. </p><dl class="section see"><dt>Lásd még</dt><dd><a class="el" href="class_d_c_motor.html#a5605320b0ad6f84b37781209d025be91">DCMotor::Tick</a> </dd></dl>
 
 </div>
 </div>
@@ -633,6 +655,7 @@ Publikus tagfüggvények</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>A szabályozóhoz kell bekötni, ennek hatására kell a szabályozót lefuttatni. </p><dl class="section see"><dt>Lásd még</dt><dd><a class="el" href="class_p_i_ctrler.html#a064e3f3ffd68b972ef9a89964c54fb19">PICtrler::Tick</a> </dd></dl>
 
 </div>
 </div>
@@ -657,6 +680,7 @@ Publikus tagfüggvények</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Stringet ad át a bekötött slotnak. Debugra, selftest üzenetek küldésére használható. </p>
 
 </div>
 </div>

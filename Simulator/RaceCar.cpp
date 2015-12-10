@@ -1,7 +1,5 @@
 #include "RaceCar.h"
 
-const double
-
 RaceCar::RaceCar(QObject *parent, double dtm, double dtpi, double D, double C, double m)
     : QObject(parent), dtm(dtm), dtpi(dtpi), D(D), C(C), m(m)
 {
@@ -24,6 +22,7 @@ RaceCar::RaceCar(QObject *parent, double dtm, double dtpi, double D, double C, d
             &ctrler, &PICtrler::Tick);
     connect(this, &RaceCar::AccuUpdate,
             &accu, &Accumulator::UpdateCapacity);
+
     motTmr.start();
     PITmr.start();
 }

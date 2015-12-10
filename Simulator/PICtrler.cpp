@@ -10,7 +10,6 @@ PICtrler::PICtrler(QObject *parent,
     xpre = 0;
 }
 
-/** Ts in s*/
 void PICtrler::Tick(double uBase, double uSense, double Ts, double umax)
 {
     double x = (uBase - uSense)*Ap;
