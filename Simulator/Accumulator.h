@@ -19,6 +19,7 @@ public:
     double GetAh(){return ah;}
     const QVector<double>& GetVCell(){return ucell;}
     bool HVEN(bool);
+    bool isOk();
 
 private:
     double umax, umin, ah, u, urail, cellnum;

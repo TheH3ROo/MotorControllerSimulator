@@ -103,6 +103,34 @@ void RaceCar::UpdateState(double M, double v)
     }
 }
 
+void RaceCar::SelfTest()
+{
+    if(accu.isOk())
+    {
+        emit sendString("SelfTest OK: Akku rendben.");
+    }
+    else
+    {
+        emit sendString("SelfTest FAULT: Akku lemerült.");
+    }
+    if(ctrler.isOk())
+    {
+        emit sendString("SelfTest OK: PI szabályzó rendben.");
+    }
+    else
+    {
+        emit sendString("SelfTest FAULT: PI szabályozó hibás.");
+    }
+    if(motor.isOk())
+    {
+        emit sendString("SelfTest OK: DC motor rendben.");
+    }
+    else
+    {
+        emit sendString("SelfTest FAULT: DC motor hibás.");
+    }
+}
+
 void RaceCar::DataProc(QMap<quint16, double>& data, QMap<QString, quint16>& code)
 {
     //State beállítása
@@ -134,6 +162,12 @@ void RaceCar::DataProc(QMap<quint16, double>& data, QMap<QString, quint16>& code
     }
     //Alapjelek beállítása
     UpdateState(data.value(code["mref"]), data.value(code["vref"]));
+    if(data.value(code["selftest"]) > 1)
+    {
+        SelfTest();
+        data[code["selftest"]] = 0;
+        qDebug()<<"selftest.";
+    }
 }
 
 void RaceCar::PrintDataToDebug()

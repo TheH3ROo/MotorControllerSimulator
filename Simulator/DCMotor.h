@@ -19,6 +19,7 @@ public:
     double GetI(){return i;}
     double GetW(){return w;}
     double GetM(){return kf*i/100;}
+    bool isOk(){return true;}
 private:
     /** Szimulációval számított értékek.*/
     double i, ipre;

@@ -11,6 +11,7 @@ public:
                       double Ap = 5,
                       double Ti = 1);
     double GetValue(){return out;}
+    bool isOk(){return true;}
 
 private:
     const double Ap, Ti;

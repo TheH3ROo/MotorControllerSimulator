@@ -42,6 +42,7 @@ private:
     double Mref, vref;
 
     void UpdateState(double M, double v);
+    void SelfTest();
 
     void PrintDataToDebug();
 

@@ -34,6 +34,14 @@ Accumulator::Accumulator():
     UpdateCells();
 }
 
+bool Accumulator::isOk()
+{
+    if(ah > 0)
+        return true;
+    else
+        return false;
+}
+
 void Accumulator::UpdateCells()
 {
     quint8 i;
