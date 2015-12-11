@@ -35,8 +35,6 @@ public:
      * @param codeFilePath  A jelentés-kód párokat tartalmazó fájl elérési útja.
     */
     DataParser(const QString& codeFilePath);
-    /** Visszatér az adatsorra (dataMap) mutató pointerrel.*/
-    //QQueue<QMap<quint16, double>>* GetData(){return &dataQueue;}
     /** Segédfüggvény az adatstring-kód kereséséhez.*/
     quint16 GetCode(QString str){return codeMap[str];}
     /** Hibakereséshez használatos függvény, a konzolra írja a dataMap elemeit. */

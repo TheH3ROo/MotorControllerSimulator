@@ -9,7 +9,6 @@
 *.so
 *.dll
 *.dylib
-
 # Qt-es
 
 /.qmake.cache
@@ -32,3 +31,5 @@ Makefile*
 #QtCtreator Qml
 *.qmlproject.user
 *.qmlproject.user.*
+
+*Doxy*
